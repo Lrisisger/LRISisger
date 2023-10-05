@@ -1,9 +1,9 @@
 <?php
 class DatabaseConnection {
     private $host = "localhost"; // Your database host
-    private $username = "your_username"; // Your database username
-    private $password = "your_password"; // Your database password
-    private $dbname = "your_database"; // Your database name
+    private $username = "root"; // Your database username
+    private $password = ""; // Your database password
+    private $dbname = "lrisisger"; // Your database name
 
     public $conn;
 
