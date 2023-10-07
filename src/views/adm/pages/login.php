@@ -12,6 +12,12 @@
         require '../../../../private/config.php';
         require '../../../../private/class/Auth.php';
         
+        if(!empty($_SESSION['token'])){
+
+            header("Location: control.php");
+            exit;
+
+         }
         
     ?>
         <main>
