@@ -14,6 +14,15 @@
 
 <body>
 
+    <?php
+        require '../../../../private/config.php';
+        require '../../../../private/class/Auth.php';
+
+        $auth = new Auth($pdo, $base);
+        $userInfo = $auth->checkToken();
+    ?>
+
+    <h1>Bem vindo <?=$userInfo->getName()?></h1>
 
     <header class="head">
         <div class="menu-button button-head" onclick="changeAside()">

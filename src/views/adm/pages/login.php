@@ -9,12 +9,7 @@
     </head>
     <body>
 
-        <?php
-            require '../../../../private/config.php';
-            require '../../../../private/class/Auth.php';
-
-            $auth = new Auth($pdo, $base)
-        ?>
+        
         <main>
             <div class="logo-sec">
                 <img src="../../../assets/svgs/logo.svg" class="logo-img">

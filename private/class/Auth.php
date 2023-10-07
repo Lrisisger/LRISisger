@@ -1,5 +1,7 @@
 <?php
 
+require(realpath(dirname(__FILE__) . '/../dao/usuarioDao.php'));
+
 class Auth {
 
     private $pdo;
@@ -7,8 +9,9 @@ class Auth {
 
     public function __construct(PDO $driver, $base){
 
-        $this->pdo = $diver;
+        $this->pdo = $driver;
         $this->base = $base;
+        
 
     }
 
@@ -18,9 +21,16 @@ class Auth {
 
             $token = $_SESSION['token'];
 
-         }
+            $userDao - new UserDaoMySql($this->pdo);
+            $user = $userDao->findBeToken($token);
+            
+            if($user){
+                return $user;
+            }
 
-         header("Location: ".this->base."/login.php");
+         }
+         echo $this->base;
+         header("Location: adm/pages/login.php");
          exit;
 
     }
