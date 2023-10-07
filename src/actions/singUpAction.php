@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require '../../private/class/usuarios.php';
 require '../../private/dao/usuarioDao.php';
 require '../../private/config.php';
@@ -13,15 +13,34 @@ $pass = filter_input(INPUT_POST, 'pass');
 $isAdm = filter_input(INPUT_POST, 'adm');
 
 
+
+function token($tamanho=50){
+    $characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $tamanho; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
 if($name && $email && $cpf && $pass && $isAdm){
+    $token = '';
+    do{
+        $token = token();
+
+        $verify = $uDao->findByToken($token); 
+    }while($verify != False);
+    $hash = password_hash($pass, PASSWORD_DEFAULT);
+
 
     $u = new Usuarios();
     $u->setName($name);
     $u->setEmail(strtolower($email));
     $u->setCpf($cpf);
-    $u->setPass($pass);
+    $u->setPass($hash);
     $u->setIsAdm($isAdm);
-
+    $u->setToken($token);
     $uDao->add($u);
 
 }else{

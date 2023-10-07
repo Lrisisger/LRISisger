@@ -22,7 +22,7 @@
         $userInfo = $auth->checkToken();
     ?>
 
-    <h1>Bem vindo <?=$userInfo->getName()?></h1>
+    <h1>Bem vindo <?=$userInfo->getName();?></h1>
 
     <header class="head">
         <div class="menu-button button-head" onclick="changeAside()">
@@ -56,14 +56,15 @@
 
                 <h3>Conta</h3>
             </li>
+            <a href="../../../actions/logOutAction.php">
+                <li>
+                    <div class="menu-button">
+                        <img src="../../../assets/icons/logout.svg" alt="">
+                    </div>
 
-            <li>
-                <div class="menu-button">
-                    <img src="../../../assets/icons/logout.svg" alt="">
-                </div>
-
-                <h3>Login out</h3>
-            </li>
+                    <h3>Login out</h3>
+                </li>
+            </a>
         </ul>
     </aside>
 

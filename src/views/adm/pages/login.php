@@ -8,8 +8,12 @@
         <title>SISGER</title>
     </head>
     <body>
-
+    <?php
+        require '../../../../private/config.php';
+        require '../../../../private/class/Auth.php';
         
+        
+    ?>
         <main>
             <div class="logo-sec">
                 <img src="../../../assets/svgs/logo.svg" class="logo-img">
@@ -18,7 +22,7 @@
                 Fazer login como Administrador
             </div>
             <div class="login-form">
-                <form action method="post">
+                <form action="../../../actions/loginAction.php" method="post">
                     <div class="email ">
                         <input type="email" name="email"
                             placeholder="E-Mail" id="email"
@@ -29,6 +33,12 @@
                             placeholder="Senha..." id="senha"
                             class="input-area">
                     </div>
+                    <?php 
+                        if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
+                            echo $_SESSION['aviso'];
+                            $_SESSION['aviso'] = '';
+                        }
+                    ?>
                     <div class="esqueceusenha text-btn">
                         <a href="#">Esqueceu a senha?</a>
                     </div>

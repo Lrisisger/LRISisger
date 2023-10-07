@@ -16,22 +16,21 @@ class Auth {
     }
 
     public function checkToken() {
-
          if(!empty($_SESSION['token'])){
 
             $token = $_SESSION['token'];
 
-            $userDao - new UserDaoMySql($this->pdo);
-            $user = $userDao->findBeToken($token);
+            $uDao = new UsuarioDaoMysql($this->pdo);
+            $user = $uDao->findByToken($token);
             
             if($user){
                 return $user;
             }
 
          }
-         echo $this->base;
-         header("Location: adm/pages/login.php");
-         exit;
+         
+        header("Location: login.php");
+        exit;
 
     }
     

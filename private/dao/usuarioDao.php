@@ -12,27 +12,15 @@ class UsuarioDaoMysql implements UsuarioDAO{
         $this->pdo = $driver;
     }
 
-    private function generateUser($data){
-        $user = new Usuarios();
-        $user->setId($data['id']);
-        $user->setName($data['name']);
-        $user->setEmail($data['email']);
-        $user->setPass($data['senha']);
-        $user->setCpf($data['cpf']);
-        $user->set($data['isAdm']);
-        $user->set($data['token']);
-
-        return $user;
-    }
-
     public function add(Usuarios $u){
 
-        $sql = $this->pdo->prepare("INSERT INTO usuarios (name, email, senha, cpf, isAdm) VALUES (:name, :email, :senha, :cpf, :isAdm)"); 
+        $sql = $this->pdo->prepare("INSERT INTO usuarios (name, email, senha, cpf, isAdm, token) VALUES (:name, :email, :senha, :cpf, :isAdm, :token)"); 
         $sql->bindValue(':name', $u->getName());
         $sql->bindValue(':email', $u->getEmail());
         $sql->bindValue(':senha', $u->getPass());
         $sql->bindValue(':cpf', $u->getCpf());
         $sql->bindValue(':isAdm', $u->getIsAdm());
+        $sql->bindValue(':token', $u->getToken());
         $sql->execute();
 
     }
@@ -42,10 +30,17 @@ class UsuarioDaoMysql implements UsuarioDAO{
         $sql = $this->pdo->prepare("SELECT * FROM usuarios where id = :id");
         $sql->bindValue(":id", $id);
         $sql->execute();
-        
+      
         if($sql->rowCount() > 0){
-            $db_u = $sql->fetch();
-            $user = generateUser($db_u);
+            $data = $sql->fetch(PDO::FETCH_ASSOC);
+            $user = new Usuarios();
+            $user->setId($data['id']);
+            $user->setName($data['name']);
+            $user->setEmail($data['email']);
+            $user->setPass($data['senha']);
+            $user->setCpf($data['cpf']);
+            $user->setIsAdm($data['isAdm']);
+            $user->setToken($data['token']);
             return $user;
         }
         
@@ -60,12 +55,42 @@ class UsuarioDaoMysql implements UsuarioDAO{
             $sql->execute();
             
             if($sql->rowCount() > 0){
-                $db_u = $sql->fetch(PDO::FETCH_ASSOC);
-                $user = generateUser($db_u);
+                $data = $sql->fetch(PDO::FETCH_ASSOC);
+                $user = new Usuarios();
+                $user->setId($data['id']);
+                $user->setName($data['name']);
+                $user->setEmail($data['email']);
+                $user->setPass($data['senha']);
+                $user->setCpf($data['cpf']);
+                $user->setIsAdm($data['isAdm']);
+                $user->setToken($data['token']);
+                return $user;
             }
-            return $user;
+            
         }
+
+        return false;
+    }
+
+    public function findByEmail($email){      
+        $sql = $this->pdo->prepare("SELECT * FROM usuarios where email = :email");
+        $sql->bindValue(":email", $email);
+        $sql->execute();
         
+        if($sql->rowCount() > 0){
+            $data = $sql->fetch(PDO::FETCH_ASSOC);
+            $user = new Usuarios();
+            $user->setId($data['id']);
+            $user->setName($data['name']);
+            $user->setEmail($data['email']);
+            $user->setPass($data['senha']);
+            $user->setCpf($data['cpf']);
+            $user->setIsAdm($data['isAdm']);
+            $user->setToken($data['token']);
+            return $user;
+            
+        }
+            
         return false;
     }
 
