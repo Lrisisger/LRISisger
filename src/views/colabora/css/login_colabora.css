@@ -1,0 +1,93 @@
+/* Path: src\views\adm\css\login.css */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: url(../../../assets/svgs/login-background.svg) no-repeat center;
+    background-size: cover;
+}
+
+.logo-sec .logo-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: (100vw * 0.25);
+    height: (100vh * 0.25);
+}
+
+.title-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 12px 0;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 8px 0;
+}
+
+.esqueceusenha {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 8px 0 0;
+}
+
+.colab a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.submit-btn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    height: 50px;
+    border: none;
+    border-radius: 70px;
+    background-color: #004cbd;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 8px 0;
+    transition: 0.2s;
+}
+
+.submit-btn button:hover{
+    background-color: #002157;
+}
+
+.register-btn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    height: 50px;
+    border: var(--default_blue) 1px solid;
+    border-radius: 70px;
+    background-color: #fff;
+    color: var(--default_black);
+    transition: 0.2s;
+}
+
+.register-btn button:hover{
+    background-color: #c7c7c7;
+}
