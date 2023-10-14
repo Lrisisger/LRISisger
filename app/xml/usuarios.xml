@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+    <usuario>
+        <id>1</id>
+        <name>Aila Almeida Dos Santos</name>
+        <email>Ailla@gmail.com</email>
+        <password>$2y$10$DiPQ8ryOw3hdYTG0PhaRSuhNl7yBJ8iWMgN.IpjoMp6pDPwhlctfG</password>
+        <cpf>123</cpf>
+        <isAdm>1</isAdm>
+        <token>5mZtKbf8vq85by1l4DW3SdwL!jSIUOLPze5tbhqdKhr#lWju3j</token>
+    </usuario>
+    <usuario>
+        <id>2</id>
+        <name>Lucas Eduardo</name>
+        <email>Lucas@gmail.com</email>
+        <password>$2y$10$9tRhM8dKW8yHhw0YZhd0Guwc4qJcS80ia7qAwntYiN4AyeYFeu3Cy</password>
+        <cpf>123</cpf>
+        <isAdm>0</isAdm>
+        <token>aXNuLCyejpspPBhn85hQ$x9XJprxvsBbYCUd!mLAsLHhXJt!T3</token>
+    </usuario>
+</root>
