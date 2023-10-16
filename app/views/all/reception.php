@@ -15,7 +15,7 @@
         <!--  Title  -->
         <div class="title">
             <div class="logoImage">
-                <a href="#"><img src="../../../public/img/svgs/logo.svg"></a>
+                <a href="#"><img src="../../../public/img/svgs/logo.svg" class="logo"></a>
             </div>
             <div class="welcomeText subtitle">Seja bem vindo ao Sisger</div>
         </div>
