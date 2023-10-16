@@ -1,68 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../../public/css/general/main.css">
-        <link rel="stylesheet" href="../../../public//css/adm/login.css">
-        <title>SISGER</title>
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../public/css/general/main.css">
+    <link rel="stylesheet" href="../../../public//css/adm/login.css">
+    <title>SISGER</title>
+</head>
+
+<body>
     <?php
-        require '../../models/Auth.php';        
-        require '../../dao/usuarioDao.php';
-        
-        if(!empty($_SESSION['token'])){
+    require '../../models/Auth.php';
+    require '../../dao/usuarioDao.php';
 
-            header("Location: control.php");
-            exit;
+    if (!empty($_SESSION['token'])) {
 
-         }
-        
+        header("Location: control.php");
+        exit;
+    }
+
     ?>
-        <main>
-            <div class="logo-sec">
-                <img src="../../../public/img/login/logo.svg" class="logo-img">
+    <main>
+        <!-- Left Side -->
+        <div class="left loginUser">
+            <!--  Title  -->
+            <div class="title">
+                <div class="logoImage">
+                </div>
+                <div class="welcomeText subtitle">Seja bem vindo ao Sisger</div>
             </div>
-            <div class="title-text">
-                Fazer login como Administrador
-            </div>
-            <div class="login-form">
-               
-            
-            <form action="../../services/loginAction.php" method="post">
-                    <div class="email ">
-                        <input type="email" name="email"
-                            placeholder="E-Mail" id="email"
-                            class="input-area">
-                    </div>
-                    <div class="senha ">
-                        <input type="password" name="senha"
-                            placeholder="Senha..." id="senha"
-                            class="input-area">
-                    </div>
-                    <?php 
-                        if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
-                            echo $_SESSION['aviso'];
-                            $_SESSION['aviso'] = '';
-                        }
-                    ?>
-                    <div class="esqueceusenha text-btn">
-                        <a href="#">Esqueceu a senha?</a>
-                    </div>
-                    <div class="colab text-btn">
-                        <a href="login.html">Fazer login como Colaborador</a>
-                    </div>
-                    <div class="colab text-btn">
-                        <a href="singUp.php">Cadastre-se</a>
-                    </div>
-                    <div class="submit-btn btn">
-                        <button type="submit" name="submit">Entrar</button>
-                    </div>
-                </form>
+            <!--  Title  -->
 
-                
+            <!-- Image Mid  -->
+            <div class=imageMiddle>
+                <img src="https://i.imgur.com/12gF2Gw.png" class="imageMid">
             </div>
-        </main>
-    </body>
+            <!-- Image Mid -->
+
+            <div class="bottom">
+                <button type="none" class="button signIn" type="" onclick="toggleModal()">Entrar<button>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="right cadUser">
+            <form class="formCad" action="" method="post">
+                <div class="titleText">Cadastro</div>
+                <div>
+                    <div>
+                        <input name="nome" placeholder="Nome completo ou razão social">
+                    </div>
+                    <div>
+                        <input name="email" placeholder="E-mail">
+                    </div>
+                    <div>
+                        <input name="codEmp" placeholder="CPF ou CNPJ">
+                    </div>
+                    <div>
+                        <input name="password" type="password" placeholder="Senha">
+                    </div>
+                    <div>
+                        <input name="confirmPass" type="password" placeholder="Confirme a senha">
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="button sendForm">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal()">&times;</span>
+                <h2>Login</h2>
+                <input type="text" placeholder="Nome de usuário">
+                <input type="password" placeholder="Senha">
+                <button class="button signIn">Login</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../../public/js/adm/login.js"></script>
+</body>
+
 </html>
