@@ -19,19 +19,5 @@ inputCpfCnpj.addEventListener("input", function () {
 });
 
 inputCpfCnpj.addEventListener("blur", function () {
-  this.dispatchEvent(new Event("input")); // Dispara o evento de input para aplicar a formatação
+  this.dispatchEvent(new Event("input")); 
 });
-
-// MODAL
-
-function toggleModal() {
-  var modal = document.getElementById('loginModal');
-  modal.style.display = modal.style.display === 'none' || modal.style.display === '' ? 'flex' : 'none';
-}
-
-window.onclick = function(event) {
-  var modal = document.getElementById('loginModal');
-  if (event.target == modal) {
-    modal.style.display = 'none';
-  }
-}
