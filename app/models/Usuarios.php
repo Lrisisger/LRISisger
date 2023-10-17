@@ -8,7 +8,7 @@
         private $pass;
         private $isAdm;
         private $token;
-
+        private $tokenEmpresa;
 
 
         public function getId(){
@@ -44,11 +44,11 @@
         }
 
         public function getPass(){
-            return $this->senha;
+            return $this->pass;
         }
 
         public function setPass($n){
-            $this->senha = trim($n);
+            $this->pass = trim($n);
         }
 
         public function getIsAdm(){
@@ -66,6 +66,15 @@
         public function setToken($n){
             $this->token = trim($n);
         }
+
+        public function getTokenEmpresa(){
+            return $this->tokenEmpresa;
+        }
+
+        public function setTokenEmpresa($n){
+            $this->tokenEmpresa = trim($n);
+        }
+
 
 
 

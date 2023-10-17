@@ -36,7 +36,8 @@ class UsuarioDaoMysql implements UsuarioDAO {
         $novoRegistro->addChild( 'password', $u->getPass() );
         $novoRegistro->addChild( 'cpf', $u->getCpf() );
         $novoRegistro->addChild( 'isAdm', $u->getIsAdm() );
-        $novoRegistro->addChild( 'token', $u->getToken() );
+        $novoRegistro->addChild( 'token', $u->getToken() );        
+        $novoRegistro->addChild( 'tokenEmpresa', $u->getTokenEmpresa() );
 
         $this->xmlFile->asXML( $this->path );
 
@@ -89,6 +90,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
                         $u->setCpf( $item->cpf );
                         $u->setIsAdm( $item->isAdm );
                         $u->setToken( $item->token );
+                        $u->setTokenEmpresa( $item->tokenEmpresa );
 
                         $array[] = $u;
                     }
@@ -108,6 +110,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
                         $u->setCpf( $item->cpf );
                         $u->setIsAdm( $item->isAdm );
                         $u->setToken( $item->token );
+                        $u->setTokenEmpresa( $item->tokenEmpresa );
 
                         $array[] = $u;
                     }
@@ -127,6 +130,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
                     $u->setCpf( $item->cpf );
                     $u->setIsAdm( $item->isAdm );
                     $u->setToken( $item->token );
+                    $u->setTokenEmpresa( $item->tokenEmpresa );
 
                     $array[] = $u;
                 }
@@ -152,6 +156,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
                     $u->setCpf( $item->cpf );
                     $u->setIsAdm( $item->isAdm );
                     $u->setToken( $item->token );
+                    $u->setTokenEmpresa( $item->tokenEmpresa );
 
                     return $u;
                 }
@@ -175,6 +180,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
                     $u->setCpf( $item->cpf );
                     $u->setIsAdm( $item->isAdm );
                     $u->setToken( $item->token );
+                    $u->setTokenEmpresa( $item->tokenEmpresa );
 
                     return $u;
                 }
@@ -197,6 +203,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
                     $u->setCpf( $item->cpf );
                     $u->setIsAdm( $item->isAdm );
                     $u->setToken( $item->token );
+                    $u->setTokenEmpresa( $item->tokenEmpresa );
 
                     return $u;
                 }

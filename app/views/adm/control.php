@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../public/css/adm/control.css">
     <link rel="stylesheet" href="../../../public/css/general/main.css">
+    
+    
     <title>SISGER</title>
 </head>
 
@@ -22,11 +24,15 @@
         
         $auth = new Auth();
         $userInfo = $auth->checkToken();
+
+        if($userInfo == false){
+            header("Location: ../../services/logOutAction.php");
+            exit;
+        }
+
         $uDao = new UsuarioDaoMysql();
         $usersColabora = $uDao->findAll(0);
-        
-
-        
+              
     ?>
 
     <header class="head">
@@ -54,13 +60,17 @@
                 <h3>Menu</h3>
             </li>
 
-            <li>
-                <div class="menu-button">
-                    <img src="../../../public/img/icons/person.svg" alt="">
-                </div>
+            <a href="cadastroColabora.php">
+                <li>
+                    <div class="menu-button">
+                        <img src="../../../public/img/icons/person.svg" alt="">
+                    </div>
 
-                <h3>Conta</h3>
-            </li>
+                    <h3>Conta</h3>
+                </li>
+            </a>
+            
+
             <a href="../../services/logoutAction.php">
                 <li>
                     <div class="menu-button">
@@ -126,7 +136,7 @@
                 <label>
                     <h4>Responsável</h4>
                     <select name="name" class="input-area input-model">
-                        <?php foreach($usersColabora as $usuario): ?>
+                       <?php foreach($usersColabora as $usuario): ?>
                             <option value='<?= $usuario->getId() ?>'><?=$usuario->getName()?></option>
                         <?php endforeach;?>
                     </select>
@@ -210,11 +220,11 @@
 
     
 
-
-
-
-
     <script src="../../../public/js/adm/control.js"></script>
+
+
+
+
 </body>
 
 </html>
