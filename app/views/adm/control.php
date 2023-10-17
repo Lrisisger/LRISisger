@@ -31,7 +31,7 @@
         }
 
         $uDao = new UsuarioDaoMysql();
-        $usersColabora = $uDao->findAll(0);
+        $usersColabora = $uDao->findAll(0, $userInfo->getTokenEmpresa());
               
     ?>
 

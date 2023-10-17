@@ -72,16 +72,17 @@ class UsuarioDaoMysql implements UsuarioDAO {
 
     }
 
-    public function findAll( $handleSearch ) {
+    public function findAll( $handleSearch, $tokenEmpresa ) {
 
         $xml = $this->xmlFile;
         $array = [];
+
         if ( $handleSearch == 0 ) {
 
             if ( count( $xml->children() ) > 0 ) {
                 foreach ( $xml as $item ) {
 
-                    if ( $item->isAdm == '0' ) {
+                    if ( $item->isAdm == '0' && $item->tokenEmpresa == $tokenEmpresa) {
                         $u = new Usuarios();
                         $u->setId( $item->id );
                         $u->setName( $item->name );
@@ -101,7 +102,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
             if ( count( $xml->children() ) > 0 ) {
                 foreach ( $xml as $item ) {
 
-                    if ( $item->isAdm == 1 ) {
+                    if ( $item->isAdm == 1 && $item->tokenEmpresa == $tokenEmpresa) {
                         $u = new Usuarios();
                         $u->setId( $item->id );
                         $u->setName( $item->name );
@@ -122,17 +123,19 @@ class UsuarioDaoMysql implements UsuarioDAO {
 
             if ( count( $xml->children() ) > 0 ) {
                 foreach ( $xml as $item ) {
-                    $u = new Usuarios();
-                    $u->setId( $item->id );
-                    $u->setName( $item->name );
-                    $u->setEmail( $item->email );
-                    $u->setPass( $item->password );
-                    $u->setCpf( $item->cpf );
-                    $u->setIsAdm( $item->isAdm );
-                    $u->setToken( $item->token );
-                    $u->setTokenEmpresa( $item->tokenEmpresa );
+                    if($item->tokenEmpresa == $tokenEmpresa){
+                        $u = new Usuarios();
+                        $u->setId( $item->id );
+                        $u->setName( $item->name );
+                        $u->setEmail( $item->email );
+                        $u->setPass( $item->password );
+                        $u->setCpf( $item->cpf );
+                        $u->setIsAdm( $item->isAdm );
+                        $u->setToken( $item->token );
+                        $u->setTokenEmpresa( $item->tokenEmpresa );
 
-                    $array[] = $u;
+                        $array[] = $u;
+                    }
                 }
             }
 

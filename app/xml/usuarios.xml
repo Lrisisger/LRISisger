@@ -20,6 +20,26 @@
         <cpf>123</cpf>
         <isAdm>0</isAdm>
         <token>D9dKFf$ewhmxnKhHMY$dEfyXFsIKVKmmclOC$vJ7WaRkltRrih</token>
-        <tokenEmpresa>zMaE3WLAcHpun4c3z!eAKEKy3ZYjvNRAybB@GI1X@$qZKO@cI3</tokenEmpresa>
+        <tokenEmpresa>zMaE3WLAcHpun4c3z!eAKEKy3ZYjvNRAybB@GI1X@$qZKO@cI2</tokenEmpresa>
     </usuario>
-</root>
+    <usuario>
+        <id>3</id>
+        <name>Ailla Almeida Dos Santos</name>
+        <email>Aaylla5@gmail.com</email>
+        <password>$2y$10$rkjxkUbh1BMcGAuaC68Fm.3jI0YPfDqtfIXH5ahwSdtRQt2hyZuIm</password>
+        <cpf>123</cpf>
+        <isAdm>1</isAdm>
+        <token>4HHITvaYVl1rTeSAQZ1s1IX@S#amKHgGY7ljYjWhsdQU9fBHHl</token>
+        <tokenEmpresa>dkzWsFc9yBKzMRynGiDFnufcJMJVH3OTKsLACTT7!Wjl2gmOKK</tokenEmpresa>
+    </usuario>
+    <usuario>
+        <id>4</id>
+        <name>Nathalia Ferreira Cruz</name>
+        <email>Tata@gmail.com</email>
+        <password>$2y$10$Q9u52Es9geW/bv0hVgOlS.ihSkE1JphYv20EAnr8CN07PMhSSIX2q</password>
+        <cpf>123</cpf>
+        <isAdm>0</isAdm>
+        <token>ZkFediih6Sh6fe#jmrh37CrmcIObPu$Z6J6W1Jr!tuGJs0XVzq</token>
+        <tokenEmpresa>zMaE3WLAcHpun4c3z!eAKEKy3ZYjvNRAybB@GI1X@$qZKO@cI2</tokenEmpresa>
+    </usuario>
+<usuario><id>5</id><name>Isaias</name><email>Isaias@gmail.com</email><password>$2y$10$qZgxyGsk1dGjOCS.p5PU0uCOppPPTtoHcCa8/gNjob8/NS0L14obu</password><cpf>123</cpf><isAdm>0</isAdm><token>PMxoFCwXqukY#ffJXMe3cp0bvl2WcJzle@TOG6vgfPw#btrK8A</token><tokenEmpresa>dkzWsFc9yBKzMRynGiDFnufcJMJVH3OTKsLACTT7!Wjl2gmOKK</tokenEmpresa></usuario></root>

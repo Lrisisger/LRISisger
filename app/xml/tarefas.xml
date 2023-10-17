@@ -2,5 +2,15 @@
 <root>
 
 
-    
+    <tarefa>
+        <id>1</id>
+        <tituloTarefa>Programar</tituloTarefa>
+        <status>2</status>
+        <descricao>Fazer as querys do banco</descricao>
+        <dataInicial>2023-10-10</dataInicial>
+        <dataLimite>2023-10-26</dataLimite>
+        <idColabora>2</idColabora>
+        <idAdm>1</idAdm>
+        <mensagemAtraso />
+    </tarefa>
 </root>
