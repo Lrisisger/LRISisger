@@ -25,7 +25,7 @@
                 <img src="../../../public/img/login/logo.svg" class="logo-img">
             </div>
             <div class="title-text">
-                Fazer login como Administrador
+                Entrar
             </div>
             <div class="login-form">
                
@@ -49,9 +49,6 @@
                     ?>
                     <div class="esqueceusenha text-btn">
                         <a href="#">Esqueceu a senha?</a>
-                    </div>
-                    <div class="colab text-btn">
-                        <a href="login.html">Fazer login como Colaborador</a>
                     </div>
                     <div class="colab text-btn">
                         <a href="singUp.php">Cadastre-se</a>
