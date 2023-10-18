@@ -1,45 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../../public/css/adm/signUp.css">
+    <link rel="stylesheet" href="../../../public/css/general/main.css">
+    <title>LRISisger - Cadastro</title>
 </head>
+
 <body>
-    
+    <!-- Left Side -->
+    <div class="left loginUser flex">
+        <!--  Title  -->
+        <div class="title flex">
+            <div class="logoImage">
+                <a href="#"><img src="../../../public/img/svgs/logo.svg" class="logo"></a>
+            </div>
+            <div class="welcomeText subtitle">Seja bem vindo ao Sisger</div>
+        </div>
+        <!--  Title  -->
 
-        <form action="../../services/singUpAction.php" method="post">
-            <input type="hidden" name="adm" value="1">
+        <!-- Image Mid  -->
+        <div class="imageMiddle flex">
+            <img src="https://i.imgur.com/12gF2Gw.png" class="imageMid">
+        </div>
+        <!-- Image Mid -->
 
-            <label>
-                Digite seu nome:<br/>
-                <input type="text" name="name">
-            </label>
+        <div class="bottom flex">
+            <a href="../adm/login.php">
+                <button type="none" class="button signIn" type="">Entrar</button>
+            </a>
+        </div>
+    </div>
 
-            <br/><br/>
-
-            <label>
-                Digite o email:<br/>
-                <input type="text" name="email">
-            </label>
-
-            <br/><br/>
-
-            <label>
-                Digite seu CPF:<br/>
-                <input type="text" name="cpf">
-            </label>
-
-            <br/><br/>
-
-            <label>
-                Digite senha:<br/>
-                <input type="password" name="pass">
-            </label>
-            <br/><br/>
-            
-            <input type="submit">
-
+    <!-- Right Side -->
+    <div class="right cadUser flex">
+        <form class="formCad flex" action="" method="post">
+            <div class="titleText">Cadastro</div>
+            <div>
+                <div>
+                    <input name="nome" placeholder="Nome completo ou razão social">
+                </div>
+                <div>
+                    <input name="email" placeholder="E-mail">
+                </div>
+                <div>
+                    <input name="codEmp" placeholder="CPF ou CNPJ">
+                </div>
+                <div>
+                    <input name="password" type="password" placeholder="Senha">
+                </div>
+                <div>
+                    <input name="confirmPass" type="password" placeholder="Confirme a senha">
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="button sendForm">Cadastrar</button>
+            </div>
         </form>
+    </div>
+
+    <script src="../../../public/js/adm/signUp.js"></script>
 </body>
+
 </html>

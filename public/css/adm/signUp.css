@@ -15,6 +15,9 @@ body {
   background-color: #4d52d1;
   width: 50%;
   height: 100vh;
+}
+
+.flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,17 +27,6 @@ body {
 .right {
   width: 50%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.formCad {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 input {
