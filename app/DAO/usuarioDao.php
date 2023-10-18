@@ -9,12 +9,15 @@ class UsuarioDaoMysql implements UsuarioDAO {
     private $path;
     private $pathId;
     private $xmlIdFile;
+    private $pathTest;
 
     public function __construct() {
+        $this->pathTest = realpath( dirname( __FILE__ ) . '/../xml/' );
         $this->path = realpath( dirname( __FILE__ ) . '/../xml/usuarios.xml' );
         $this->pathId = realpath( dirname( __FILE__ ) . '/../xml/id.xml' );
         $this->xmlFile = simplexml_load_file( $this->path );
         $this->xmlIdFile = simplexml_load_file( $this->pathId );
+        
 
     }
 
@@ -26,7 +29,6 @@ class UsuarioDaoMysql implements UsuarioDAO {
             $xmlId = $this->xmlIdFile;
             $idAtual = $xmlId->idUser;
             $idAtual = $idAtual + 1;
-
         }
 
         $novoRegistro = $this->xmlFile->addChild( 'usuario' );
@@ -61,9 +63,38 @@ class UsuarioDaoMysql implements UsuarioDAO {
                 $this->xmlFile->asXML( $this->path );
 
             }
-
         }
+    }
 
+    public function addNovaEmpresa(Usuarios $u){
+        $dom = new DOMDocument('1.0', 'UTF-8');
+        $rootNode = $dom->createElement('root');
+
+        $tokenEmpresa = $dom->creatElement('tokenEmpresa');
+
+        $contadorId = $dom->creatElement('contadorId');
+        $idUsuario = $dom->creatElement('idUsuario');
+        $idTarefa = $dom->creatElement('idTarefa');
+        $contadorId->appendChild($idUsuario);
+        $contadorId->appendChild($idTarefa);
+
+
+        $usuarios = $dom->creatElement('usuarios');
+        $adm = $dom->creatElement('adm');
+        $mod = $dom->creatElement('mod');
+        $colabora = $dom->creatElement('colabora');     
+        $usuarios->appendChild($adm);
+        $usuarios->appendChild($mod);
+        $usuarios->appendChild($colabora);
+
+        
+
+        $rootNode->appendChild($tokenEmpresa);
+        $rootNode->appendChild($contadorId);
+        $rootNode->appendChild($usuarios);
+
+        $dom->appendChild($rootNode);
+        //$dom->save('emp'.)
     }
 
     public function add( Usuarios $u ) {

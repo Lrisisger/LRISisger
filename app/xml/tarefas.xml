@@ -4,11 +4,33 @@
 
     <tarefa>
         <id>1</id>
-        <tituloTarefa>Programar</tituloTarefa>
-        <status>2</status>
-        <descricao>Fazer as querys do banco</descricao>
+        <tituloTarefa>Limpar A Casa</tituloTarefa>
+        <status>1</status>
+        <descricao>Limpe primeiro o quarto depois a cozinha</descricao>
+        <dataInicial>2023-10-17</dataInicial>
+        <dataLimite>2023-10-20</dataLimite>
+        <idColabora>2</idColabora>
+        <idAdm>1</idAdm>
+        <mensagemAtraso />
+    </tarefa>
+    <tarefa>
+        <id>2</id>
+        <tituloTarefa>Limpar A Casa</tituloTarefa>
+        <status>5</status>
+        <descricao>Limpe primeiro o quarto depois a cozinha</descricao>
+        <dataInicial>2023-10-17</dataInicial>
+        <dataLimite>2023-10-20</dataLimite>
+        <idColabora>2</idColabora>
+        <idAdm>1</idAdm>
+        <mensagemAtraso />
+    </tarefa>
+    <tarefa>
+        <id>3</id>
+        <tituloTarefa>Fazer Comida</tituloTarefa>
+        <status>4</status>
+        <descricao>Crie o usuario DAO</descricao>
         <dataInicial>2023-10-10</dataInicial>
-        <dataLimite>2023-10-26</dataLimite>
+        <dataLimite>2023-10-24</dataLimite>
         <idColabora>2</idColabora>
         <idAdm>1</idAdm>
         <mensagemAtraso />
