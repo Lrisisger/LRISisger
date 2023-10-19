@@ -38,6 +38,14 @@ input {
   margin: 8px;
 }
 
+.aviso{
+  color: red;
+  margin-left: 15px;
+  font-size: 14px;
+  font: 800;
+
+}
+
 .subtitle {
   font-weight: bold;
   font-size: 24px;
@@ -47,7 +55,7 @@ input {
 .titleText {
   font-weight: bold;
   font-size: 28px;
-  margin-bottom: 90px;
+  margin-bottom: 30px;
 }
 
 .button {
@@ -62,14 +70,14 @@ input {
 }
 
 .logo {
-  width: 50%;
-  height: 50%;
+  height: 150px;
 }
 
 
 .signIn {
   background-color: #9999ff;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .signIn:hover {
@@ -79,6 +87,8 @@ input {
 .sendForm {
   background-color: #626aba;
   transition: 0.3s;
+  cursor: pointer;
+  margin-top: 25px;
 }
 
 .sendForm:hover {

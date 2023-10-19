@@ -1,16 +1,16 @@
 <?php
-session_start();
 require '../models/usuarios.php';
 require '../dao/usuarioDao.php';
 require '../../config/config.php';
 
 $uDao = new UsuarioDaoMysql();
 
-$name = ucwords( strtolower( filter_input( INPUT_POST, 'name' ) ) );
+$name = ucwords( strtolower( filter_input( INPUT_POST, 'nome' ) ) );
 $email = strtolower( filter_input( INPUT_POST, 'email', FILTER_VALIDATE_EMAIL ) );
-$cpf = ucwords( strtolower( filter_input( INPUT_POST, 'cpf' ) ) );
+$cpf = ucwords( strtolower( filter_input( INPUT_POST, 'cpfCnpj' ) ) );
 $pass = filter_input( INPUT_POST, 'pass' );
-$isAdm = filter_input( INPUT_POST, 'adm' );
+$confirmPass = filter_input(INPUT_POST, 'confirmPass');
+$isAdm = filter_input( INPUT_POST, 'isAdm' );
 
 function token( $tamanho = 50 ) {
     $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$';
@@ -22,7 +22,19 @@ function token( $tamanho = 50 ) {
     return $randomString;
 }
 
-if ( $name && $email && $cpf && $pass && ($isAdm == 1 || $isAdm == 0) ) {
+if($pass != $confirmPass){
+    if($isAdm == 1){
+        $_SESSION['aviso'] = 'Senhas diferentes';
+        header('Location: ../views/adm/singup.php');
+        exit;
+    }else{
+        $_SESSION['aviso'] = 'Senhas diferentes';
+        header('Location: ../views/adm/cadastroColabora.php');
+        exit;
+    }
+}
+
+if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm == 0) ) {
     $token = '';
     $tokenNovaEmpresa = '';
     do {
@@ -54,7 +66,7 @@ if ( $name && $email && $cpf && $pass && ($isAdm == 1 || $isAdm == 0) ) {
 
 } else {
   if($isAdm == 1){
-    header( 'Location: ../views/adm/singUp.php' );
+    header( 'Location: ../views/adm/singup.php' );
     exit;
   }else{
     header( 'Location: ../views/adm/cadastroColabora.php' );

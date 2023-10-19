@@ -1,38 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
 
-
-    <tarefa>
-        <id>1</id>
-        <tituloTarefa>Limpar A Casa</tituloTarefa>
-        <status>1</status>
-        <descricao>Limpe primeiro o quarto depois a cozinha</descricao>
-        <dataInicial>2023-10-17</dataInicial>
-        <dataLimite>2023-10-20</dataLimite>
-        <idColabora>2</idColabora>
-        <idAdm>1</idAdm>
-        <mensagemAtraso />
-    </tarefa>
-    <tarefa>
-        <id>2</id>
-        <tituloTarefa>Limpar A Casa</tituloTarefa>
-        <status>5</status>
-        <descricao>Limpe primeiro o quarto depois a cozinha</descricao>
-        <dataInicial>2023-10-17</dataInicial>
-        <dataLimite>2023-10-20</dataLimite>
-        <idColabora>2</idColabora>
-        <idAdm>1</idAdm>
-        <mensagemAtraso />
-    </tarefa>
-    <tarefa>
-        <id>3</id>
-        <tituloTarefa>Fazer Comida</tituloTarefa>
-        <status>4</status>
-        <descricao>Crie o usuario DAO</descricao>
-        <dataInicial>2023-10-10</dataInicial>
-        <dataLimite>2023-10-24</dataLimite>
-        <idColabora>2</idColabora>
-        <idAdm>1</idAdm>
-        <mensagemAtraso />
-    </tarefa>
-</root>
+<tarefa><id>1</id><tituloTarefa>Limpar A Casa</tituloTarefa><status>2</status><descricao>Limpe primeiro o quarto depois a cozinha</descricao><dataInicial>2023-10-18</dataInicial><dataLimite>2023-10-31</dataLimite><idColabora>2</idColabora><idAdm>1</idAdm><mensagemAtraso/><tokenEmpresa>yeb#i3ZFOVJlDn#E4Y0F57rZ1Nv79dHep8YwiDD!biM$zDH1Vx</tokenEmpresa></tarefa><tarefa><id>2</id><tituloTarefa>Fazer Comida</tituloTarefa><status>2</status><descricao>Crie o usuario DAO</descricao><dataInicial>2023-10-17</dataInicial><dataLimite>2023-11-01</dataLimite><idColabora>4</idColabora><idAdm>3</idAdm><mensagemAtraso/><tokenEmpresa>Xc6yulmVl5DmwjI3Ryik!O2aFKWH3qw2077Lj5rj1ywM62mR74</tokenEmpresa></tarefa></root>

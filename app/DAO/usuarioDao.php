@@ -66,37 +66,6 @@ class UsuarioDaoMysql implements UsuarioDAO {
         }
     }
 
-    public function addNovaEmpresa(Usuarios $u){
-        $dom = new DOMDocument('1.0', 'UTF-8');
-        $rootNode = $dom->createElement('root');
-
-        $tokenEmpresa = $dom->creatElement('tokenEmpresa');
-
-        $contadorId = $dom->creatElement('contadorId');
-        $idUsuario = $dom->creatElement('idUsuario');
-        $idTarefa = $dom->creatElement('idTarefa');
-        $contadorId->appendChild($idUsuario);
-        $contadorId->appendChild($idTarefa);
-
-
-        $usuarios = $dom->creatElement('usuarios');
-        $adm = $dom->creatElement('adm');
-        $mod = $dom->creatElement('mod');
-        $colabora = $dom->creatElement('colabora');     
-        $usuarios->appendChild($adm);
-        $usuarios->appendChild($mod);
-        $usuarios->appendChild($colabora);
-
-        
-
-        $rootNode->appendChild($tokenEmpresa);
-        $rootNode->appendChild($contadorId);
-        $rootNode->appendChild($usuarios);
-
-        $dom->appendChild($rootNode);
-        //$dom->save('emp'.)
-    }
-
     public function add( Usuarios $u ) {
 
         $this->handleAdd( $u, true );
