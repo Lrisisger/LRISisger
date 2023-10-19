@@ -1,10 +1,10 @@
 <?php
-
+session_start();
 require '../models/usuarios.php';
 require '../dao/usuarioDao.php';
 require '../../config/config.php';
 
-$uDao = new UsuarioDaoMysql( $pdo );
+$uDao = new UsuarioDaoMysql();
 
 $name = ucwords( strtolower( filter_input( INPUT_POST, 'name' ) ) );
 $email = strtolower( filter_input( INPUT_POST, 'email', FILTER_VALIDATE_EMAIL ) );
@@ -22,16 +22,22 @@ function token( $tamanho = 50 ) {
     return $randomString;
 }
 
-if ( $name && $email && $cpf && $pass && $isAdm ) {
+if ( $name && $email && $cpf && $pass && ($isAdm == 1 || $isAdm == 0) ) {
     $token = '';
-
+    $tokenNovaEmpresa = '';
     do {
         $token = token();
-
-        $verify = $uDao->findByToken( $token );
+        $tokenNovaEmpresa = token();
+        $verify = $uDao->findByToken( $token ) && $uDao->findByToken( $tokenNovaEmpresa );
 
     }
-    while( $verify != False );
+    while( $verify );
+
+    if($isAdm == 1){
+        $tokenEmpresa = $tokenNovaEmpresa;  
+    }else{        
+        $tokenEmpresa = $uDao->findByToken($_SESSION['token'])->getTokenEmpresa();        
+    }
 
     $hash = password_hash( $pass, PASSWORD_DEFAULT );
 
@@ -42,13 +48,24 @@ if ( $name && $email && $cpf && $pass && $isAdm ) {
     $u->setPass( $hash );
     $u->setIsAdm( $isAdm );
     $u->setToken( $token );
+    $u->setTokenEmpresa($tokenEmpresa);
 
     $uDao->add( $u );
 
 } else {
+  if($isAdm == 1){
     header( 'Location: ../views/adm/singUp.php' );
     exit;
+  }else{
+    header( 'Location: ../views/adm/cadastroColabora.php' );
+    exit;
+  }
 }
 
-header( 'Location: ../views/adm/login.php' );
-exit;
+if($isAdm == 1){
+    header( 'Location: ../views/adm/login.php' );
+    exit;
+}else{
+    header( 'Location: ../views/adm/control.php' );
+    exit;
+}

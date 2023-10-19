@@ -9,12 +9,15 @@ class UsuarioDaoMysql implements UsuarioDAO {
     private $path;
     private $pathId;
     private $xmlIdFile;
+    private $pathTest;
 
     public function __construct() {
+        $this->pathTest = realpath( dirname( __FILE__ ) . '/../xml/' );
         $this->path = realpath( dirname( __FILE__ ) . '/../xml/usuarios.xml' );
         $this->pathId = realpath( dirname( __FILE__ ) . '/../xml/id.xml' );
         $this->xmlFile = simplexml_load_file( $this->path );
         $this->xmlIdFile = simplexml_load_file( $this->pathId );
+        
 
     }
 
@@ -26,7 +29,6 @@ class UsuarioDaoMysql implements UsuarioDAO {
             $xmlId = $this->xmlIdFile;
             $idAtual = $xmlId->idUser;
             $idAtual = $idAtual + 1;
-
         }
 
         $novoRegistro = $this->xmlFile->addChild( 'usuario' );
@@ -36,7 +38,8 @@ class UsuarioDaoMysql implements UsuarioDAO {
         $novoRegistro->addChild( 'password', $u->getPass() );
         $novoRegistro->addChild( 'cpf', $u->getCpf() );
         $novoRegistro->addChild( 'isAdm', $u->getIsAdm() );
-        $novoRegistro->addChild( 'token', $u->getToken() );
+        $novoRegistro->addChild( 'token', $u->getToken() );        
+        $novoRegistro->addChild( 'tokenEmpresa', $u->getTokenEmpresa() );
 
         $this->xmlFile->asXML( $this->path );
 
@@ -60,9 +63,38 @@ class UsuarioDaoMysql implements UsuarioDAO {
                 $this->xmlFile->asXML( $this->path );
 
             }
-
         }
+    }
 
+    public function addNovaEmpresa(Usuarios $u){
+        $dom = new DOMDocument('1.0', 'UTF-8');
+        $rootNode = $dom->createElement('root');
+
+        $tokenEmpresa = $dom->creatElement('tokenEmpresa');
+
+        $contadorId = $dom->creatElement('contadorId');
+        $idUsuario = $dom->creatElement('idUsuario');
+        $idTarefa = $dom->creatElement('idTarefa');
+        $contadorId->appendChild($idUsuario);
+        $contadorId->appendChild($idTarefa);
+
+
+        $usuarios = $dom->creatElement('usuarios');
+        $adm = $dom->creatElement('adm');
+        $mod = $dom->creatElement('mod');
+        $colabora = $dom->creatElement('colabora');     
+        $usuarios->appendChild($adm);
+        $usuarios->appendChild($mod);
+        $usuarios->appendChild($colabora);
+
+        
+
+        $rootNode->appendChild($tokenEmpresa);
+        $rootNode->appendChild($contadorId);
+        $rootNode->appendChild($usuarios);
+
+        $dom->appendChild($rootNode);
+        //$dom->save('emp'.)
     }
 
     public function add( Usuarios $u ) {
@@ -71,16 +103,17 @@ class UsuarioDaoMysql implements UsuarioDAO {
 
     }
 
-    public function findAll( $handleSearch ) {
+    public function findAll( $handleSearch, $tokenEmpresa ) {
 
         $xml = $this->xmlFile;
         $array = [];
+
         if ( $handleSearch == 0 ) {
 
             if ( count( $xml->children() ) > 0 ) {
                 foreach ( $xml as $item ) {
 
-                    if ( $item->isAdm == '0' ) {
+                    if ( $item->isAdm == '0' && $item->tokenEmpresa == $tokenEmpresa) {
                         $u = new Usuarios();
                         $u->setId( $item->id );
                         $u->setName( $item->name );
@@ -89,6 +122,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
                         $u->setCpf( $item->cpf );
                         $u->setIsAdm( $item->isAdm );
                         $u->setToken( $item->token );
+                        $u->setTokenEmpresa( $item->tokenEmpresa );
 
                         $array[] = $u;
                     }
@@ -99,7 +133,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
             if ( count( $xml->children() ) > 0 ) {
                 foreach ( $xml as $item ) {
 
-                    if ( $item->isAdm == 1 ) {
+                    if ( $item->isAdm == 1 && $item->tokenEmpresa == $tokenEmpresa) {
                         $u = new Usuarios();
                         $u->setId( $item->id );
                         $u->setName( $item->name );
@@ -108,6 +142,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
                         $u->setCpf( $item->cpf );
                         $u->setIsAdm( $item->isAdm );
                         $u->setToken( $item->token );
+                        $u->setTokenEmpresa( $item->tokenEmpresa );
 
                         $array[] = $u;
                     }
@@ -119,16 +154,19 @@ class UsuarioDaoMysql implements UsuarioDAO {
 
             if ( count( $xml->children() ) > 0 ) {
                 foreach ( $xml as $item ) {
-                    $u = new Usuarios();
-                    $u->setId( $item->id );
-                    $u->setName( $item->name );
-                    $u->setEmail( $item->email );
-                    $u->setPass( $item->password );
-                    $u->setCpf( $item->cpf );
-                    $u->setIsAdm( $item->isAdm );
-                    $u->setToken( $item->token );
+                    if($item->tokenEmpresa == $tokenEmpresa){
+                        $u = new Usuarios();
+                        $u->setId( $item->id );
+                        $u->setName( $item->name );
+                        $u->setEmail( $item->email );
+                        $u->setPass( $item->password );
+                        $u->setCpf( $item->cpf );
+                        $u->setIsAdm( $item->isAdm );
+                        $u->setToken( $item->token );
+                        $u->setTokenEmpresa( $item->tokenEmpresa );
 
-                    $array[] = $u;
+                        $array[] = $u;
+                    }
                 }
             }
 
@@ -152,6 +190,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
                     $u->setCpf( $item->cpf );
                     $u->setIsAdm( $item->isAdm );
                     $u->setToken( $item->token );
+                    $u->setTokenEmpresa( $item->tokenEmpresa );
 
                     return $u;
                 }
@@ -175,6 +214,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
                     $u->setCpf( $item->cpf );
                     $u->setIsAdm( $item->isAdm );
                     $u->setToken( $item->token );
+                    $u->setTokenEmpresa( $item->tokenEmpresa );
 
                     return $u;
                 }
@@ -197,6 +237,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
                     $u->setCpf( $item->cpf );
                     $u->setIsAdm( $item->isAdm );
                     $u->setToken( $item->token );
+                    $u->setTokenEmpresa( $item->tokenEmpresa );
 
                     return $u;
                 }
