@@ -224,7 +224,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
         return false;
     }
 
-    //FUNÇAO QUE EDITA O USUARIO
+    //FUNÇÃO QUE EDITA O USUARIO
     //PRIMIRO ELE CHAMA A FUNÇÃO DE DELETAR O USUARIO 
     //DEPOIS ELE CHAMA A FUNÇÃO DE ADICIONAR O USUARIO COM OS NOVOS DADOS
     public function update( Usuarios $u ) {
