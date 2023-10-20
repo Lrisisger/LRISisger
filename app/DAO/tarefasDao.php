@@ -65,11 +65,16 @@ class TarefasDaoXml implements TarefasDAO {
 
     }
 
+    //FUNÇÃO QUE CHAMA A FUNÇÃO DE ADICIONA A TAREFA
     public function add( Tarefas $t ) {
         $this->handleAdd( $t, true );
     }
 
+   
+    //FUNÇÃO QUE BUSCA TODAS AS TAREFAS
+    //TOKENEMPRESA IDENTIFICA A EMPRESA     
     public function findAll($tokenEmpresa) {
+
 
         $xml = $this->xmlFile;
         $array = [];
@@ -98,7 +103,8 @@ class TarefasDaoXml implements TarefasDAO {
         return $array;
 
     }
-
+    
+    //FUNÇÃO QUE BUSCA A TAREFA POR ID
     public function findById($id){
 
         $xml = $this->xmlFile;
@@ -127,8 +133,15 @@ class TarefasDaoXml implements TarefasDAO {
         return false;
     }
 
+
+    
+
+
+
+  //FUNÇÃO QUE BUSCA A TAREFA POR DATA
     public function findByDate($date, $tokenEmpresa) {
         $array = [];
+
         $xml = $this->xmlFile;
         if (count($xml->children()) > 0){
             foreach ($xml as $item) {
@@ -156,11 +169,15 @@ class TarefasDaoXml implements TarefasDAO {
         return false;
     }
 
+    //FUNÇÃO QUE EDITA A TAREFA
+    //PRIMIRO ELE CHAMA A FUNÇÃO DE DELETAR A TAREFA
+    //DEPOIS ELE CHAMA A FUNÇÃO DE ADICIONAR A TAREFA COM OS NOVOS DADOS
     public function update(Tarefas $t) {
         $this->handleDel($t->getId());
         $this->handleAdd($t, false);
     }
 
+    //CHAMA A FUNÇÃO DE DELETAR O USUARIO 
     public function delete($id) {
         $this->handleDel($id);
     }

@@ -1,7 +1,7 @@
 <?php
-
+    //MODELO DAS TAREFAS
     class Tarefas {
-        private $id;        
+        private $id;     
         private $tituloTarefa; //$t->setTituloTarefa($tituloTarefa);
         private $status; // $t->setStatus($status);
         private $descricao; //$t->setDescricao($descricao);
@@ -11,11 +11,14 @@
         private $idAdm; //$t->setIdAdm($idAdm);
         private $tokenEmpresa; //$t->setTokenEmpresa($tokenEmpresa);
         private $mensagemAtraso;  //
-
+       
+      
+      //FUNÇÃO QUE PEGA O VALOR DO ID
         public function getId(){
             return $this->id;
         }
-
+        
+        //FUNÇÃO QUE ALTERA O VALOR DO ID
         public function setId($n){
             $this->id = trim($n);
         }
@@ -99,6 +102,7 @@
         
     }
 
+    //MODELO DO DAO DAS TAREFAS 
     interface TarefasDAO {
         public function add(Tarefas $t);
         public function findAll($tokenEmpresa);

@@ -1,5 +1,6 @@
 <?php
 
+//FUNÇÃO QUE ALTERA A COR DA TAREFA PELO STATUS DA TAREFA
 function alterarCorTarefa($status){
     if($status == 1){
         return 'task-finalizada';
@@ -14,6 +15,7 @@ function alterarCorTarefa($status){
     }
 }
 
+//FUNÇÃO QUE ALTERA A COR DO CONTAINER DA IMAGEM PELO STATUS DA TAREFA 
 function alterarCorP($status){
     if($status == 1){
         return 'containerImg-finalizada';
@@ -28,6 +30,7 @@ function alterarCorP($status){
     }
 }
 
+//FUNÇÃO QUE ALTERA A IMAGEM DE ACORDO COM O STATUS DA TAREFA
 function alterarImgTarefa($status){
     if($status == 1){
         return '../../../public/img/icons/verified.svg';

@@ -66,12 +66,17 @@ class UsuarioDaoMysql implements UsuarioDAO {
         }
     }
 
+
+    // FUNÇÃO QUE CHAMA A ADIÇÃO DO USUARIO
     public function add( Usuarios $u ) {
 
         $this->handleAdd( $u, true );
 
     }
 
+    // FUNÇÃO QUE FAZ A BUSCA DOS USUARIOS
+    // HANDLESEARCH É A VARIAVEL QUE INDENTIFICA SE O USUARIO É ADM OU NÃO 
+    // TOKENEMPRESA INDETIFICA A EMPRESA DO USUARIO
     public function findAll( $handleSearch, $tokenEmpresa ) {
 
         $xml = $this->xmlFile;
@@ -144,7 +149,8 @@ class UsuarioDaoMysql implements UsuarioDAO {
         return $array;
 
     }
-
+    
+    //FUNÇÃO QUE BUSCA O USUARIO POR ID
     public function findById( $id ) {
 
         $xml = $this->xmlFile;
@@ -168,7 +174,8 @@ class UsuarioDaoMysql implements UsuarioDAO {
 
         return false;
     }
-
+    
+    //FUNÇÃO QUE BUSCA POR TOKEN DO USUARIO 
     public function findByToken( $token ) {
 
         $xml = $this->xmlFile;
@@ -192,6 +199,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
         return false;
     }
 
+    //FUNÇÃO QUE BUSCA PELO EMAIL DO USUARIO
     public function findByEmail( $email ) {
 
         $xml = $this->xmlFile;
@@ -216,11 +224,15 @@ class UsuarioDaoMysql implements UsuarioDAO {
         return false;
     }
 
+    //FUNÇAO QUE EDITA O USUARIO
+    //PRIMIRO ELE CHAMA A FUNÇÃO DE DELETAR O USUARIO 
+    //DEPOIS ELE CHAMA A FUNÇÃO DE ADICIONAR O USUARIO COM OS NOVOS DADOS
     public function update( Usuarios $u ) {
         $this->handleDel( $u->getId() );
         $this->handleAdd( $u, false );
     }
-
+    
+    //CHAMA A FUNÇÃO DE DELETAR O USUARIO 
     public function delete( $id ) {
         $this->handleDel( $id );
     }
