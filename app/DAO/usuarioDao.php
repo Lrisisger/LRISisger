@@ -66,8 +66,8 @@ class UsuarioDaoMysql implements UsuarioDAO {
         }
     }
 
-    // FUNÇÃO QUE CHAMA A ADIÇÃO DO USUARIO
 
+    // FUNÇÃO QUE CHAMA A ADIÇÃO DO USUARIO
     public function add( Usuarios $u ) {
 
         $this->handleAdd( $u, true );

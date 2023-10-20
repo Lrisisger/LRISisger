@@ -21,7 +21,8 @@
         require realpath( dirname( __FILE__ ) . '/../../models/Auth.php');
         require realpath( dirname( __FILE__ ) . '/../../dao/usuarioDao.php');
         require realpath( dirname( __FILE__ ) . '/../../scripts-php/adm/control.php');
-        
+        require realpath( dirname( __FILE__ ) . '/../../dao/tarefasDao.php');
+
         $auth = new Auth();
         $userInfo = $auth->checkToken();
 
@@ -29,9 +30,19 @@
             header("Location: ../../services/logOutAction.php");
             exit;
         }
-
+        
         $uDao = new UsuarioDaoMysql();
         $usersColabora = $uDao->findAll(0, $userInfo->getTokenEmpresa());
+
+        
+        $tDao = new TarefasDaoXml();
+        $tarefas = $tDao->findAll($userInfo->getTokenEmpresa());
+
+        function ordenarStatus($statusOne, $statusTwo){
+            return  $statusTwo->getStatus() - $statusOne->getStatus();
+        }
+        
+        usort($tarefas, 'ordenarStatus');
               
     ?>
 
@@ -131,7 +142,8 @@
             </div>
 
             <form action="../../services/newTaskAction.php" method="post">
-                <input type="hidden" value='<?=$userInfo->getId()?>' name='idAdm'>
+                <input type="hidden" value='<?=$userInfo->getId()?>' name='idAdm'>                
+                <input type="hidden" value='<?=$userInfo->getTokenEmpresa()?>' name='tokenEmpresa'>
 
                 <label>
                     <h4>Responsável</h4>

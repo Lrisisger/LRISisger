@@ -1,8 +1,4 @@
 <?php
-require realpath( dirname( __FILE__ ) . '/../../dao/tarefasDao.php');
-
-$tDao = new TarefasDaoXml();
-$tarefas = $tDao->findAll();
 
 //FUNÇÃO QUE ALTERA A COR DA TAREFA PELO STATUS DA TAREFA
 function alterarCorTarefa($status){
@@ -49,8 +45,3 @@ function alterarImgTarefa($status){
     }
 }
 
-function ordenarStatus($statusOne, $statusTwo){
-    return  $statusTwo->getStatus() - $statusOne->getStatus();
-}
-
-usort($tarefas, 'ordenarStatus');
