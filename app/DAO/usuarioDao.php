@@ -3,7 +3,7 @@
 require_once( realpath( dirname( __FILE__ ) . '/../../config/config.php' ) );
 require_once ( realpath( dirname( __FILE__ ) . '/../models/Usuarios.php' ) );
 
-class UsuarioDaoMysql implements UsuarioDAO {
+class UsuarioDaoXml implements UsuarioDAO {
 
     private $xmlFile;
     private $path;
