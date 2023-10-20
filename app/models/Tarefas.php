@@ -1,5 +1,5 @@
 <?php
-
+    //MODELO DAS TAREFAS
     class Tarefas {
         private $id;        
         private $tituloTarefa;
@@ -12,11 +12,12 @@
         private $mensagemAtraso;
 
 
-
+        //FUNÇÃO QUE PEGA O VALOR DO ID
         public function getId(){
             return $this->id;
         }
-
+        
+        //FUNÇÃO QUE ALTERA O VALOR DO ID
         public function setId($n){
             $this->id = trim($n);
         }
@@ -92,6 +93,7 @@
         
     }
 
+    //MODELO DO DAO DAS TAREFAS 
     interface TarefasDAO {
         public function add(Tarefas $t);
         public function findAll();

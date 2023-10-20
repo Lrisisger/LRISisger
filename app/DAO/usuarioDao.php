@@ -66,36 +66,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
         }
     }
 
-    public function addNovaEmpresa(Usuarios $u){
-        $dom = new DOMDocument('1.0', 'UTF-8');
-        $rootNode = $dom->createElement('root');
-
-        $tokenEmpresa = $dom->creatElement('tokenEmpresa');
-
-        $contadorId = $dom->creatElement('contadorId');
-        $idUsuario = $dom->creatElement('idUsuario');
-        $idTarefa = $dom->creatElement('idTarefa');
-        $contadorId->appendChild($idUsuario);
-        $contadorId->appendChild($idTarefa);
-
-
-        $usuarios = $dom->creatElement('usuarios');
-        $adm = $dom->creatElement('adm');
-        $mod = $dom->creatElement('mod');
-        $colabora = $dom->creatElement('colabora');     
-        $usuarios->appendChild($adm);
-        $usuarios->appendChild($mod);
-        $usuarios->appendChild($colabora);
-
-        
-
-        $rootNode->appendChild($tokenEmpresa);
-        $rootNode->appendChild($contadorId);
-        $rootNode->appendChild($usuarios);
-
-        $dom->appendChild($rootNode);
-        //$dom->save('emp'.)
-    }
+    // FUNÇÃO QUE CHAMA A ADIÇÃO DO USUARIO
 
     public function add( Usuarios $u ) {
 
@@ -103,6 +74,9 @@ class UsuarioDaoMysql implements UsuarioDAO {
 
     }
 
+    // FUNÇÃO QUE FAZ A BUSCA DOS USUARIOS
+    // HANDLESEARCH É A VARIAVEL QUE INDENTIFICA SE O USUARIO É ADM OU NÃO 
+    // TOKENEMPRESA INDETIFICA A EMPRESA DO USUARIO
     public function findAll( $handleSearch, $tokenEmpresa ) {
 
         $xml = $this->xmlFile;
@@ -175,7 +149,8 @@ class UsuarioDaoMysql implements UsuarioDAO {
         return $array;
 
     }
-
+    
+    //FUNÇÃO QUE BUSCA O USUARIO POR ID
     public function findById( $id ) {
 
         $xml = $this->xmlFile;
@@ -199,7 +174,8 @@ class UsuarioDaoMysql implements UsuarioDAO {
 
         return false;
     }
-
+    
+    //FUNÇÃO QUE BUSCA POR TOKEN DO USUARIO 
     public function findByToken( $token ) {
 
         $xml = $this->xmlFile;
@@ -223,6 +199,7 @@ class UsuarioDaoMysql implements UsuarioDAO {
         return false;
     }
 
+    //FUNÇÃO QUE BUSCA PELO EMAIL DO USUARIO
     public function findByEmail( $email ) {
 
         $xml = $this->xmlFile;
@@ -247,11 +224,15 @@ class UsuarioDaoMysql implements UsuarioDAO {
         return false;
     }
 
+    //FUNÇAO QUE EDITA O USUARIO
+    //PRIMIRO ELE CHAMA A FUNÇÃO DE DELETAR O USUARIO 
+    //DEPOIS ELE CHAMA A FUNÇÃO DE ADICIONAR O USUARIO COM OS NOVOS DADOS
     public function update( Usuarios $u ) {
         $this->handleDel( $u->getId() );
         $this->handleAdd( $u, false );
     }
-
+    
+    //CHAMA A FUNÇÃO DE DELETAR O USUARIO 
     public function delete( $id ) {
         $this->handleDel( $id );
     }
