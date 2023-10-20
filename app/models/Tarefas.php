@@ -1,18 +1,19 @@
 <?php
     //MODELO DAS TAREFAS
     class Tarefas {
-        private $id;        
-        private $tituloTarefa;
-        private $status;
-        private $descricao;
-        private $dataInicial;
-        private $dataLimite;
-        private $idColabora;
-        private $idAdm;
-        private $mensagemAtraso;
-
-
-        //FUNÇÃO QUE PEGA O VALOR DO ID
+        private $id;     
+        private $tituloTarefa; //$t->setTituloTarefa($tituloTarefa);
+        private $status; // $t->setStatus($status);
+        private $descricao; //$t->setDescricao($descricao);
+        private $dataInicial; //$t->setDataInicial($dataInicial);
+        private $dataLimite; //$t->setDataLimite($dataLimite);
+        private $idColabora; //$t->setIdColabora($idColabora); 
+        private $idAdm; //$t->setIdAdm($idAdm);
+        private $tokenEmpresa; //$t->setTokenEmpresa($tokenEmpresa);
+        private $mensagemAtraso;  //
+       
+      
+      //FUNÇÃO QUE PEGA O VALOR DO ID
         public function getId(){
             return $this->id;
         }
@@ -78,6 +79,14 @@
             $this->idAdm = $n;
         }
 
+        public function getTokenEmpresa(){
+            return $this->tokenEmpresa;
+        }
+
+        public function setTokenEmpresa($n){
+            $this->tokenEmpresa = $n;
+        }
+
         public function getMensagemAtraso(){
             return $this->mensagemAtraso;
         }
@@ -96,9 +105,9 @@
     //MODELO DO DAO DAS TAREFAS 
     interface TarefasDAO {
         public function add(Tarefas $t);
-        public function findAll();
+        public function findAll($tokenEmpresa);
         public function findById($id);
-        public function findByDate($date);
+        public function findByDate($date, $tokenEmpresa);
         public function update(Tarefas $t);
         public function delete($id);
     }

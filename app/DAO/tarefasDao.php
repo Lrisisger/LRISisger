@@ -36,6 +36,7 @@ class TarefasDaoXml implements TarefasDAO {
         $novoRegistro->addChild('idColabora', $t->getIdColabora());
         $novoRegistro->addChild('idAdm', $t->getIdAdm());
         $novoRegistro->addChild('mensagemAtraso', $t->getMensagemAtraso());
+        $novoRegistro->addChild('tokenEmpresa', $t->getTokenEmpresa());
 
         $this->xmlFile->asXML($this->path);
 
@@ -69,28 +70,32 @@ class TarefasDaoXml implements TarefasDAO {
         $this->handleAdd( $t, true );
     }
 
+   
     //FUNÇÃO QUE BUSCA TODAS AS TAREFAS
-    //TOKENEMPRESA IDENTIFICA A EMPRESA 
-    public function findAll() {
+    //TOKENEMPRESA IDENTIFICA A EMPRESA     
+    public function findAll($tokenEmpresa) {
+
 
         $xml = $this->xmlFile;
         $array = [];
 
         if(count($xml->children()) > 0) {
             foreach($xml as $item){
+                if($item->tokenEmpresa == $tokenEmpresa){
+                    $t = new Tarefas();
+                    $t->setId($item->id);
+                    $t->setTituloTarefa($item->tituloTarefa);
+                    $t->setStatus($item->status);
+                    $t->setDescricao($item->descricao);
+                    $t->setDataInicial($item->dataIncial);
+                    $t->setDataLimite($item->dataLimite);
+                    $t->setIdColabora($item->idColabora);
+                    $t->setIdAdm($item->idAdm);
+                    $t->setMensagemAtraso($item->mensagemAtraso);
+                    $t->setTokenEmpresa($item->tokenEmpresa);
 
-                $t = new Tarefas();
-                $t->setId($item->id);
-                $t->setTituloTarefa($item->tituloTarefa);
-                $t->setStatus($item->status);
-                $t->setDescricao($item->descricao);
-                $t->setDataInicial($item->dataIncial);
-                $t->setDataLimite($item->dataLimite);
-                $t->setIdColabora($item->idColabora);
-                $t->setIdAdm($item->idAdm);
-                $t->setMensagemAtraso($item->mensagemAtraso);
-
-                $array[] = $t;
+                    $array[] = $t;
+                }
 
             }
         }
@@ -116,36 +121,49 @@ class TarefasDaoXml implements TarefasDAO {
                     $t->setIdColabora($item->idColabora);
                     $t->setIdAdm($item->idAdm);
                     $t->setMensagemAtraso($item->mensagemAtraso);
+                    $t->setTokenEmpresa($item->tokenEmpresa);
+                    
 
                     $array[] = $t;
                 }
             }
+            return $array;
         }
 
         return false;
     }
 
-    //FUNÇÃO QUE BUSCA A TAREFA POR DATA
-    public function findByDate($date) {
+
+    
+
+
+
+  //FUNÇÃO QUE BUSCA A TAREFA POR DATA
+    public function findByDate($date, $tokenEmpresa) {
+        $array = [];
 
         $xml = $this->xmlFile;
         if (count($xml->children()) > 0){
             foreach ($xml as $item) {
                 if ($item->date == $date) {
-                    $t = new Tarefas();
-                    $t->setId($item->id);
-                    $t->setTituloTarefa($item->tituloTarefa);
-                    $t->setStatus($item->status);
-                    $t->setDescricao($item->descricao);
-                    $t->setDataInicial($item->dataIncial);
-                    $t->setDataLimite($item->dataLimite);
-                    $t->setIdColabora($item->idColabora);
-                    $t->setIdAdm($item->idAdm);
-                    $t->setMensagemAtraso($item->mensagemAtraso);
-
-                    $array[] = $t;
+                    if($item->tokenEmpresa == $tokenEmpresa){
+                        $t = new Tarefas();
+                        $t->setId($item->id);
+                        $t->setTituloTarefa($item->tituloTarefa);
+                        $t->setStatus($item->status);
+                        $t->setDescricao($item->descricao);
+                        $t->setDataInicial($item->dataIncial);
+                        $t->setDataLimite($item->dataLimite);
+                        $t->setIdColabora($item->idColabora);
+                        $t->setIdAdm($item->idAdm);
+                        $t->setMensagemAtraso($item->mensagemAtraso);
+                        $t->setTokenEmpresa($item->tokenEmpresa);
+    
+                        $array[] = $t;
+                    }
                 }
             }
+            return $array;
         }
 
         return false;
