@@ -1,8 +1,4 @@
 <?php
-require realpath( dirname( __FILE__ ) . '/../../dao/tarefasDao.php');
-
-$tDao = new TarefasDaoXml();
-$tarefas = $tDao->findAll();
 
 function alterarCorTarefa($status){
     if($status == 1){
@@ -46,8 +42,3 @@ function alterarImgTarefa($status){
     }
 }
 
-function ordenarStatus($statusOne, $statusTwo){
-    return  $statusTwo->getStatus() - $statusOne->getStatus();
-}
-
-usort($tarefas, 'ordenarStatus');

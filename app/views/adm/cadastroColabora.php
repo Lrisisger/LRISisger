@@ -1,45 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../../public/css/adm/signUp.css">
+    <link rel="stylesheet" href="../../../public/css/general/main.css">
+    <title>LRISisger - Cadastro</title>
 </head>
-<body>
+<?php
     
+    require realpath( dirname( __FILE__ ) . '/../../../config/config.php' );
+?>
+<body>
+    <!-- Right Side -->
+    <div class="right cadUser flex">
+        <form class="formCad flex" action="../../services/singUpAction.php" method="post">
+                <input type="hidden" name="isAdm" value="0">
 
-        <form action="../../services/singUpAction.php" method="post">
-            <input type="hidden" name="adm" value="0">
+            <div class="titleText">Cadastro</div>
+            <div>
+                <div>
+                    <input name="nome" placeholder="Nome completo ou razão social">
+                </div>
+                <div>
+                    <input name="email" placeholder="E-mail">
+                </div>
+                <div>
+                    <input name="cpfCnpj" placeholder="CPF ou CNPJ" min='11'>
+                </div>
+                <div>
+                    <input name="pass" type="password" placeholder="Senha" min="8">
+                </div>
+                <div>
+                    <input name="confirmPass" type="password" placeholder="Confirme a senha" min="8">
+                </div>
 
-            <label>
-                Digite seu nome:<br/>
-                <input type="text" name="name">
-            </label>
-
-            <br/><br/>
-
-            <label>
-                Digite o email:<br/>
-                <input type="text" name="email">
-            </label>
-
-            <br/><br/>
-
-            <label>
-                Digite seu CPF:<br/>
-                <input type="text" name="cpf">
-            </label>
-
-            <br/><br/>
-
-            <label>
-                Digite senha:<br/>
-                <input type="password" name="pass">
-            </label>
-            <br/><br/>
-            
-            <input type="submit">
-
+                <?php 
+                        if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
+                            echo "<span class='aviso'>".$_SESSION['aviso']."</span>";
+                            $_SESSION['aviso'] = '';
+                        }
+                    ?>
+            </div>
+            <div>
+                <button type="submit" class="button sendForm">Cadastrar</button>
+            </div>
         </form>
+    </div>
+
+    <script src="../../../public/js/adm/signUp.js"></script>
 </body>
+
 </html>

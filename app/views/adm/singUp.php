@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="../../../public/css/general/main.css">
     <title>LRISisger - Cadastro</title>
 </head>
-
+<?php
+    
+    require realpath( dirname( __FILE__ ) . '/../../../config/config.php' );
+?>
 <body>
     <!-- Left Side -->
     <div class="left loginUser flex">
@@ -23,7 +26,7 @@
 
         <!-- Image Mid  -->
         <div class="imageMiddle flex">
-            <img src="https://i.imgur.com/12gF2Gw.png" class="imageMid">
+            <img src="../../../public/img/svgs/background.png" class="imageMid">
         </div>
         <!-- Image Mid -->
 
@@ -36,7 +39,9 @@
 
     <!-- Right Side -->
     <div class="right cadUser flex">
-        <form class="formCad flex" action="" method="post">
+        <form class="formCad flex" action="../../services/singUpAction.php" method="post">
+                <input type="hidden" name="isAdm" value="1">
+
             <div class="titleText">Cadastro</div>
             <div>
                 <div>
@@ -46,14 +51,21 @@
                     <input name="email" placeholder="E-mail">
                 </div>
                 <div>
-                    <input name="codEmp" placeholder="CPF ou CNPJ">
+                    <input name="cpfCnpj" placeholder="CPF ou CNPJ" >
                 </div>
                 <div>
-                    <input name="password" type="password" placeholder="Senha">
+                    <input name="pass" type="password" placeholder="Senha" min="8">
                 </div>
                 <div>
-                    <input name="confirmPass" type="password" placeholder="Confirme a senha">
+                    <input name="confirmPass" type="password" placeholder="Confirme a senha" min="8">
                 </div>
+
+                <?php 
+                        if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
+                            echo "<span class='aviso'>".$_SESSION['aviso']."</span>";
+                            $_SESSION['aviso'] = '';
+                        }
+                    ?>
             </div>
             <div>
                 <button type="submit" class="button sendForm">Cadastrar</button>
