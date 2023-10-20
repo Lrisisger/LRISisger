@@ -12,6 +12,7 @@
         require '../../models/Auth.php';        
         require '../../dao/usuarioDao.php';
         
+        //VERIFICA SE EXISTE SESSÃO DE TOKEN ATIVA (LOGIN ATIVO)
         if(!empty($_SESSION['token'])){
 
             header("Location: control.php");
@@ -42,6 +43,7 @@
                             class="input-area">
                     </div>
                     <?php 
+                        //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
                         if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
                             echo $_SESSION['aviso'];
                             $_SESSION['aviso'] = '';

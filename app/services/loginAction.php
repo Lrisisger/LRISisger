@@ -3,7 +3,7 @@ require '../models/Usuarios.php';
 require '../dao/usuarioDao.php';
 require_once '../../config/config.php';
 //INCIANDO O DAO DE USUARIO
-$uDao = new UsuarioDaoMysql();
+$uDao = new UsuarioDaoXml();
 
 $email =ucwords(strtolower(filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL))); //RECEBENDO DADOS DE EMAIL DO LOGIN
 $pass = filter_input(INPUT_POST, 'senha'); //RECEBENDO DADOS DA SENHA DO LOGIN

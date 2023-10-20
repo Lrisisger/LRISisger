@@ -24,24 +24,24 @@
         require realpath( dirname( __FILE__ ) . '/../../dao/tarefasDao.php');
 
         $auth = new Auth();
-        $userInfo = $auth->checkToken();
+        $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
 
         if($userInfo == false){
             header("Location: ../../services/logOutAction.php");
             exit;
         }
         
-        $uDao = new UsuarioDaoMysql();
-        $usersColabora = $uDao->findAll(0, $userInfo->getTokenEmpresa());
+        $uDao = new UsuarioDaoXml();// INICIANDO DAO DE USUARIOS
+        $usersColabora = $uDao->findAll(0, $userInfo->getTokenEmpresa());//RECEBENDO FUNCIONÁRIOS DA EMPRESA
 
         
-        $tDao = new TarefasDaoXml();
-        $tarefas = $tDao->findAll($userInfo->getTokenEmpresa());
+        $tDao = new TarefasDaoXml();// INICIANDO DAO DE TAREFAS
+        $tarefas = $tDao->findAll($userInfo->getTokenEmpresa());// RECEBENDO TAREFAS DA EMPRESA
 
+        // FUNÇÃO QUE ORDENA AS TAREFAS NA TELA DE ACORDO COM O STATUS
         function ordenarStatus($statusOne, $statusTwo){
             return  $statusTwo->getStatus() - $statusOne->getStatus();
         }
-        
         usort($tarefas, 'ordenarStatus');
               
     ?>
