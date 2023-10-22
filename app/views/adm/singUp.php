@@ -51,7 +51,7 @@
                     <input name="email" placeholder="E-mail">
                 </div>
                 <div>
-                    <input name="cpfCnpj" placeholder="CPF ou CNPJ" >
+                    <input name="cpfCnpj" placeholder="CPF ou CNPJ" maxlength="17" id="cpfCnpj">
                 </div>
                 <div>
                     <input name="pass" type="password" placeholder="Senha" min="8">

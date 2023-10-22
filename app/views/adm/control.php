@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../../public/css/general/main.css">
     
     
+    
     <title>SISGER</title>
 </head>
 
@@ -43,7 +44,31 @@
             return  $statusTwo->getStatus() - $statusOne->getStatus();
         }
         usort($tarefas, 'ordenarStatus');
-              
+            
+        //echo "<script>var nome = '$nome';</script>";
+        
+   
+        echo "<script>let tarefas = [];</script>";
+        
+        foreach($tarefas as $tarefa){
+            echo "<script>array = {
+                    id: ".$tarefa->getId().",
+                    nomeColabora: '".$uDao->findById($tarefa->getId())->getName()."',
+                    tituloTarefa: '".$tarefa->getTituloTarefa()."',                    
+                    status: ".$tarefa->getStatus().",
+                    descricao: '".$tarefa->getDescricao()."',                    
+                    dataInicial: '".$tarefa->getDataInicial()."',
+                    dataLimite: '".$tarefa->getDataLimite()."',
+                    mensagemAtraso: '".$tarefa->getMensagemAtraso()."',
+
+                }
+             
+            tarefas.id".$tarefa->getId()." = array;
+            </script>
+            ";
+        };
+     
+
     ?>
 
     <header class="head">
@@ -106,21 +131,21 @@
                 <div class="content">
 
                     <?php foreach($tarefas as $tarefa):?>
-                    <div class="task <?=alterarCorTarefa($tarefa->getStatus());?>">
-                        <span>
-                            <?=$tarefa->getTituloTarefa();?>
-                        </span>
+                        <div id="<?=$tarefa->getId()?>" class="task <?=alterarCorTarefa($tarefa->getStatus());?>" onclick="handleModal('currentTask', this.id)">
+                            <span>
+                                <?=$tarefa->getTituloTarefa();?>
+                            </span>
 
-                        <div class="container-img <?=alterarCorP($tarefa->getStatus()) ?>">
-                            <img src="<?=alterarImgTarefa($tarefa->getStatus()) ?>" alt="">
+                            <div class="container-img <?=alterarCorP($tarefa->getStatus()) ?>">
+                                <img src="<?=alterarImgTarefa($tarefa->getStatus()) ?>" alt="">
+                            </div>
                         </div>
-                    </div>
                     <?php endforeach; ?>
                     
                 </div>
 
-                <div class="add-act" onclick="addTask()">
-                        <img src="../../../public/img//icons/plus.svg" alt="">
+                <div class="add-act" onclick="handleModal('newTask', false)">
+                    <img src="../../../public/img//icons/plus.svg" alt="">
                 </div>
 
             </div>
@@ -136,7 +161,7 @@
         <div class="modal-new-task">
             <div class="head-task">
                 <h3>Nova tarefa...</h3>
-                <div onclick="addTask()" class="back">                    
+                <div onclick="handleModal('newTask', false)" class="back">                    
                     <img  src="../../../public/img/svgs/arrow_back.svg" alt="">
                 </div>
             </div>
@@ -156,7 +181,7 @@
 
                 <label>
                     <h4>Titulo da tarefa</h4>
-                    <input type="text" name="task_title" class="input-area input-model">
+                    <input type="text" name="task_title" class="input-area input-model" maxlength="20">
                 </label>
 
                 <label>
@@ -176,10 +201,10 @@
             </form>
         </div>
 
-        <div class="modal-task">
-            <div class="head-task">
-                <h3>Tarefa 01</h3>
-                <div onclick="addTask()" class="back">                    
+        <div class="modal-task" >
+            <div id="container-title" class="head-task ">
+                <h3 id="task-title"></h3>
+                <div onclick="handleModal('currentTask', false)" class="back">                    
                     <img  src="../../../public/img/svgs/arrow_back.svg" alt="">
                 </div>
             </div>
@@ -187,55 +212,48 @@
             <div class="modal-task-body">
                 <div class="colab">
                     <h4 class="task-title">Responsável</h4>
-                    <div>
-                        Lucas Eduardo
+                    <div id="task-name" class="container-info">
+                        
                     </div>
                 </div>
 
                 <div class="date">
                     <h4 class="task-title">Prazo da tarefa</h4>
-                    <div>
-                        <div class="begin">
-                            20/07/5030
+                    <div class="container-date">
+                        <div id="task-dataInicial" class="container-info">
+                          
                         </div>
 
-                        <div class="end">
-                            20/07/5030
+                        <div id="task-dataFinal" class="container-info">
+                           
                         </div>
                     </div>
                 </div>
 
                 <div class="status">
-                    <div class="sta">
+                    <div class="">
                         <h4 class="task-title">Status</h4>
-                        <div>Em atraso</div>
+                        <div id="task-status" class="container-info"></div>
                     </div>
 
-                    <div class="beg">
-                        <h4 class="task-title">Início da tarefa</h4>
-                        <div>Não iniciada</div>
-                    </div>
                 </div>
 
                 <div class="desc">
                     <h4 class="task-title">Descrição da tarefa</h4>
-                    <div>Confecção de banner 60x90</div>
+                    <div id="task-descricao" class="container-info"></div>
                 </div>
 
                 <div class="obs">
                     <h4 class="task-title">Observações</h4>
-                    <div>Atividade em atraso por conta da alta demanda por favor alinhar nova entrega com o cliente</div>
+                    <div id="task-meensagem" class="container-info" style="height: 80px;"></div>
                 </div>
             </div>
         </div>
     </div>
 
     
-
     <script src="../../../public/js/adm/control.js"></script>
-
-
-
+    
 
 </body>
 

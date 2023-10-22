@@ -2,15 +2,15 @@
     //MODELO DAS TAREFAS
     class Tarefas {
         private $id;     
-        private $tituloTarefa; //$t->setTituloTarefa($tituloTarefa);
-        private $status; // $t->setStatus($status);
-        private $descricao; //$t->setDescricao($descricao);
-        private $dataInicial; //$t->setDataInicial($dataInicial);
-        private $dataLimite; //$t->setDataLimite($dataLimite);
-        private $idColabora; //$t->setIdColabora($idColabora); 
-        private $idAdm; //$t->setIdAdm($idAdm);
-        private $tokenEmpresa; //$t->setTokenEmpresa($tokenEmpresa);
-        private $mensagemAtraso;  //
+        private $tituloTarefa;
+        private $status; 
+        private $descricao; 
+        private $dataInicial; 
+        private $dataLimite; 
+        private $idColabora; 
+        private $idAdm; 
+        private $tokenEmpresa; 
+        private $mensagemAtraso;  
        
       
       //FUNÇÃO QUE PEGA O VALOR DO ID
