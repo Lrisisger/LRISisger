@@ -87,7 +87,7 @@ class TarefasDaoXml implements TarefasDAO {
                     $t->setTituloTarefa($item->tituloTarefa);
                     $t->setStatus($item->status);
                     $t->setDescricao($item->descricao);
-                    $t->setDataInicial($item->dataIncial);
+                    $t->setDataInicial($item->dataInicial);
                     $t->setDataLimite($item->dataLimite);
                     $t->setIdColabora($item->idColabora);
                     $t->setIdAdm($item->idAdm);

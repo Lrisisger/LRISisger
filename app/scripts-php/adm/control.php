@@ -18,15 +18,15 @@ function alterarCorTarefa($status){
 //FUNÇÃO QUE ALTERA A COR DO CONTAINER DA IMAGEM PELO STATUS DA TAREFA 
 function alterarCorP($status){
     if($status == 1){
-        return 'containerImg-finalizada';
+        return 'cor-finalizada';
     }else if($status == 2){
-        return 'containerImg-naoIniciada';
+        return 'cor-naoIniciada';
     }else if($status == 3){
-        return 'containerImg-emAndamento';
+        return 'cor-emAndamento';
     }else if($status == 4){
-        return 'containerImg-pausada';
+        return 'cor-pausada';
     }else if($status == 5){
-        return 'containerImg-atrasada';
+        return 'cor-atrasada';
     }
 }
 

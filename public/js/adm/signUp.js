@@ -1,4 +1,4 @@
-const inputCpfCnpj = document.querySelector('input[name="codEmp"]');
+const inputCpfCnpj = document.getElementById('cpfCnpj');
 
 inputCpfCnpj.addEventListener("input", function () {
   const value = this.value.replace(/\D/g, "");

@@ -130,21 +130,7 @@ main {
     height: 100%;
     width: 50px;
 }
-.containerImg-naoIniciada{
-    background-color: #C8CBC7;
-}
-.containerImg-emAndamento{
-    background-color: #17A1FA;
-}
-.containerImg-pausada{
-    background-color: #DFBD0C;
-}
-.containerImg-atrasada{
-    background-color: #FF3838;
-}
-.containerImg-finalizada{
-    background-color: #68CF44 ;
-}
+
 
 
 .container-img img {
@@ -226,7 +212,7 @@ aside {
     background-color: #fff;
     height: 500px;
     width: 380px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;   
     border-radius: 15px; 
@@ -307,16 +293,44 @@ aside {
 }
 .modal-task-body{
     padding: 10px 15px;
+    width: 380px;
 }
+
 .task-title{
     color: #333;
     font-size: 17px;
+    margin-left: 17px;
+    margin-top: 10px;
 }
-.colab{
-    background-color: #FF3838;
+.container-info{
+    background-color: #DBE0EA;
+    height: 40px;
+    border-radius: 12px;
+    width: 360px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-top: 3px;
+    flex:1;
+    overflow-x: auto;
+}
+.container-date{
+    display: flex;
+    gap: 5px;    
 }
 
+.status{
+    display: flex;
+    gap: 5px;
+}
 
+.status div{
+    flex: 1;
+}
+
+.current-task{
+    background-color: rgb(34, 125, 92);
+}
 /* Iniciando responsividade */
 
 @media (max-width: 745px) {
@@ -346,4 +360,19 @@ aside {
 }
 
 
-
+/*Classe que muda cor das tarefas*/
+.cor-naoIniciada{
+    background-color: #C8CBC7;
+}
+.cor-emAndamento{
+    background-color: #17A1FA;
+}
+.cor-pausada{
+    background-color: #DFBD0C;
+}
+.cor-atrasada{
+    background-color: #FF3838;
+}
+.cor-finalizada{
+    background-color: #68CF44 ;
+}
