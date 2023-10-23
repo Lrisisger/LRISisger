@@ -43,9 +43,9 @@
                             class="input-area">
                     </div>
                     <?php 
-                        //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
+                    //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
                         if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
-                            echo $_SESSION['aviso'];
+                            echo "<span id='aviso'>".$_SESSION['aviso']."</span>";
                             $_SESSION['aviso'] = '';
                         }
                     ?>
