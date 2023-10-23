@@ -2,6 +2,7 @@
 <root>
 
 
-    
-    
-<idUser>14</idUser><idTarefa>13</idTarefa></root>
+    <idUser>14</idUser>
+    <idTarefa>19</idTarefa>
+    <idSetor>0</idSetor>
+</root>

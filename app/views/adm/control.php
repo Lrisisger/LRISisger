@@ -51,9 +51,11 @@
         echo "<script>let tarefas = [];</script>";
         
         foreach($tarefas as $tarefa){
+
+
             echo "<script>array = {
                     id: ".$tarefa->getId().",
-                    nomeColabora: '".$uDao->findById($tarefa->getId())->getName()."',
+                    nomeColabora: '".$uDao->findById($tarefa->getIdColabora())->getName()."',
                     tituloTarefa: '".$tarefa->getTituloTarefa()."',                    
                     status: ".$tarefa->getStatus().",
                     descricao: '".$tarefa->getDescricao()."',                    
@@ -96,7 +98,7 @@
                 <h3>Menu</h3>
             </li>
 
-            <a href="cadastroColabora.php">
+            <a href="conta.php">
                 <li>
                     <div class="menu-button">
                         <img src="../../../public/img/icons/person.svg" alt="">
@@ -105,7 +107,26 @@
                     <h3>Conta</h3>
                 </li>
             </a>
+
+            <a href="participantes.php">
+                <li>
+                    <div class="menu-button">
+                        <img style="height:30px;"  src="../../../public/img/icons/people.svg" alt="">
+                    </div>
+
+                    <h3>Participante</h3>
+                </li>
+            </a>    
             
+            <a href="setor.php">
+                <li>
+                    <div class="menu-button">
+                        <img style="height:30px;"  src="../../../public/img/icons/setor.svg" alt="">
+                    </div>
+
+                    <h3>Setores</h3>
+                </li>
+            </a>  
 
             <a href="../../services/logoutAction.php">
                 <li>
@@ -253,6 +274,7 @@
 
     
     <script src="../../../public/js/adm/control.js"></script>
+    <script src="../../../public/js/general/main.js"></script>
     
 
 </body>

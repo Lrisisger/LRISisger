@@ -61,11 +61,12 @@
                 </div>
 
                 <?php 
-                        if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
-                            echo "<span class='aviso'>".$_SESSION['aviso']."</span>";
-                            $_SESSION['aviso'] = '';
-                        }
-                    ?>
+                    //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
+                    if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
+                        echo "<span class='aviso'>".$_SESSION['aviso']."</span>";
+                        $_SESSION['aviso'] = '';
+                    }
+                ?>
             </div>
             <div>
                 <button type="submit" class="button sendForm">Cadastrar</button>

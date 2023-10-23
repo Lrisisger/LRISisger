@@ -75,13 +75,14 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
     $uDao->add( $u ); //ENVIANDO USUARIO PARA O DAO ADICIONAR NO XML
 
 } else {
-  if($isAdm == 1){
-    header( 'Location: ../views/adm/singup.php' );
-    exit;
-  }else{
-    header( 'Location: ../views/adm/cadastroColabora.php' );
-    exit;
-  }
+    $_SESSION['aviso'] = 'Preencha todos os campos'; //SE EMAIL OU SENHA NÃO FOREM PREENCHIDOS CRIAR SESSAO COM AVISO 
+    if($isAdm == 1){
+        header( 'Location: ../views/adm/singup.php' );
+        exit;
+    }else{
+        header( 'Location: ../views/adm/cadastroColabora.php' );
+        exit;
+    }
 }
 
 if($isAdm == 1){

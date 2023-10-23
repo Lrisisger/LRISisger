@@ -1,4 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
 
-<usuario><id>9</id><name>Lucas Eduardo Souza Da Silva</name><email>Lucas@gmail.com</email><password>$2y$10$wJP3/gRm7BJPDzPe7V36LO879dCRXVOJkOa0AIBfNXgQsWSyHucBa</password><cpf>12.345.678/9456-42</cpf><isAdm>1</isAdm><token>k2rZWiKtqtxXLWY$6S$HF7G9PD3Rsk!rNTGhWNzSO!4Q@bsHDB</token><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></usuario><usuario><id>10</id><name>Jorel Joshua</name><email>Jorel@gmail.com</email><password>$2y$10$CPwCjFCtH8dGFOxHqeRBpOFSkfV7szoVvgAwgFL6gTid/wLm8rA5i</password><cpf>123</cpf><isAdm>0</isAdm><token>yyW1d3eOQc1rKVUf2Df$QIGQRRa8XXHvaXUeLUOwo8UZKQqhjs</token><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></usuario><usuario><id>11</id><name>Linnycker</name><email>Lin@gmail.com</email><password>$2y$10$uAgB56EUsT6FJQ14ScSPN.rnbwgG1uUmaBIKK0XL9nSDcMVpT/0nS</password><cpf>123</cpf><isAdm>0</isAdm><token>VoVPsiV@qeZ4kKI27YCbFgg3CE#p2E@47#SnxZ1QdUmpsuhjON</token><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></usuario><usuario><id>12</id><name>Ianca Garcia</name><email>Garcia@gmail.com</email><password>$2y$10$0qMcO.BlR5NXYefHOSDv1e3MzoaVVWqrl70L.7h3k1yKxERUCB9k6</password><cpf>123</cpf><isAdm>1</isAdm><token>8WjWyMYSewetleDnZz8qwT@Ajd0SPAahoZFk1xBddXYcO0eKEp</token><tokenEmpresa>2wtDOJYz@snMaXJpEBTMjVOJT0RoNWjMW5NuI76nhuK3vytA9F</tokenEmpresa></usuario><usuario><id>13</id><name>Lucca Soares</name><email>Luca@gmail.com</email><password>$2y$10$JwpfZpyCrOwxWIay9LAVNufHjoPFp7vj/9An3O3nwh0Np3G619V.O</password><cpf>123</cpf><isAdm>0</isAdm><token>l4G6hgTQ8z00EnQx#swEPsVqlrLI550KNh5u5QCijhUW8Yc5iR</token><tokenEmpresa>2wtDOJYz@snMaXJpEBTMjVOJT0RoNWjMW5NuI76nhuK3vytA9F</tokenEmpresa></usuario><usuario><id>14</id><name>Robbert</name><email>Robert@gmail.com</email><password>$2y$10$bC5jK6jGtvbe3MumV6MIpexKmNdlns9lxJufrQmSfjTdubJ9Fl7jW</password><cpf>123</cpf><isAdm>0</isAdm><token>2D1EMA3VHXLsniwejW#Dw7vr#F$5gbMCSuTrM0DKvOkhcUFmuw</token><tokenEmpresa>2wtDOJYz@snMaXJpEBTMjVOJT0RoNWjMW5NuI76nhuK3vytA9F</tokenEmpresa></usuario></root>
+    <usuario>
+        <id>9</id>
+        <name>Lucas Eduardo Souza Da Silva</name>
+        <email>Lucas@gmail.com</email>
+        <password>$2y$10$wJP3/gRm7BJPDzPe7V36LO879dCRXVOJkOa0AIBfNXgQsWSyHucBa</password>
+        <cpf>12.345.678/9456-42</cpf>
+        <isAdm>1</isAdm>
+        <token>k2rZWiKtqtxXLWY$6S$HF7G9PD3Rsk!rNTGhWNzSO!4Q@bsHDB</token>
+        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
+    </usuario>
+    <usuario>
+        <id>10</id>
+        <name>Jorel Joshua</name>
+        <email>Jorel@gmail.com</email>
+        <password>$2y$10$CPwCjFCtH8dGFOxHqeRBpOFSkfV7szoVvgAwgFL6gTid/wLm8rA5i</password>
+        <cpf>123</cpf>
+        <isAdm>0</isAdm>
+        <token>yyW1d3eOQc1rKVUf2Df$QIGQRRa8XXHvaXUeLUOwo8UZKQqhjs</token>
+        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
+    </usuario>
+    <usuario>
+        <id>11</id>
+        <name>Linnycker</name>
+        <email>Lin@gmail.com</email>
+        <password>$2y$10$uAgB56EUsT6FJQ14ScSPN.rnbwgG1uUmaBIKK0XL9nSDcMVpT/0nS</password>
+        <cpf>123</cpf>
+        <isAdm>0</isAdm>
+        <token>VoVPsiV@qeZ4kKI27YCbFgg3CE#p2E@47#SnxZ1QdUmpsuhjON</token>
+        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
+    </usuario>
+    <usuario>
+        <id>12</id>
+        <name>Ianca Garcia</name>
+        <email>Garcia@gmail.com</email>
+        <password>$2y$10$0qMcO.BlR5NXYefHOSDv1e3MzoaVVWqrl70L.7h3k1yKxERUCB9k6</password>
+        <cpf>123</cpf>
+        <isAdm>1</isAdm>
+        <token>8WjWyMYSewetleDnZz8qwT@Ajd0SPAahoZFk1xBddXYcO0eKEp</token>
+        <tokenEmpresa>2wtDOJYz@snMaXJpEBTMjVOJT0RoNWjMW5NuI76nhuK3vytA9F</tokenEmpresa>
+    </usuario>
+    <usuario>
+        <id>13</id>
+        <name>Lucca Soares</name>
+        <email>Luca@gmail.com</email>
+        <password>$2y$10$JwpfZpyCrOwxWIay9LAVNufHjoPFp7vj/9An3O3nwh0Np3G619V.O</password>
+        <cpf>123</cpf>
+        <isAdm>0</isAdm>
+        <token>l4G6hgTQ8z00EnQx#swEPsVqlrLI550KNh5u5QCijhUW8Yc5iR</token>
+        <tokenEmpresa>2wtDOJYz@snMaXJpEBTMjVOJT0RoNWjMW5NuI76nhuK3vytA9F</tokenEmpresa>
+    </usuario>
+    <usuario>
+        <id>14</id>
+        <name>Robbert</name>
+        <email>Robert@gmail.com</email>
+        <password>$2y$10$bC5jK6jGtvbe3MumV6MIpexKmNdlns9lxJufrQmSfjTdubJ9Fl7jW</password>
+        <cpf>123</cpf>
+        <isAdm>0</isAdm>
+        <token>2D1EMA3VHXLsniwejW#Dw7vr#F$5gbMCSuTrM0DKvOkhcUFmuw</token>
+        <tokenEmpresa>2wtDOJYz@snMaXJpEBTMjVOJT0RoNWjMW5NuI76nhuK3vytA9F</tokenEmpresa>
+    </usuario>
+</root>
