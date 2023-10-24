@@ -1,7 +1,6 @@
 <?php
 require '../models/usuarios.php';
 require '../dao/usuarioDao.php';
-require '../../config/config.php';
 
 //INICIALIZANDO DAO DE USUARIOS
 $uDao = new UsuarioDaoXml();

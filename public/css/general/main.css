@@ -145,7 +145,7 @@ a:hover{
     color: #002157;
 }
 
-.aviso{
+.aviso, #aviso{
     color: #f00;
     margin-left: 15px;
     font-size: 14px;

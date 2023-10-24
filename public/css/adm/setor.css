@@ -13,6 +13,7 @@
     height: 30px;
     width: 250px;
     color: #fff;
+    cursor: pointer;
 }
 
 .set-container{
@@ -126,4 +127,8 @@
 
 .button-enviar:hover{
     background-color: #95b1f8;
+}
+
+.close-modal{
+    cursor: pointer;
 }
