@@ -25,7 +25,7 @@ class SetoresDaoXml implements SetoresDAO {
 
         if ( $newId ) {
             $xmlId = $this->xmlIdFile;
-            $idAtual = $xmlId->idUser;
+            $idAtual = $xmlId->idSetor;
             $idAtual = $idAtual + 1;
         }
 
@@ -50,7 +50,7 @@ class SetoresDaoXml implements SetoresDAO {
     //FUNÇÃO QUE DELETA USUARIOS DO XML
 
     private function handleDel( $id ) {
-        foreach ( $this->xmlFile->usuario as $item ) {
+        foreach ( $this->xmlFile->setor as $item ) {
             if ( $item->id == $id ) {
                 $dom = dom_import_simplexml( $item );
                 $dom->parentNode->removeChild( $dom );
@@ -121,8 +121,8 @@ class SetoresDaoXml implements SetoresDAO {
         $xml = $this->xmlFile;
         if ( count( $xml->children() ) > 0 ) {
             foreach ( $xml as $item ) {
-                if ( $item->token == $token ) {
-                    $s = new Usuarios();
+                if ( $item->tokenSetor == $token ) {
+                    $s = new Setores();
                     $s->setId( $item->id );
                     $s->setName( $item->name );                    
                     $s->setTokenSetor( $item->tokenSetor );
@@ -135,14 +135,13 @@ class SetoresDaoXml implements SetoresDAO {
         return false;
     }
 
-    //FUNÇÃO QUE BUSCA PELO EMAIL DO USUARIO
-    public function findByEmail( $email ) {
-
+    
+    public function findByTokenEmpresa($tokenEmpresa){
         $xml = $this->xmlFile;
         if ( count( $xml->children() ) > 0 ) {
             foreach ( $xml as $item ) {
-                if ( $item->email == $email ) {
-                    $s = new Usuarios();
+                if ( $item->tokenEmpresa == $tokenEmpresa ) {
+                    $s = new Setores();
                     $s->setId( $item->id );
                     $s->setName( $item->name );                    
                     $s->setTokenSetor( $item->tokenSetor );
@@ -152,9 +151,9 @@ class SetoresDaoXml implements SetoresDAO {
                 }
             }
         }
-
         return false;
     }
+
 
     //FUNÇAO QUE EDITA O USUARIO
     //PRIMIRO ELE CHAMA A FUNÇÃO DE DELETAR O USUARIO 

@@ -37,6 +37,7 @@ class TarefasDaoXml implements TarefasDAO {
         $novoRegistro->addChild('idAdm', $t->getIdAdm());
         $novoRegistro->addChild('mensagemAtraso', $t->getMensagemAtraso());
         $novoRegistro->addChild('tokenEmpresa', $t->getTokenEmpresa());
+        $novoRegistro->addChild('tokenSetor', $t->getTokenSetor());
 
         $this->xmlFile->asXML($this->path);
 
@@ -93,6 +94,7 @@ class TarefasDaoXml implements TarefasDAO {
                     $t->setIdAdm($item->idAdm);
                     $t->setMensagemAtraso($item->mensagemAtraso);
                     $t->setTokenEmpresa($item->tokenEmpresa);
+                    $t->setTokenSetor($item->tokenSetor);
 
                     $array[] = $t;
                 }
@@ -122,6 +124,7 @@ class TarefasDaoXml implements TarefasDAO {
                     $t->setIdAdm($item->idAdm);
                     $t->setMensagemAtraso($item->mensagemAtraso);
                     $t->setTokenEmpresa($item->tokenEmpresa);
+                    $t->setTokenSetor($item->tokenSetor);
                     
 
                     $array[] = $t;
@@ -138,14 +141,14 @@ class TarefasDaoXml implements TarefasDAO {
 
 
 
-  //FUNÇÃO QUE BUSCA A TAREFA POR DATA
-    public function findByDate($date, $tokenEmpresa) {
+  //FUNÇÃO QUE BUSCA A TAREFA PELO TOKEN DO SETOR
+    public function findBySetor($tokenSetor) {
         $array = [];
 
         $xml = $this->xmlFile;
         if (count($xml->children()) > 0){
             foreach ($xml as $item) {
-                if ($item->date == $date) {
+                if ($item->tokenSetor == $tokenSetor) {
                     if($item->tokenEmpresa == $tokenEmpresa){
                         $t = new Tarefas();
                         $t->setId($item->id);
@@ -158,6 +161,7 @@ class TarefasDaoXml implements TarefasDAO {
                         $t->setIdAdm($item->idAdm);
                         $t->setMensagemAtraso($item->mensagemAtraso);
                         $t->setTokenEmpresa($item->tokenEmpresa);
+                        $t->setTokenSetor($item->tokenSetor);
     
                         $array[] = $t;
                     }

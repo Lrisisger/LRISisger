@@ -10,7 +10,28 @@
 </head>
 
 <body>
+ <?php 
+  
+  require realpath( dirname( __FILE__ ) . '/../../../config/config.php' );
+  require realpath( dirname( __FILE__ ) . '/../../models/Auth.php');
+  require realpath( dirname( __FILE__ ) . '/../../dao/setoresDao.php');
+  require realpath( dirname( __FILE__ ) . '/../../dao/usuarioDao.php');
 
+  $auth = new Auth();
+  $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
+
+  if($userInfo == false){
+      header("Location: ../../services/logOutAction.php");
+      exit;
+  }
+  
+  
+  $tDao = new SetoresDaoXml();
+  $tarefas = $tDao->findAll($userInfo->getTokenEmpresa());
+
+ 
+  
+ ?>
   <header class="head">
     <div class="menu-button button-head" onclick="changeAside()">
       <img src="../../../public/img/icons/list.svg" alt="menu">
@@ -79,39 +100,48 @@
   </aside>
 
   <main>
-    <div class="add-sec-area">
+    <div onclick="newSector('new')" class="add-sec-area">
       <button>
         CRIAR SETOR
       </button>
     </div>
 
     <div class="set-container">
+      <?php foreach($tarefas as $tarefa): ?>
+        <div class="setor">
+          <div class="name">
+            <?=$tarefa->getName();?>
+          </div>
 
-      <div class="setor">
-        <div class="name">
-          Setor de compras
+          <div class="botoes">
+            <a href="../../services/delSet.php?token=<?=$tarefa->getTokenSetor()?>" onclick="return confirm('Tem certeza que deseja excluir?')" class="del">Deletar</a>
+            <a href="#" onclick="newSector('edit')" class="edit">Editar</a>
+          </div>
         </div>
-
-        <div class="botoes">
-          <a href="#" class="del">Deletar</a>
-         <a href="#" class="edit">Editar</a>
-        </div>
-      </div>
+      <?php endforeach; ?>
 
     </div>
   </main>
 
   <div class="dark">
+
     <div class="novo-set">
       <div class="header">
         <h2>Novo Setor</h2>
-        <img src="../../../public/img/svgs/arrow_back.svg" alt="">
+        <img onclick="newSector('new')" class="close-modal" src="../../../public/img/svgs/arrow_back.svg" alt="">
       </div>
 
       <div class="modal-container">
         <form action="../../services/newSecAction.php" method="post">
           <input type="text" name="setor" class="info" placeholder="Nome do setor">
           <input type="password" name="senha" class="info" placeholder="Senha">
+          <?php 
+            //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
+            if(!empty($_SESSION['avisoAdd']) && $_SESSION['avisoAdd']){
+              echo "<span class='aviso'>".$_SESSION['avisoAdd']."</span>";
+              $_SESSION['avisoAdd'] = '';
+            }
+          ?>
           <input type="submit" class="button-enviar" value="Confirmar">
         </form>
       </div>
@@ -120,7 +150,7 @@
     <div class="edit-set">
       <div class="header">
         <h2>Editar Setor</h2>
-        <img src="../../../public/img/svgs/arrow_back.svg" alt="">
+        <img onclick="newSector('edit')" class="close-modal" src="../../../public/img/svgs/arrow_back.svg" alt="">
       </div>
 
       <div class="modal-container">
@@ -134,7 +164,9 @@
 
   </div>
 
-  <script src="../../../public/js/general/main.js"></script>
+  <script src="../../../public/js/general/main.js"></script>  
+  <script src="../../../public/js/adm/setor.js"></script>
+
 </body>
 
 </html>

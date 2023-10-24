@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-
-
     <idUser>14</idUser>
     <idTarefa>19</idTarefa>
-    <idSetor>0</idSetor>
-</root>
+    
+<idSetor>18</idSetor></root>

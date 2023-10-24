@@ -10,6 +10,7 @@
         private $idColabora; 
         private $idAdm; 
         private $tokenEmpresa; 
+        private $tokenSetor;
         private $mensagemAtraso;  
        
       
@@ -103,6 +104,17 @@
             $this->tokenEmpresa = $n;
         }
 
+        //FUNÇÃO QUE PEGA O VALOR DO TOKEN DO SETOR
+        public function getTokenSetor(){
+            return $this->tokenEmpresa;
+        }
+
+        //FUNÇÃO QUE ALTERA O VALOR DO TOKEN DO SETOR
+        public function setTokenSetor($n){
+            $this->tokenEmpresa = $n;
+        }
+
+
         //FUNÇÃO QUE PEGA O VALOR DA MENSAGEM DE ATRASO
         public function getMensagemAtraso(){
             return $this->mensagemAtraso;
@@ -125,7 +137,7 @@
         public function add(Tarefas $t);
         public function findAll($tokenEmpresa);
         public function findById($id);
-        public function findByDate($date, $tokenEmpresa);
+        public function findBySetor($tokenSetor);
         public function update(Tarefas $t);
         public function delete($id);
     }
