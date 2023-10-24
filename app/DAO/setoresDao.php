@@ -135,13 +135,12 @@ class SetoresDaoXml implements SetoresDAO {
         return false;
     }
 
-    //FUNÇÃO QUE BUSCA PELO EMAIL DO USUARIO
-    public function findByEmail( $email ) {
-
+    
+    public function findByTokenEmpresa($tokenEmpresa){
         $xml = $this->xmlFile;
         if ( count( $xml->children() ) > 0 ) {
             foreach ( $xml as $item ) {
-                if ( $item->email == $email ) {
+                if ( $item->tokenEmpresa == $tokenEmpresa ) {
                     $s = new Usuarios();
                     $s->setId( $item->id );
                     $s->setName( $item->name );                    
@@ -152,9 +151,9 @@ class SetoresDaoXml implements SetoresDAO {
                 }
             }
         }
-
         return false;
     }
+
 
     //FUNÇAO QUE EDITA O USUARIO
     //PRIMIRO ELE CHAMA A FUNÇÃO DE DELETAR O USUARIO 
