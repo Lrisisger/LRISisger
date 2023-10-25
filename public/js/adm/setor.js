@@ -1,11 +1,17 @@
 const modalNewSet = document.querySelector('.novo-set');
 const modalEditSet = document.querySelector('.edit-set');
 const dark_screen = document.querySelector('.dark');
+const nameEdit = document.getElementById('nomeEdit');
+const inputToken = document.getElementById('tokenSetor');
 
 
-const newSector = (typeModal) =>{
+const newSector = (typeModal, id) =>{
     let modal = typeModal == 'new' ? modalNewSet : modalEditSet;
-
+    if(typeModal == 'edit' && id){
+        nameEdit.value = setores[`id${id}`].nomeSetor
+        inputToken.value = setores[`id${id}`].tokenSetor
+    } 
+   
     if(window.getComputedStyle (dark_screen).display == 'flex'){        
 
         
@@ -21,6 +27,7 @@ const newSector = (typeModal) =>{
         }, 100)       
 
         
+    
     }else{
         dark_screen.style.display = 'flex';        
         dark_screen.style.opacity = 0;        
@@ -28,7 +35,12 @@ const newSector = (typeModal) =>{
 
         current_scroll = window.scrollY;
         const timer = setTimeout(()=>{         
-            dark_screen.style.opacity = 1;   
+            dark_screen.style.opacity = 1;
+           
+            
+
         }, 50)
+
+        
     }
 }

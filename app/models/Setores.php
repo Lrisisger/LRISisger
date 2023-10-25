@@ -43,7 +43,8 @@
     interface SetoresDAO {
         public function add(Setores $s);
         public function findById($id);        
-        public function findAll($tokenEmpresa);
+        public function findAll($tokenEmpresa);        
+        public function findByToken($token);
         public function findByTokenEmpresa($tokenEmpresa);
         public function update(Setores $s);
         public function delete($id);

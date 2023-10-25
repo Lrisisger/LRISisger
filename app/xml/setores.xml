@@ -2,7 +2,22 @@
 <root>
 
 
-    
-
- 
-<setor><id>18</id><name>Administrativo</name><tokenSetor>t6YgUfUqOVJbliomF3jgwGHAE36wJPFz0xfcFn2bT8q7d5Cfqq</tokenSetor><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></setor></root>
+    <setor>
+        <id>1</id>
+        <name>Compras</name>
+        <tokenSetor>68e6VYPznfIZN5SCIoaLZrw83V3cKATc6qZ5BcCsgAqeMHHR6M</tokenSetor>
+        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
+    </setor>
+    <setor>
+        <id>2</id>
+        <name>Vendas</name>
+        <tokenSetor>1jWN0plbPqGwVo2nyUOduzZmKAMGSJEseg1UQNa37TnxuWuKX1</tokenSetor>
+        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
+    </setor>
+    <setor>
+        <id>3</id>
+        <name>Lojistica</name>
+        <tokenSetor>nPmi2ANxYaHs22rNW3bMD3NZYjnzKC57oX6HPhmL8hW2W9sK9J</tokenSetor>
+        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
+    </setor>
+</root>
