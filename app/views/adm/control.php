@@ -83,7 +83,7 @@
         </div>
     </header>
 
-    <h1>LEMBRAR DE ENVIAR TOKEN DO SETOR PARA A CRIAÇÃO DA TAREFA</h1>
+   <!-- <h1>LEMBRAR DE ENVIAR TOKEN DO SETOR PARA A CRIAÇÃO DA TAREFA</h1> -->
 
     <!-- NAV BAR -->
     <aside>

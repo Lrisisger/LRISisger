@@ -2,7 +2,16 @@
 <root>
 
 
-    
-
- 
-<setor><id>18</id><name>Administrativo</name><tokenSetor>t6YgUfUqOVJbliomF3jgwGHAE36wJPFz0xfcFn2bT8q7d5Cfqq</tokenSetor><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></setor></root>
+    <setor>
+        <id>19</id>
+        <name>Vendas</name>
+        <tokenSetor>evlNOCIdAzq5BDuWpaYy4keYhPaIYEQsi659khzY3fy0LGoHLk</tokenSetor>
+        <tokenEmpresa>ysDppB6s9N4Oufd07RjS7i$rxIVyok#xwN!qBi303i08QBFdVU</tokenEmpresa>
+    </setor>
+    <setor>
+        <id>21</id>
+        <name>Vendas</name>
+        <tokenSetor>rEXY0WXyG4NdPnZ0UcWVc2nRIRmSgirOMMBcCur8PyK129nah9</tokenSetor>
+        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
+    </setor>
+</root>

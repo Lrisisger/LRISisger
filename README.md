@@ -16,7 +16,7 @@ Armazenamento de Dados: XML
 Como Visualizar o Projeto
 Você pode visualizar o projeto clonando o repositório a partir do seguinte link:
 
-*git clone https://github.com/Lrisisger/LRISisger.git* 
+``git clone https://github.com/Lrisisger/LRISisger.git``
 
 ## Contato
 ### Se você tiver alguma pergunta, sugestão ou feedback, entre em contato com um dos membros do grupo:
