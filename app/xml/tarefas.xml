@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
 
+    <tarefa>
+        <id>20</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>2</status>
+        <descricao>123</descricao>
+        <dataInicial>2023-10-24</dataInicial>
+        <dataLimite>2023-10-26</dataLimite>
+        <idColabora>10</idColabora>
+        <idAdm>9</idAdm>
+        <mensagemAtraso />
+        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
+        <tokenSetor>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenSetor>
+    </tarefa>
 </root>

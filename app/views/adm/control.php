@@ -23,6 +23,7 @@
         require realpath( dirname( __FILE__ ) . '/../../dao/usuarioDao.php');
         require realpath( dirname( __FILE__ ) . '/../../scripts-php/adm/control.php');
         require realpath( dirname( __FILE__ ) . '/../../dao/tarefasDao.php');
+        require realpath( dirname( __FILE__ ) . '/../../dao/setoresDao.php');
 
         $auth = new Auth();
         $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
@@ -35,21 +36,28 @@
         $uDao = new UsuarioDaoXml();// INICIANDO DAO DE USUARIOS
         $usersColabora = $uDao->findAll(0, $userInfo->getTokenEmpresa());//RECEBENDO FUNCIONÁRIOS DA EMPRESA
 
+        $sDao = new SetoresDaoXml();// INICIANDO DAO DE SETORES
+        $setores = $sDao->findAll($userInfo->getTokenEmpresa());// RECEBENDO TAREFAS DA EMPRESA
+
         
         $tDao = new TarefasDaoXml();// INICIANDO DAO DE TAREFAS
+       
+            
+        //echo "<script>var nome = '$nome';</script>";
+        
+   
         $tarefas = $tDao->findAll($userInfo->getTokenEmpresa());// RECEBENDO TAREFAS DA EMPRESA
+
+
 
         // FUNÇÃO QUE ORDENA AS TAREFAS NA TELA DE ACORDO COM O STATUS
         function ordenarStatus($statusOne, $statusTwo){
             return  $statusTwo->getStatus() - $statusOne->getStatus();
         }
-        usort($tarefas, 'ordenarStatus');
-            
-        //echo "<script>var nome = '$nome';</script>";
+        usort($tarefas, 'ordenarStatus');   
         
-   
         echo "<script>let tarefas = [];</script>";
-        
+
         foreach($tarefas as $tarefa){
 
 
@@ -83,7 +91,6 @@
         </div>
     </header>
 
-    <h1>LEMBRAR DE ENVIAR TOKEN DO SETOR PARA A CRIAÇÃO DA TAREFA</h1>
 
     <!-- NAV BAR -->
     <aside>
@@ -145,35 +152,37 @@
     <main>
         <!-- NAV BAR -->
         <section class="sector">
+            <?php foreach($setores as $setor):
+               
+                
+            ?>
+                <div class="sec">
+                    <div class="sec-head">
+                        <h2><?= $setor->getName() ?></h2>
+                    </div>
 
-            <div class="sec">
-                <div class="sec-head">
-                    <h2>SETOR 1</h2>
-                </div>
+                    <div class="content">
 
-                <div class="content">
+                        <?php foreach($tarefas as $tarefa):?>
+                            <div id="<?=$tarefa->getId()?>" class="task <?=alterarCorTarefa($tarefa->getStatus());?>" onclick="handleModal('currentTask', this.id, false)">
+                                <span>
+                                    <?=$tarefa->getTituloTarefa();?>
+                                </span>
 
-                    <?php foreach($tarefas as $tarefa):?>
-                        <div id="<?=$tarefa->getId()?>" class="task <?=alterarCorTarefa($tarefa->getStatus());?>" onclick="handleModal('currentTask', this.id)">
-                            <span>
-                                <?=$tarefa->getTituloTarefa();?>
-                            </span>
-
-                            <div class="container-img <?=alterarCorP($tarefa->getStatus()) ?>">
-                                <img src="<?=alterarImgTarefa($tarefa->getStatus()) ?>" alt="">
+                                <div class="container-img <?=alterarCorP($tarefa->getStatus()) ?>">
+                                    <img src="<?=alterarImgTarefa($tarefa->getStatus()) ?>" alt="">
+                                </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
-                    
+                        <?php endforeach; ?>
+                        
+                    </div>
+
+                    <div class="add-act" onclick="handleModal('newTask', false, this.token)" token="<?=$setor->getTokenSetor()?>">
+                        <img src="../../../public/img//icons/plus.svg" alt="">
+                    </div>
+
                 </div>
-
-                <div class="add-act" onclick="handleModal('newTask', false)">
-                    <img src="../../../public/img//icons/plus.svg" alt="">
-                </div>
-
-            </div>
-
-
+            <?php endforeach ?>
 
         </section>
 
@@ -184,7 +193,7 @@
         <div class="modal-new-task">
             <div class="head-task">
                 <h3>Nova tarefa...</h3>
-                <div onclick="handleModal('newTask', false)" class="back">                    
+                <div onclick="handleModal('newTask', false,false)" class="back">                    
                     <img  src="../../../public/img/svgs/arrow_back.svg" alt="">
                 </div>
             </div>
@@ -227,7 +236,7 @@
         <div class="modal-task" >
             <div id="container-title" class="head-task ">
                 <h3 id="task-title"></h3>
-                <div onclick="handleModal('currentTask', false)" class="back">                    
+                <div onclick="handleModal('currentTask', false, false)" class="back">                    
                     <img  src="../../../public/img/svgs/arrow_back.svg" alt="">
                 </div>
             </div>

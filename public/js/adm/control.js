@@ -2,7 +2,7 @@ const dark_screen = document.querySelector('.dark');
 let current_scroll = window.scrollY;
 
 
-const handleModal = (modalType, id) => {
+const handleModal = (modalType, id, tokenSetor) => {
 
     function statusType(stat){
         switch (stat) {
@@ -48,7 +48,7 @@ const handleModal = (modalType, id) => {
         }
     }
 
-    const modal = modalType == "newTask" ? document.querySelector('.modal-new-task') : document.querySelector('.modal-task')
+    const modal = document.querySelector('.modal-task')
     const titulo = document.getElementById('task-title');
     const nome = document.getElementById('task-name');
     const dataInicial = document.getElementById('task-dataInicial');

@@ -11,6 +11,7 @@ $dataInicial = filter_input(INPUT_POST, 'begin_date');//RECEBENDO DATA INICIAL D
 $dataLimite = filter_input(INPUT_POST, 'last_date');//RECEBENDO DATA LIMITE DA TAREFA
 $descricao = filter_input(INPUT_POST, 'task_description');//RECEBENDO DESCRIÇÃO DA TAREFA
 $tokenEmpresa = filter_input(INPUT_POST, 'tokenEmpresa');//RECEBENDO TOKEN DA EMPRESA
+$tokenSetor = filter_input(INPUT_POST, 'tokenSetor');//RECEBENDO TOKEN DO SETOR
 $status = 2;// SETANDO STATUS INICIAL PARA A TAREFA
 
 
