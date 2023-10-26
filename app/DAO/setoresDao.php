@@ -159,7 +159,7 @@ class SetoresDaoXml implements SetoresDAO {
     //PRIMIRO ELE CHAMA A FUNÇÃO DE DELETAR O USUARIO 
     //DEPOIS ELE CHAMA A FUNÇÃO DE ADICIONAR O USUARIO COM OS NOVOS DADOS
     public function update( Setores $s ) {
-        $this->handleDel( $s->getId() );
+        $this->handleDel($s->getId());
         $this->handleAdd( $s, false );
     }
     

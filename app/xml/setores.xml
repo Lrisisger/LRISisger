@@ -3,15 +3,17 @@
 
 
     <setor>
-        <id>19</id>
-        <name>Vendas</name>
-        <tokenSetor>evlNOCIdAzq5BDuWpaYy4keYhPaIYEQsi659khzY3fy0LGoHLk</tokenSetor>
-        <tokenEmpresa>ysDppB6s9N4Oufd07RjS7i$rxIVyok#xwN!qBi303i08QBFdVU</tokenEmpresa>
-    </setor>
-    <setor>
-        <id>21</id>
-        <name>Vendas</name>
-        <tokenSetor>rEXY0WXyG4NdPnZ0UcWVc2nRIRmSgirOMMBcCur8PyK129nah9</tokenSetor>
+        <id>1</id>
+        <name>Compras</name>
+        <tokenSetor>68e6VYPznfIZN5SCIoaLZrw83V3cKATc6qZ5BcCsgAqeMHHR6M</tokenSetor>
         <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
     </setor>
-</root>
+
+
+    <setor>
+        <id>5</id>
+        <name>Lojistica</name>
+        <tokenSetor>36vHFuSrhE5rP8UPkLDCEJT1Twb1ciVCrye5q379PfjkQT9CcQ</tokenSetor>
+        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
+    </setor>
+<setor><id>6</id><name>Administração</name><tokenSetor>leF3NQlhu4fC125E6b45GYqjzbGlaEiWAsg5RRSrcJLLbgni3W</tokenSetor><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></setor></root>
