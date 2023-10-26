@@ -48,7 +48,7 @@
    
         $tarefasGeral = $tDao->findAll($userInfo->getTokenEmpresa());// RECEBENDO TAREFAS DA EMPRESA
 
-
+        
 
         // FUNÇÃO QUE ORDENA AS TAREFAS NA TELA DE ACORDO COM O STATUS
         function ordenarStatus($statusOne, $statusTwo){
@@ -155,6 +155,8 @@
             <?php foreach($setores as $setor):
                
                $tarefasSetor = $tDao->findBySetor($setor->getTokenSetor()) ? $tDao->findBySetor($setor->getTokenSetor()) : [];// RECEBENDO TAREFAS DA EMPRESA
+
+               usort($tarefasSetor, 'ordenarStatus');   
                 
             ?>
                 <div class="sec">

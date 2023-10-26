@@ -2,18 +2,15 @@
 <root>
 
 
-    <setor>
-        <id>1</id>
-        <name>Compras</name>
-        <tokenSetor>68e6VYPznfIZN5SCIoaLZrw83V3cKATc6qZ5BcCsgAqeMHHR6M</tokenSetor>
-        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
-    </setor>
+    
 
 
+    
     <setor>
-        <id>5</id>
-        <name>Lojistica</name>
-        <tokenSetor>36vHFuSrhE5rP8UPkLDCEJT1Twb1ciVCrye5q379PfjkQT9CcQ</tokenSetor>
+        <id>6</id>
+        <name>Administração</name>
+        <tokenSetor>leF3NQlhu4fC125E6b45GYqjzbGlaEiWAsg5RRSrcJLLbgni3W</tokenSetor>
         <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
     </setor>
-<setor><id>6</id><name>Administração</name><tokenSetor>leF3NQlhu4fC125E6b45GYqjzbGlaEiWAsg5RRSrcJLLbgni3W</tokenSetor><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></setor><setor><id>9</id><name>Jor-el</name><tokenSetor>ZaE2FDx1i91MLRtd9y189FJyXGUPy2EZnQNdg8ZgGtM4zoRaAo</tokenSetor><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></setor><setor><id>7</id><name>Alou</name><tokenSetor>7IOdv7YCWQyEJc4s4jrhTqy9M1spQC2N19FuJObNezhghB0FNB</tokenSetor><tokenEmpresa>r4twKYogXmLX79n2R4j6qZvlwaNO2yFxNX9MPfP91@tZI7kFe@</tokenEmpresa></setor><setor><id>8</id><name>Heverald</name><tokenSetor>vbmffC871ORbtRa6ISxGnxiIcg2xWCXN5SCMBkYwdTlyWIhyP5</tokenSetor><tokenEmpresa>r4twKYogXmLX79n2R4j6qZvlwaNO2yFxNX9MPfP91@tZI7kFe@</tokenEmpresa></setor><setor><id>10</id><name>Ianca</name><tokenSetor>JVkOWpJ2xGX1INArMI6Fd5iMlUpB3wJc9qBIATw10OCykFYHQC</tokenSetor><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></setor><setor><id>11</id><name>Lin</name><tokenSetor>Fat1dM1defLeqtx6w0SvsEU6cVARzYB7Y5hbWateLxZ9Qg7zEY</tokenSetor><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></setor><setor><id>12</id><name>Lojistica</name><tokenSetor>bteyQxZERk1PK8QIMj95QoAA9NMjt7VHieBjs1wUXGddovISI0</tokenSetor><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></setor><setor><id>13</id><name>Asdasd</name><tokenSetor>AJOJgmsrGujIpChTAIHv1eH2CREQi1wZDSMHlOOPkHUgYD4AGg</tokenSetor><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></setor><setor><id>14</id><name>Fsdfds</name><tokenSetor>jhIR3rUT99GnuRboThZ5TMGBb31QP082wnVu5bpC3lBOqhnfY7</tokenSetor><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></setor><setor><id>15</id><name>Afsasf</name><tokenSetor>eFmNFz4LlWqbYhzQCtuzIOZxFBZ8NwXzFnUnoNs9FcPCKmsMnb</tokenSetor><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></setor></root>
+    
+</root>

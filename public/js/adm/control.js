@@ -10,9 +10,7 @@ const handleModalNewTask = (token) => {
     }
 
     if (window.getComputedStyle(dark_screen).display == 'flex') {
-        current_scroll;
-
-
+        
         const timer = setTimeout(() => {
             dark_screen.style.opacity = 0;
 

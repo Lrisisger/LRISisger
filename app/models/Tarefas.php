@@ -106,12 +106,12 @@
 
         //FUNÇÃO QUE PEGA O VALOR DO TOKEN DO SETOR
         public function getTokenSetor(){
-            return $this->tokenEmpresa;
+            return $this->tokenSetor;
         }
 
         //FUNÇÃO QUE ALTERA O VALOR DO TOKEN DO SETOR
         public function setTokenSetor($n){
-            $this->tokenEmpresa = $n;
+            $this->tokenSetor = $n;
         }
 
 
