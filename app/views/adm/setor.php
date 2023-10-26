@@ -136,7 +136,6 @@
 
     </div>
   </main>
-
   <div class="dark">
 
     <div class="novo-set">
