@@ -149,7 +149,7 @@ class TarefasDaoXml implements TarefasDAO {
         if (count($xml->children()) > 0){
             foreach ($xml as $item) {
                 if ($item->tokenSetor == $tokenSetor) {
-                    if($item->tokenEmpresa == $tokenEmpresa){
+                    if($item->tokenSetor == $tokenSetor){
                         $t = new Tarefas();
                         $t->setId($item->id);
                         $t->setTituloTarefa($item->tituloTarefa);

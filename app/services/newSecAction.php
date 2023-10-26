@@ -31,7 +31,7 @@ if($setorNome && $senha){
         $token = '';
         
         //LOOPING QUE IMPOSSIBILITA A CRIAÇÃO DE USUARIOS COM TOKEN IGUAL       
-         do {
+        do {
             $token = token(); //CRIANDO TOKEN PARA O SETOR
             $verify = $sDao->findByToken( $token ); //VERIFICAÇÃO DE TOKENS 
 
