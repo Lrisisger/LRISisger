@@ -85,7 +85,7 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
 }
 
 if($isAdm == 1){
-    header( 'Location: ../views/adm/login.php' );
+    header( 'Location: ../views/geral/login.php' );
     exit;
 }else{
     header( 'Location: ../views/adm/control.php' );

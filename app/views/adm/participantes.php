@@ -24,6 +24,11 @@
       header("Location: ../../services/logOutAction.php");
       exit;
   }
+
+  if($userInfo->getIsAdm() == 0){
+    header("Location: ../worker/control_colabora.php");
+    exit;
+  }
   
  ?>
   <header class="head">
@@ -87,7 +92,7 @@
             <img src="../../../public/img/icons/logout.svg" alt="">
           </div>
 
-          <h3>Login out</h3>
+          <h3>Logout</h3>
         </li>
       </a>
     </ul>

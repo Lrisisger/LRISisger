@@ -10,9 +10,7 @@ const handleModalNewTask = (token) => {
     }
 
     if (window.getComputedStyle(dark_screen).display == 'flex') {
-        current_scroll;
-
-
+        
         const timer = setTimeout(() => {
             dark_screen.style.opacity = 0;
 
@@ -94,7 +92,7 @@ const handleModalTask = (id) => {
     const mensagem = document.getElementById('task-mensagem');
     const containerCor = document.getElementById('container-title');
 
-    console.log(id)
+    
     if (id != false) {
         titulo.innerHTML = tarefasGeral[`id${id}`].tituloTarefa;
         nome.innerHTML = tarefasGeral[`id${id}`].nomeColabora;
