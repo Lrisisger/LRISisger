@@ -2,22 +2,15 @@
 <root>
 
 
+    
+
+
+    
     <setor>
-        <id>1</id>
-        <name>Compras</name>
-        <tokenSetor>68e6VYPznfIZN5SCIoaLZrw83V3cKATc6qZ5BcCsgAqeMHHR6M</tokenSetor>
+        <id>6</id>
+        <name>Administração</name>
+        <tokenSetor>leF3NQlhu4fC125E6b45GYqjzbGlaEiWAsg5RRSrcJLLbgni3W</tokenSetor>
         <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
     </setor>
-    <setor>
-        <id>2</id>
-        <name>Vendas</name>
-        <tokenSetor>1jWN0plbPqGwVo2nyUOduzZmKAMGSJEseg1UQNa37TnxuWuKX1</tokenSetor>
-        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
-    </setor>
-    <setor>
-        <id>3</id>
-        <name>Lojistica</name>
-        <tokenSetor>nPmi2ANxYaHs22rNW3bMD3NZYjnzKC57oX6HPhmL8hW2W9sK9J</tokenSetor>
-        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
-    </setor>
-<setor><id>4</id><name>Administrativo</name><tokenSetor>bH1cSCXhrei0lYEWKFDh70Ba6ewpOzZ1madLxXKTkhJpKUItVf</tokenSetor><tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa></setor><setor><id>5</id><name>Administrativo</name><tokenSetor>OTpC2SA95ZrYXKfG5iqKFyHQGwyC7TWyMNWmHHL1uFSnGPVVKV</tokenSetor><tokenEmpresa>zq2jglbsKdkbPHtds839Z!cF6bR1YGmHB3!Az#dswMbnQnv0oI</tokenEmpresa></setor><setor><id>6</id><name>Planalto</name><tokenSetor>dNcDHUSOCvMVea5FREveyiO2oYajtBIMWbgMGcfediTAYWJKNw</tokenSetor><tokenEmpresa>zq2jglbsKdkbPHtds839Z!cF6bR1YGmHB3!Az#dswMbnQnv0oI</tokenEmpresa></setor><setor><id>7</id><name>Ipiranga</name><tokenSetor>guLSxIi85xlMNppUvE4rbrduHmVPMXOinz5hg5SK0RAqoYARJb</tokenSetor><tokenEmpresa>zq2jglbsKdkbPHtds839Z!cF6bR1YGmHB3!Az#dswMbnQnv0oI</tokenEmpresa></setor></root>
+    
+<setor><id>2</id><name>Vendas</name><tokenSetor>6z7hEjAq9Rki0z2JoyAElSihswMwErEgadW8zXekK44V36YBLZ</tokenSetor><tokenEmpresa>r4twKYogXmLX79n2R4j6qZvlwaNO2yFxNX9MPfP91@tZI7kFe@</tokenEmpresa></setor><setor><id>1</id><name>Compras</name><tokenSetor>VKTe7aJ9obmFkQFvclN17RwFngbVG9O0UX5H4KLfkDL5bqp0Bf</tokenSetor><tokenEmpresa>r4twKYogXmLX79n2R4j6qZvlwaNO2yFxNX9MPfP91@tZI7kFe@</tokenEmpresa></setor></root>

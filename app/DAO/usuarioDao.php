@@ -16,9 +16,7 @@ class UsuarioDaoXml implements UsuarioDAO {
         $this->path = realpath( dirname( __FILE__ ) . '/../xml/usuarios.xml' );
         $this->pathId = realpath( dirname( __FILE__ ) . '/../xml/id.xml' );
         $this->xmlFile = simplexml_load_file( $this->path );
-        $this->xmlIdFile = simplexml_load_file( $this->pathId );
-        
-
+        $this->xmlIdFile = simplexml_load_file( $this->pathId );       
     }
 
     //FUNÇÃO QUE LIDA COM A ADIÇÃO DE USUARIOS NO XML

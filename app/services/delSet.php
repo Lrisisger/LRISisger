@@ -18,7 +18,6 @@ if($tarefasSet){
         $tDao->delete($tarefa->getId());
     }
 }
-
 $sDao->delete($setor->getId());
 
 header( 'Location: ../views/adm/setor.php' );

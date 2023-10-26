@@ -17,6 +17,7 @@
   require realpath( dirname( __FILE__ ) . '/../../dao/setoresDao.php');
   require realpath( dirname( __FILE__ ) . '/../../dao/usuarioDao.php');
 
+
   $auth = new Auth();
   $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
 
@@ -24,6 +25,11 @@
       header("Location: ../../services/logOutAction.php");
       exit;
   }
+  
+  if($userInfo->getIsAdm() == 0){
+    header("Location: ../worker/control_colabora.php");
+    exit;
+}
   
   
   $sDao = new SetoresDaoXml();
@@ -107,7 +113,7 @@
             <img src="../../../public/img/icons/logout.svg" alt="">
           </div>
 
-          <h3>Login out</h3>
+          <h3>Logout</h3>
         </li>
       </a>
     </ul>
@@ -136,7 +142,6 @@
 
     </div>
   </main>
-
   <div class="dark">
 
     <div class="novo-set">
@@ -172,6 +177,14 @@
           <input type="hidden" value="" id="tokenSetor" name="tokenSetor">
           <input type="text" name="setor" value="" id="nomeEdit" class="info" placeholder="Nome do setor">
           <input type="password" name="senha" class="info" placeholder="Senha">
+          <?php 
+            //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
+            if(!empty($_SESSION['avisoEdit']) && $_SESSION['avisoEdit']){
+              echo "<span class='aviso'>".$_SESSION['avisoEdit']."</span>";
+              $_SESSION['avisoEdit'] = '';
+              echo '<script> newSector("edit", false) </script>';
+            }
+          ?>
           <input type="submit" class="button-enviar" value="Confirmar">
         </form>
       </div>

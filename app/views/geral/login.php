@@ -14,10 +14,14 @@
         
         //VERIFICA SE EXISTE SESSÃO DE TOKEN ATIVA (LOGIN ATIVO)
         if(!empty($_SESSION['token'])){
-
-            header("Location: control.php");
-            exit;
-
+            $userInfo = new UsuarioDaoXml;
+            if($userInfo->findByToken($_SESSION['token']) == 1){
+                header("Location: ../adm/control.php");
+                exit;
+            }else{
+                header("Location: ../worker/control_colabora.php");
+                exit;
+            }
          }
         
     ?>
@@ -53,7 +57,7 @@
                         <a href="#">Esqueceu a senha?</a>
                     </div>
                     <div class="colab text-btn">
-                        <a href="singUp.php">Cadastre-se</a>
+                        <a href="../adm/singUp.php">Cadastre-se</a>
                     </div>
                     <div class="submit-btn btn">
                         <button type="submit" name="submit">Entrar</button>

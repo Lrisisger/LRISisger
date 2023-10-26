@@ -18,6 +18,7 @@ main {
     flex-wrap: wrap;
     height: auto;
     gap: 40px;
+    margin-top: 15px;
 }
 .sec {
     display: flex;

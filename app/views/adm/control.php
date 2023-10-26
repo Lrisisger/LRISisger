@@ -32,6 +32,11 @@
             header("Location: ../../services/logOutAction.php");
             exit;
         }
+
+        if($userInfo->getIsAdm() == 0){
+            header("Location: ../worker/control_colabora.php");
+            exit;
+        }
         
         $uDao = new UsuarioDaoXml();// INICIANDO DAO DE USUARIOS
         $usersColabora = $uDao->findAll(0, $userInfo->getTokenEmpresa());//RECEBENDO FUNCIONÁRIOS DA EMPRESA
@@ -46,19 +51,19 @@
         //echo "<script>var nome = '$nome';</script>";
         
    
-        $tarefas = $tDao->findAll($userInfo->getTokenEmpresa());// RECEBENDO TAREFAS DA EMPRESA
+        $tarefasGeral = $tDao->findAll($userInfo->getTokenEmpresa());// RECEBENDO TAREFAS DA EMPRESA
 
-
+        
 
         // FUNÇÃO QUE ORDENA AS TAREFAS NA TELA DE ACORDO COM O STATUS
         function ordenarStatus($statusOne, $statusTwo){
             return  $statusTwo->getStatus() - $statusOne->getStatus();
         }
-        usort($tarefas, 'ordenarStatus');   
+        usort($tarefasGeral, 'ordenarStatus');   
         
-        echo "<script>let tarefas = [];</script>";
+        echo "<script>let tarefasGeral = [];</script>";
 
-        foreach($tarefas as $tarefa){
+        foreach($tarefasGeral as $tarefa){
 
 
             echo "<script>array = {
@@ -73,7 +78,7 @@
 
                 }
              
-            tarefas.id".$tarefa->getId()." = array;
+                tarefasGeral.id".$tarefa->getId()." = array;
             </script>
             ";
         };
@@ -143,7 +148,7 @@
                         <img src="../../../public/img/icons/logout.svg" alt="">
                     </div>
 
-                    <h3>Login out</h3>
+                    <h3>Logout</h3>
                 </li>
             </a>
         </ul>
@@ -154,6 +159,9 @@
         <section class="sector">
             <?php foreach($setores as $setor):
                
+               $tarefasSetor = $tDao->findBySetor($setor->getTokenSetor()) ? $tDao->findBySetor($setor->getTokenSetor()) : [];// RECEBENDO TAREFAS DA EMPRESA
+
+               usort($tarefasSetor, 'ordenarStatus');   
                 
             ?>
                 <div class="sec">
@@ -163,8 +171,8 @@
 
                     <div class="content">
 
-                        <?php foreach($tarefas as $tarefa):?>
-                            <div id="<?=$tarefa->getId()?>" class="task <?=alterarCorTarefa($tarefa->getStatus());?>" onclick="handleModal('currentTask', this.id, false)">
+                        <?php foreach($tarefasSetor as $tarefa):?>
+                            <div id="<?=$tarefa->getId()?>" class="task <?=alterarCorTarefa($tarefa->getStatus());?>" onclick="handleModalTask(this.id)">
                                 <span>
                                     <?=$tarefa->getTituloTarefa();?>
                                 </span>
@@ -177,7 +185,7 @@
                         
                     </div>
 
-                    <div class="add-act" onclick="handleModal('newTask', false, this.token)" token="<?=$setor->getTokenSetor()?>">
+                    <div class="add-act" onclick="handleModalNewTask(this.id)" id="<?=$setor->getTokenSetor()?>">
                         <img src="../../../public/img//icons/plus.svg" alt="">
                     </div>
 
@@ -193,7 +201,7 @@
         <div class="modal-new-task">
             <div class="head-task">
                 <h3>Nova tarefa...</h3>
-                <div onclick="handleModal('newTask', false,false)" class="back">                    
+                <div onclick="handleModalNewTask()" class="back">                    
                     <img  src="../../../public/img/svgs/arrow_back.svg" alt="">
                 </div>
             </div>
@@ -201,6 +209,7 @@
             <form action="../../services/newTaskAction.php" method="post">
                 <input type="hidden" value='<?=$userInfo->getId()?>' name='idAdm'>                
                 <input type="hidden" value='<?=$userInfo->getTokenEmpresa()?>' name='tokenEmpresa'>
+                <input type="hidden" value='' name='tokenSetor' id="tokenSetor">
 
                 <label>
                     <h4>Responsável</h4>
@@ -236,7 +245,7 @@
         <div class="modal-task" >
             <div id="container-title" class="head-task ">
                 <h3 id="task-title"></h3>
-                <div onclick="handleModal('currentTask', false, false)" class="back">                    
+                <div onclick="handleModalTask(false)" class="back">                    
                     <img  src="../../../public/img/svgs/arrow_back.svg" alt="">
                 </div>
             </div>

@@ -54,7 +54,7 @@ class TarefasDaoXml implements TarefasDAO {
     //FUNÇÃO QUE DELETA USUARIOS DO XML
 
     private function handleDel($id) {
-        foreach ($this->xmlFile->tarefas as $item){
+        foreach ($this->xmlFile->tarefa as $item){
             if ($item->id == $id){
                 $dom = dom_import_simplexml($item);
                 $dom->parentNode->removeChild($dom);
@@ -149,7 +149,7 @@ class TarefasDaoXml implements TarefasDAO {
         if (count($xml->children()) > 0){
             foreach ($xml as $item) {
                 if ($item->tokenSetor == $tokenSetor) {
-                    if($item->tokenEmpresa == $tokenEmpresa){
+                    if($item->tokenSetor == $tokenSetor){
                         $t = new Tarefas();
                         $t->setId($item->id);
                         $t->setTituloTarefa($item->tituloTarefa);

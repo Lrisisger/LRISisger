@@ -2,7 +2,8 @@
 
 require '../dao/usuarioDao.php'; 
 require '../models/setores.php';
-require '../dao/setoresDao.php'; 
+require '../dao/setoresDao.php';
+require_once '../../config/config.php'; 
 
 $uDao = new UsuarioDaoXml();
 $sDao = new SetoresDaoXml();
@@ -29,10 +30,10 @@ if($setorNome && $senha){
 
         $sDao->update($s);
     }else{
-        $_SESSION['avisoAdd'] = 'Senha incorreta';
+        $_SESSION['avisoEdit'] = 'Senha incorreta';
     }
 }else{
-    $_SESSION['avisoAdd'] = 'Preencha todos os campos';
+    $_SESSION['avisoEdit'] = 'Preencha todos os campos';
 }
 
 header( 'Location: ../views/adm/setor.php' );
