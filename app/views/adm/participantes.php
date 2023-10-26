@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../../public/css/adm/setor.css">
+  <link rel="stylesheet" href="../../../public/css/adm/participantes.css">
   <link rel="stylesheet" href="../../../public/css/general/main.css">
   <title>SISGER</title>
 </head>
@@ -25,26 +25,6 @@
       exit;
   }
   
-  
-  $sDao = new SetoresDaoXml();
-  $setores = $sDao->findAll($userInfo->getTokenEmpresa());
-
-  echo "<script>let setores = [];</script>";
-        
-  foreach($setores as $setor){
-
-      echo "<script>array = {
-              id: ".$setor->getId().",
-              nomeSetor: '".$setor->getName()."',
-              tokenSetor: '".$setor->getTokenSetor()."',
-              tokemEmpresa: '".$setor->getTokenEmpresa()."'
-          }
-       
-      setores.id".$setor->getId()." = array;
-      </script>
-      ";
-  };
-  
  ?>
   <header class="head">
     <div class="menu-button button-head" onclick="changeAside()">
@@ -52,7 +32,7 @@
     </div>
 
     <div class="title">
-      <h1>SETORES</h1>
+      <h1>PARTICIPANTES</h1>
     </div>
   </header>
 
@@ -91,13 +71,13 @@
         </li>
       </a>
 
-      <a href="participantes.php">
+      <a href="setor.php">
         <li>
           <div class="menu-button">
-            <img style="height:30px;" src="../../../public/img/icons/people.svg" alt="">
+            <img style="height:30px;" src="../../../public/img/icons/setor.svg" alt="">
           </div>
 
-          <h3>Participante</h3>
+          <h3>Setor</h3>
         </li>
       </a>
 
@@ -114,70 +94,14 @@
   </aside>
 
   <main>
-    <div onclick="newSector('new', false)" class="add-sec-area">
-      <button>
-        CRIAR SETOR
-      </button>
-    </div>
 
-    <div class="set-container">
-      <?php foreach($setores as $setor): ?>
-        <div class="setor">
-          <div class="name">
-            <?=$setor->getName();?>
-          </div>
-
-          <div class="botoes">
-            <a href="../../services/delSet.php?token=<?=$setor->getTokenSetor()?>" onclick="return confirm('Tem certeza que deseja excluir?')" class="del">Deletar</a>
-            <a href="#" onclick="newSector('edit', this.id)" id="<?=$setor->getId()?>" class="edit">Editar</a>
-          </div>
-        </div>
-      <?php endforeach; ?>
-
-    </div>
-  </main>
-
-  <div class="dark">
-
-    <div class="novo-set">
-      <div class="header">
-        <h2>Novo Setor</h2>
-        <img onclick="newSector('new', false)" class="close-modal" src="../../../public/img/svgs/arrow_back.svg" alt="">
-      </div>
-
-      <div class="modal-container">
-        <form action="../../services/newSecAction.php" method="post">
-          <input type="text" name="setor" class="info" placeholder="Nome do setor">
-          <input type="password" name="senha" class="info" placeholder="Senha">
-          <?php 
-            //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
-            if(!empty($_SESSION['avisoAdd']) && $_SESSION['avisoAdd']){
-              echo "<span class='aviso'>".$_SESSION['avisoAdd']."</span>";
-              $_SESSION['avisoAdd'] = '';
-            }
-          ?>
-          <input type="submit" class="button-enviar" value="Confirmar">
-        </form>
+    <div class="container-add">
+      <div class="botao">
+        ADICIONAR PARTICIPANTES
       </div>
     </div>
 
-    <div class="edit-set">
-      <div class="header">
-        <h2>Editar Setor</h2>
-        <img onclick="newSector('edit', false)" class="close-modal" src="../../../public/img/svgs/arrow_back.svg" alt="">
-      </div>
-
-      <div class="modal-container">
-        <form action="../../services/editSecAction.php" method="post">
-          <input type="hidden" value="" id="tokenSetor" name="tokenSetor">
-          <input type="text" name="setor" value="" id="nomeEdit" class="info" placeholder="Nome do setor">
-          <input type="password" name="senha" class="info" placeholder="Senha">
-          <input type="submit" class="button-enviar" value="Confirmar">
-        </form>
-      </div>
-    </div>
-
-  </div>
+</main>
 
   <script src="../../../public/js/general/main.js"></script>  
   <script src="../../../public/js/adm/setor.js"></script>
