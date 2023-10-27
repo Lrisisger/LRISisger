@@ -1,0 +1,160 @@
+:root {
+    --redbox: #E05D5D;
+    --greenbox: #71B15A;
+    --goldbox: #DFBD0C;
+    --startbox: #17A1FA;
+    --bluebutton: #5BA5D8;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+label {
+    font-weight: 500;
+}
+
+input, textarea {
+    border-radius: 24px;
+    border: none;
+    background-color: #DBE0EA;
+    color: black;
+}
+
+.logoutButton {
+    border: none;
+    background-color: #6F78D1;
+    padding: 8px;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.logoutButton:hover{
+    background-color: #525AB3;
+}
+
+.cardTarefa {
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    min-width: 350px
+}
+
+.titleTarefa {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 8px 0 12px 8px;
+    color: white;
+}
+
+.container-red{
+    background-color: var(--redbox);
+    position: relative;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 12px;
+}
+
+.container-blue{
+    background-color: var(--startbox);
+    position: relative;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 12px;
+}
+
+.container-green{
+    background-color: var(--greenbox);
+    position: relative;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 12px;
+}
+
+.container-gold{
+    background-color: var(--goldbox);
+    position: relative;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 12px;
+}
+
+.inputArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    padding: 10px 16px;
+}
+
+.respon input {
+    width: 100%;
+    padding: 8px;
+}
+
+.prazo input {
+    padding: 8px;
+}
+
+.status input {
+    padding: 8px;
+}
+
+.atraso input {
+    background-color: var(--redbox);
+    color: white;
+}
+
+.concluido input {
+    background-color: var(--greenbox);
+    color: white;
+}
+
+.iniciado input {
+    background-color: var(--startbox);
+    color: white;
+}
+
+.pausado input {
+    background-color: var(--goldbox);
+    color: white;
+}
+
+.descricao input, textarea {
+    padding: 8px;
+    width: 100%;
+    resize: vertical;
+    min-height: 50px;
+    text-align: justify;
+}
+
+.observ input, textarea {
+    padding: 8px;
+    width: 100%;
+    min-height: 115px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button{
+    color: white;
+    background-color: #626ABA;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 18px;
+    width: 110px;
+    margin: 12px;
+    transition: 0.2s;
+}
+
+.buttons button:hover{
+    background-color: #525AB3;
+}

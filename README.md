@@ -23,7 +23,8 @@ Você pode visualizar o projeto clonando o repositório a partir do seguinte lin
 
 - Lucas Eduardo: *lesds2001@gmail.com*
 - Ianca Garcia: [email de contato]
-- Luis Santos: [email de contato]
+- Luis Couto: *luislk_@outlook.com*
 - Robert Narcisio: [email de contato]
 - Luca Soares: [email de contato]
+
  Obrigado por se interessar pelo nosso projeto!

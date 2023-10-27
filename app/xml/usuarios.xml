@@ -81,4 +81,14 @@
         <token>bahHJjg4UXmWo5kK#pYee94v5KUrnhrAH8aYNF5kXAATpNDCC8</token>
         <tokenEmpresa>r4twKYogXmLX79n2R4j6qZvlwaNO2yFxNX9MPfP91@tZI7kFe@</tokenEmpresa>
     </usuario>
+    <usuario>
+        <id>16</id>
+        <name>Luis</name>
+        <email>Tico@gmail.com</email>
+        <password>$2y$10$IGfskhU6y4I1YQUx3yApTu85xWmjYzv9i3mmMppcoQSd2CAApZGfq</password>
+        <cpf>123</cpf>
+        <isAdm>0</isAdm>
+        <token>JYmK@#!8MR3Jxsx200TYz8j9SfRK1z7t4R#G9UmbTc11k9uRVW</token>
+        <tokenEmpresa>oMUWuQ$pmlhCtu@sKBQorknjBSFFyjNmX0z1sziabYMyc8oo0j</tokenEmpresa>
+    </usuario>
 </root>
