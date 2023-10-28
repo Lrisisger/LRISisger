@@ -153,9 +153,9 @@
             </a>
         </ul>
     </aside>
+    <!-- NAV BAR -->
 
     <main>
-        <!-- NAV BAR -->
         <section class="sector">
             <?php foreach($setores as $setor):
                
