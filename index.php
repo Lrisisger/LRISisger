@@ -1,3 +1,3 @@
 <?php
-header("Location: app/views/adm/login.php");
+header("Location: app/views/geral/login.php");
 exit;
