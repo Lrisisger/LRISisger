@@ -22,9 +22,9 @@ Você pode visualizar o projeto clonando o repositório a partir do seguinte lin
 ### Se você tiver alguma pergunta, sugestão ou feedback, entre em contato com um dos membros do grupo:
 
 - Lucas Eduardo: *lesds2001@gmail.com*
-- Ianca Garcia: [email de contato]
+- Ianca Garcia: *garciainca@gmail.com*
 - Luis Couto: *luislk_@outlook.com*
-- Robert Narcisio: [email de contato]
-- Luca Soares: [email de contato]
+- Robert Narcisio: *robertngt@gmail.com*
+- Luca Soares: *lucalima7l77@gmail.com*
 
  Obrigado por se interessar pelo nosso projeto!
