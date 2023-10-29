@@ -1,5 +1,5 @@
 <?php
-
+// EDIÇÃO DE NOME DOS SETORES
 require '../dao/usuarioDao.php'; 
 require '../models/setores.php';
 require '../dao/setoresDao.php';

@@ -1,5 +1,5 @@
 <<?php
-
+//  FUNÇAO DE DELETR SETOR
 require '../dao/tarefasDao.php'; 
 require '../models/setores.php';
 require '../dao/setoresDao.php'; 

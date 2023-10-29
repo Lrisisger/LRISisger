@@ -1,5 +1,5 @@
 <?php
-
+//DECLARA AS CARACTERISTICAS PARA A CRIAÇÃO DE UM SETOR
     class Setores {
         private $id;
         private $name;

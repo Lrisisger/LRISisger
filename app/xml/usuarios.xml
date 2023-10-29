@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-
+<!-- XML QUE SALVA AS INFORMAÇÕES DOS USUÁRIOS CADASTRADOS -->
     <usuario>
         <id>9</id>
         <name>Lucas Eduardo Souza Da Silva</name>
