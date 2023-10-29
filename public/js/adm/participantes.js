@@ -1,15 +1,23 @@
-const modalNewSet = document.querySelector('.novo-set');
-const modalEditSet = document.querySelector('.edit-set');
+const modalNewPart = document.querySelector('.modal-new-user');
+const modalEditPart = document.querySelector('.modal-edit-user');
 const dark_screen = document.querySelector('.dark');
 const nameEdit = document.getElementById('nomeEdit');
-const inputToken = document.getElementById('tokenSetor');
+const emailEdit = document.getElementById('emailEdit');
+const cpfEdit = document.getElementById('cpfEdit');
+const isAdmEdit = document.getElementById('isAdmEdit');
+const tokenEdit = document.getElementById('tokenEdit');
 
 
-const newSector = (typeModal, id) =>{
-    let modal = typeModal == 'new' ? modalNewSet : modalEditSet;
+const newUser = (typeModal, id) =>{
+
+    let modal = typeModal == 'new' ? modalNewPart : modalEditPart;
     if(typeModal == 'edit' && id){
-        nameEdit.value = setores[`id${id}`].nomeSetor
-        inputToken.value = setores[`id${id}`].tokenSetor
+        nameEdit.value = usuarios[`id${id}`].nome
+        emailEdit.value = usuarios[`id${id}`].email
+        cpfEdit.value = usuarios[`id${id}`].cpf
+        isAdmEdit.value = usuarios[`id${id}`].isAdm
+        tokenEdit.value = usuarios[`id${id}`].token
+
     } 
    
     if(window.getComputedStyle (dark_screen).display == 'flex'){        

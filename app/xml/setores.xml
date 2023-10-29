@@ -6,11 +6,5 @@
 
 
     
-    <setor>
-        <id>6</id>
-        <name>Administração</name>
-        <tokenSetor>leF3NQlhu4fC125E6b45GYqjzbGlaEiWAsg5RRSrcJLLbgni3W</tokenSetor>
-        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
-    </setor>
-    
-</root>
+  
+<setor><id>1</id><name>Vendas</name><tokenSetor>6MzgxKJZSasebeImcynt7n97yzj0LCsRvVdj0iwZA8JPTDbpVA</tokenSetor><tokenEmpresa>QaS2$9j@2!zqPetJiQ0SsfPlAAvacILQ3Gk$HQewH90Wq3u4c9</tokenEmpresa></setor></root>

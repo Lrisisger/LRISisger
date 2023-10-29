@@ -20,10 +20,31 @@
   $auth = new Auth();
   $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
 
+  $uDao = new UsuarioDaoXml();
+  $infoAllUsers = $uDao->findAll(2, $userInfo->getTokenEmpresa());
+
   if($userInfo == false){
       header("Location: ../../services/logOutAction.php");
       exit;
   }
+
+  echo "<script>let usuarios = [];</script>";
+        
+  foreach($infoAllUsers as $user){ 
+    if($user->getMainAcc() == 0){
+      echo "<script>array = {
+              nome: '".$user->getName()."',
+              email: '".$user->getEmail()."',
+              cpf: '".$user->getCpf()."',
+              isAdm: '".$user->getIsAdm()."',
+              token: '".$user->getToken()."'
+          }
+       
+          usuarios.id".$user->getId()." = array;
+      </script>
+      ";
+    }
+  };
   
  ?>
   <header class="head">
@@ -96,15 +117,138 @@
   <main>
 
     <div class="container-add">
-      <div class="botao">
+      <div class="botao" onclick="newUser('new', false)">
         ADICIONAR PARTICIPANTES
       </div>
     </div>
 
+    <div class="container-part">
+      <?php foreach($infoAllUsers as $users): 
+        if($users->getMainAcc() == 0):
+        ?>
+        <div class="part">
+          <div class="infos">
+            <div class="name"><?=$users->getName()?></div>
+            <div class="cpf"><?=$users->getCpf()?></div>
+          </div>
+
+          <div class="botoes">
+            <div class="botao-edit" onclick="newUser('edit', <?= $users->getId()?>)">Editar</div>
+            <div class="botao-del">Deletar</div>
+          </div>
+          
+        </div>
+      <?php 
+      endif;
+      endforeach; ?>
+
+    </div>
+      
+
 </main>
 
+<div class="dark">
+      <div class="modal-new-user">
+        <div class="container-title">
+          <h3>Novo colaborador</h3>
+          <img onclick="newUser('new', false)"  src="../../../public/img/svgs/arrow_back.svg" alt="">
+        </div>
+
+        <div class="container-form">
+          <form action="../../services/singUpAction.php" method="post">
+
+            <label>
+              <h4>Nome completo</h4>
+              <input type="text" name="nome">
+            </label>
+
+            <label>
+              <h4>Email</h4>
+              <input type="email" name="email">
+            </label>
+
+            <div class="container-cpf-User">
+              <label>
+                <h4>CPF</h4>
+                <input type="text" name="cpfCnpj" style="width: 150px;">
+              </label>
+
+              <label>
+                <h4>Tipo de usuario</h4>
+                <select name="isAdm">
+                  <option value="1">Administrador</option>
+                  <option value="0">Colaborador</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              <h4>Senha</h4>
+              <input type="password" name="pass">
+            </label>
+          
+            <label>
+              <h4>Confirmar Senha</h4>
+              <input type="password" name="confirmPass">
+            </label>
+
+            
+            <input class="botao sub" type="submit">
+           
+          </form>
+        </div>
+      </div> 
+
+      <div class="modal-edit-user">
+        <div class="container-title">
+          <h3>Novo colaborador</h3>
+          <img onclick="newUser('edit', false)" src="../../../public/img/svgs/arrow_back.svg" alt="">
+        </div>
+
+        <div class="container-form">
+          <form action="../../services/editUserAction.php">
+            <input type="hidden" name="token" id="tokenEdit" value="">
+
+            <label>
+              <h4>Nome completo</h4>
+              <input id="nomeEdit" type="text" name="nome">
+            </label>
+
+            <label>
+              <h4>Email</h4>
+              <input id="emailEdit" type="email" name="email">
+            </label>
+
+            <div class="container-cpf-User">
+              <label>
+                <h4>CPF</h4>
+                <input id="cpfEdit" type="text" name="cpfCnpj" style="width: 150px;">
+              </label>
+
+              <label>
+                <h4>Tipo de usuario</h4>
+                <select id="isAdmEdit" name="isAdm">
+                  <option value="1">Administrador</option>
+                  <option value="0">Colaborador</option>
+                </select>
+              </label>
+            </div>
+
+      
+
+            
+            <input class="botao sub" type="submit">
+           
+          </form>
+        </div>
+      </div> 
+
+        
+</div>
+
+
   <script src="../../../public/js/general/main.js"></script>  
-  <script src="../../../public/js/adm/setor.js"></script>
+  <script src="../../../public/js/adm/participantes.js"></script>
 
 </body>
 

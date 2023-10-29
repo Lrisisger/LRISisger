@@ -39,7 +39,8 @@ class UsuarioDaoXml implements UsuarioDAO {
         $novoRegistro->addChild( 'cpf', $u->getCpf() );
         $novoRegistro->addChild( 'isAdm', $u->getIsAdm() );
         $novoRegistro->addChild( 'token', $u->getToken() );        
-        $novoRegistro->addChild( 'tokenEmpresa', $u->getTokenEmpresa() );
+        $novoRegistro->addChild( 'tokenEmpresa', $u->getTokenEmpresa() );        
+        $novoRegistro->addChild( 'mainAcc', $u->getMainAcc() );
 
         $this->xmlFile->asXML( $this->path );
 
@@ -97,6 +98,7 @@ class UsuarioDaoXml implements UsuarioDAO {
                         $u->setIsAdm( $item->isAdm );
                         $u->setToken( $item->token );
                         $u->setTokenEmpresa( $item->tokenEmpresa );
+                        $u->setMainAcc($item->mainAcc);
 
                         $array[] = $u;
                     }
@@ -117,6 +119,7 @@ class UsuarioDaoXml implements UsuarioDAO {
                         $u->setIsAdm( $item->isAdm );
                         $u->setToken( $item->token );
                         $u->setTokenEmpresa( $item->tokenEmpresa );
+                        $u->setMainAcc($item->mainAcc);
 
                         $array[] = $u;
                     }
@@ -138,6 +141,7 @@ class UsuarioDaoXml implements UsuarioDAO {
                         $u->setIsAdm( $item->isAdm );
                         $u->setToken( $item->token );
                         $u->setTokenEmpresa( $item->tokenEmpresa );
+                        $u->setMainAcc($item->mainAcc);
 
                         $array[] = $u;
                     }
@@ -166,6 +170,7 @@ class UsuarioDaoXml implements UsuarioDAO {
                     $u->setIsAdm( $item->isAdm );
                     $u->setToken( $item->token );
                     $u->setTokenEmpresa( $item->tokenEmpresa );
+                    $u->setMainAcc($item->mainAcc);
 
                     return $u;
                 }
@@ -191,6 +196,7 @@ class UsuarioDaoXml implements UsuarioDAO {
                     $u->setIsAdm( $item->isAdm );
                     $u->setToken( $item->token );
                     $u->setTokenEmpresa( $item->tokenEmpresa );
+                    $u->setMainAcc($item->mainAcc);
 
                     return $u;
                 }
@@ -215,6 +221,7 @@ class UsuarioDaoXml implements UsuarioDAO {
                     $u->setIsAdm( $item->isAdm );
                     $u->setToken( $item->token );
                     $u->setTokenEmpresa( $item->tokenEmpresa );
+                    $u->setMainAcc($item->mainAcc);
 
                     return $u;
                 }
