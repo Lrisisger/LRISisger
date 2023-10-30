@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-
     <usuario>
         <id>9</id>
         <name>Lucas Eduardo Souza Da Silva</name>
@@ -65,7 +64,7 @@
         <id>15</id>
         <name>Nathan Felipe</name>
         <email>Nathanferreira@gmail.com</email>
-        <password>$2y$10$lQUtNb1Foo65D3bAArEO5etLIpclCRuFXcOjf/7ggu5BbsQh/XSGa</password>
+        <password>$2y$10$IGfskhU6y4I1YQUx3yApTu85xWmjYzv9i3mmMppcoQSd2CAApZGfq</password>
         <cpf>123.123.132-13</cpf>
         <isAdm>1</isAdm>
         <token>ENNj5e!efexTrkqDAEwWt7dwb2yU#4bAe6I0W3ueQv3NW2siHV</token>
@@ -88,7 +87,7 @@
         <password>$2y$10$IGfskhU6y4I1YQUx3yApTu85xWmjYzv9i3mmMppcoQSd2CAApZGfq</password>
         <cpf>123</cpf>
         <isAdm>0</isAdm>
-        <token>JYmK@#!8MR3Jxsx200TYz8j9SfRK1z7t4R#G9UmbTc11k9uRVW</token>
-        <tokenEmpresa>oMUWuQ$pmlhCtu@sKBQorknjBSFFyjNmX0z1sziabYMyc8oo0j</tokenEmpresa>
+        <token>ENNj5e!efexTrkqDAEwWt7dwb2yU#4bAe6I0W3ueQv3NW2siHV</token>
+        <tokenEmpresa>ysDppB6s9N4Oufd07RjS7i$rxIVyok#xwN!qBi303i08QBFdVU</tokenEmpresa>
     </usuario>
 </root>
