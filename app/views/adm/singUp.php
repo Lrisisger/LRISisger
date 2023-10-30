@@ -41,6 +41,7 @@
     <div class="right cadUser flex">
         <form class="formCad flex" action="../../services/singUpAction.php" method="post">
                 <input type="hidden" name="isAdm" value="1">
+                <input type="hidden" name="main" value="1">
 
             <div class="titleText">Cadastro</div>
             <div>

@@ -2,30 +2,5 @@
 <root>
 
 
-    <tarefa>
-        <id>4</id>
-        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
-        <status>2</status>
-        <descricao>Fazer as querys do banco</descricao>
-        <dataInicial>2023-10-18</dataInicial>
-        <dataLimite>2023-10-27</dataLimite>
-        <idColabora>12</idColabora>
-        <idAdm>15</idAdm>
-        <mensagemAtraso />
-        <tokenEmpresa>r4twKYogXmLX79n2R4j6qZvlwaNO2yFxNX9MPfP91@tZI7kFe@</tokenEmpresa>
-        <tokenSetor>6z7hEjAq9Rki0z2JoyAElSihswMwErEgadW8zXekK44V36YBLZ</tokenSetor>
-    </tarefa>
-    <tarefa>
-        <id>5</id>
-        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
-        <status>2</status>
-        <descricao>Fazer as querys do banco</descricao>
-        <dataInicial>2023-10-25</dataInicial>
-        <dataLimite>2023-10-27</dataLimite>
-        <idColabora>14</idColabora>
-        <idAdm>15</idAdm>
-        <mensagemAtraso />
-        <tokenEmpresa>r4twKYogXmLX79n2R4j6qZvlwaNO2yFxNX9MPfP91@tZI7kFe@</tokenEmpresa>
-        <tokenSetor>VKTe7aJ9obmFkQFvclN17RwFngbVG9O0UX5H4KLfkDL5bqp0Bf</tokenSetor>
-    </tarefa>
+
 </root>
