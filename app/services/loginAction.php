@@ -22,7 +22,7 @@ if($email && $pass){
         if(password_verify($pass, $hash)){
             $_SESSION['token'] = $u->getToken(); //SE LOGIN APROVADO CRIAR SESSAO COM TOKEN DO USUARIO  
 
-            if($u->getIsAdm == 1){
+            if($u->getIsAdm() == 1){
                 header('Location: ../views/adm/control.php');//CASO LOGIN APROVADO REDIRECIONAR PARA TELA DE CONTROLE
                 exit;
             }else{
