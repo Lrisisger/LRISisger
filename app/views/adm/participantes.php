@@ -108,7 +108,7 @@
             <img src="../../../public/img/icons/logout.svg" alt="">
           </div>
 
-          <h3>Login out</h3>
+          <h3>Logout</h3>
         </li>
       </a>
     </ul>

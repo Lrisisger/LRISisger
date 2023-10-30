@@ -32,6 +32,11 @@
             header("Location: ../../services/logOutAction.php");
             exit;
         }
+
+        if($userInfo->getIsAdm() == 0){
+            header("Location: ../worker/control_colabora.php");
+            exit;
+        }
         
         $uDao = new UsuarioDaoXml();// INICIANDO DAO DE USUARIOS
         $usersColabora = $uDao->findAll(0, $userInfo->getTokenEmpresa());//RECEBENDO FUNCIONÁRIOS DA EMPRESA
@@ -143,7 +148,7 @@
                         <img src="../../../public/img/icons/logout.svg" alt="">
                     </div>
 
-                    <h3>Login out</h3>
+                    <h3>Logout</h3>
                 </li>
             </a>
         </ul>
@@ -240,7 +245,7 @@
         <div class="modal-task" >
             <div id="container-title" class="head-task ">
                 <h3 id="task-title"></h3>
-                <div onclick="handleModalNewTask()" class="back">                    
+                <div onclick="handleModalTask(false)" class="back">                    
                     <img  src="../../../public/img/svgs/arrow_back.svg" alt="">
                 </div>
             </div>
