@@ -44,6 +44,12 @@
     margin: 0 35px;
 }
 
+.button-head-inverse {
+    position: absolute;
+    right: 0;
+    margin: 0 35px;
+}
+
 .title h1 {
     color: #fff;
     font-size: 40px;

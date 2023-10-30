@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-
     <usuario>
         <id>1</id>
         <name>Lucas Eduardo</name>
@@ -69,7 +68,7 @@
         <id>15</id>
         <name>Nathan Felipe</name>
         <email>Nathanferreira@gmail.com</email>
-        <password>$2y$10$lQUtNb1Foo65D3bAArEO5etLIpclCRuFXcOjf/7ggu5BbsQh/XSGa</password>
+        <password>$2y$10$IGfskhU6y4I1YQUx3yApTu85xWmjYzv9i3mmMppcoQSd2CAApZGfq</password>
         <cpf>123.123.132-13</cpf>
         <isAdm>1</isAdm>
         <token>Z6QAm#mxz6zfMD6Oo5kS#U@bLEwzXwN2WWotqBX7PvGIzZGkAK</token>
