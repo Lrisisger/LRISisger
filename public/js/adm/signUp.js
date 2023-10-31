@@ -1,8 +1,9 @@
 const inputCpfCnpj = document.getElementById('cpfCnpj');
 
 inputCpfCnpj.addEventListener("input", function () {
+  console.log('123')
   const value = this.value.replace(/\D/g, "");
-
+  
   
   if (value.length === 11) {
     this.value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");

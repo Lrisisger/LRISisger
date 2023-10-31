@@ -2,15 +2,5 @@
 <root>
 <!-- ESSE XML SALVA OS DADOS DOS SETORES -->
 
-    
 
-
-    
-    <setor>
-        <id>6</id>
-        <name>Administração</name>
-        <tokenSetor>leF3NQlhu4fC125E6b45GYqjzbGlaEiWAsg5RRSrcJLLbgni3W</tokenSetor>
-        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
-    </setor>
-    
-<setor><id>2</id><name>Vendas</name><tokenSetor>6z7hEjAq9Rki0z2JoyAElSihswMwErEgadW8zXekK44V36YBLZ</tokenSetor><tokenEmpresa>r4twKYogXmLX79n2R4j6qZvlwaNO2yFxNX9MPfP91@tZI7kFe@</tokenEmpresa></setor><setor><id>1</id><name>Compras</name><tokenSetor>VKTe7aJ9obmFkQFvclN17RwFngbVG9O0UX5H4KLfkDL5bqp0Bf</tokenSetor><tokenEmpresa>r4twKYogXmLX79n2R4j6qZvlwaNO2yFxNX9MPfP91@tZI7kFe@</tokenEmpresa></setor><setor><id>3</id><name>Contabilidade</name><tokenSetor>S17KdgClDywROJRzyiRDnyDuaZ9kGFGAsvbHe90QGuSMKHjs7n</tokenSetor><tokenEmpresa>ysDppB6s9N4Oufd07RjS7i$rxIVyok#xwN!qBi303i08QBFdVU</tokenEmpresa></setor></root>
+<setor><id>2</id><name>Carros</name><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa></setor></root>

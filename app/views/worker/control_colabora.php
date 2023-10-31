@@ -25,6 +25,11 @@
         header("Location: ../../services/logOutAction.php");
         exit;
     }
+
+    if($userInfo->getIsAdm() == 1){
+        header("Location: ../adm/control.php");
+        exit;
+    }
     ?>
 
     <header class="head">

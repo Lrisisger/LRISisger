@@ -9,6 +9,7 @@
         private $isAdm;
         private $token;
         private $tokenEmpresa;
+        private $mainAcc;
 
         //FUNÇÃO QUE PEGA O VALOR DO ID DO USUARIO
         public function getId(){
@@ -88,6 +89,14 @@
         //FUNÇÃO QUE ALTERA O VALOR DO TOKEN DA EMPRESA DO USUARIO
         public function setTokenEmpresa($n){
             $this->tokenEmpresa = trim($n);
+        }
+
+        public function setMainAcc($n){
+            $this->mainAcc = trim($n);
+        }
+
+        public function getMainAcc(){
+            return $this->mainAcc;
         }
 
 
