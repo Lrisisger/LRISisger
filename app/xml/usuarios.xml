@@ -2,6 +2,9 @@
 <root>
 
 
+<!-- XML QUE SALVA AS INFORMAÇÕES DOS USUÁRIOS CADASTRADOS -->
+
+
     <usuario>
         <id>1</id>
         <name>Lucas Eduardo Souza Da Silva</name>
