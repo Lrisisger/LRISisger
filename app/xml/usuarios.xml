@@ -16,4 +16,4 @@
 
     
     
-<usuario><id>3</id><name>Nathan Fellipe</name><email>Nathanferreira@gmail.com</email><password>$2y$10$gVjX09U06yd2LCC6k83qYOcHYu2iOAUEZpwYfsQxl1psD7DKCQqf2</password><cpf>12312312312</cpf><isAdm>0</isAdm><token>LXloyFaX2n!x2m#CKVs8CGg1p3Nc#CW25K1LaXJX4bMQPfp#gp</token><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><mainAcc>0</mainAcc></usuario></root>
+<usuario><id>4</id><name>Luiz Henrique</name><email>Luis@gmail.com</email><password>$2y$10$8G4/mMp5EfUsHFoGKcZ1nOa.dHgYHeOm83QPcY6CZHgII0bJdsB2a</password><cpf>123123123</cpf><isAdm>0</isAdm><token>J7bZKp0FbmG7CUcj!TWwFGQp!ncLQ87MWpQbjsg@DuZseQtlvr</token><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><mainAcc>0</mainAcc></usuario><usuario><id>5</id><name>Ianca Garcia</name><email>Garcia@gmail.com</email><password>$2y$10$re/1/i9ETIt6WIjbJqyFL.5pTcsMMpMNiSjO8MPUv8E5skE87O.K.</password><cpf>123</cpf><isAdm>0</isAdm><token>#7ThILx7n!sYT2@cYrxHxHPVkCJOqJxwal$5kpTAVqwnDExhQ8</token><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><mainAcc>0</mainAcc></usuario></root>

@@ -172,7 +172,7 @@
             <div class="container-cpf-User">
               <label>
                 <h4>CPF</h4>
-                <input type="text" name="cpfCnpj" style="width: 150px;">
+                <input type="text" id="cpfNew" name="cpfCnpj" style="width: 150px;">
               </label>
 
               <label>
@@ -203,7 +203,7 @@
 
       <div class="modal-edit-user">
         <div class="container-title">
-          <h3>Novo colaborador</h3>
+          <h3>Editar colaborador</h3>
           <img onclick="newUser('edit', false)" src="../../../public/img/svgs/arrow_back.svg" alt="">
         </div>
 

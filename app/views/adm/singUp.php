@@ -31,7 +31,7 @@
         <!-- Image Mid -->
 
         <div class="bottom flex">
-            <a href="../adm/login.php">
+            <a href="../geral/login.php">
                 <button type="none" class="button signIn" type="">Entrar</button>
             </a>
         </div>
