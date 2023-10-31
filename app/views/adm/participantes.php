@@ -20,13 +20,15 @@
   $auth = new Auth();
   $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
 
+  if($userInfo == false){
+    header("Location: ../../services/logOutAction.php");
+    exit;
+  }
+
   $uDao = new UsuarioDaoXml();
   $infoAllUsers = $uDao->findAll(2, $userInfo->getTokenEmpresa());
 
-  if($userInfo == false){
-      header("Location: ../../services/logOutAction.php");
-      exit;
-  }
+  
 
   echo "<script>let usuarios = [];</script>";
         
@@ -133,8 +135,8 @@
           </div>
 
           <div class="botoes">
-            <div class="botao-edit" onclick="newUser('edit', <?= $users->getId()?>)">Editar</div>
-            <div class="botao-del">Deletar</div>
+            <a class="botao-edit" onclick="newUser('edit', <?= $users->getId()?>)">Editar</a>
+            <a href="../../services/delUserAction.php?id=<?= $users->getId()?>"  class="botao-del" onclick="return confirm('Tem certeza que deseja excluir?')">Deletar</a>
           </div>
           
         </div>
@@ -206,7 +208,7 @@
         </div>
 
         <div class="container-form">
-          <form action="../../services/editUserAction.php">
+          <form action="../../services/editUserAction.php" method="post">
             <input type="hidden" name="token" id="tokenEdit" value="">
 
             <label>

@@ -1,78 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
+
+
     <usuario>
         <id>1</id>
-        <name>Lucas Eduardo</name>
+        <name>Lucas Eduardo Souza Da Silva</name>
         <email>Lucas@gmail.com</email>
-        <password>$2y$10$NC5hjnGWP9rRN3ekihtA9evjZ0IHI2yi1ER0.ArKKwOaduIipmbRG</password>
+        <password>$2y$10$Wfvm2PasIeDfXh4Yg1FIdOKioF/v2JhGooLNnLSH1VBre602RTPvy</password>
         <cpf>864.004.935-14</cpf>
         <isAdm>1</isAdm>
-        <token>PSliynb24DZFhqXIQl7VN!qKuRveulNmSUDd$$8QeyX!3dw!6o</token>
-        <tokenEmpresa>QaS2$9j@2!zqPetJiQ0SsfPlAAvacILQ3Gk$HQewH90Wq3u4c9</tokenEmpresa>
+        <token>0GHWy7QfN7f#Q2$3J$w5rH9UaM6a#O@fUQJO!bvcCQAGqjUkdi</token>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
         <mainAcc>1</mainAcc>
     </usuario>
 
-    <usuario>
-        <id>1</id>
-        <name>Antonio</name>
-        <email>antonio@gmail.com</email>
-        <password>$2y$10$NC5hjnGWP9rRN3ekihtA9evjZ0IHI2yi1ER0.ArKKwOaduIipmbRG</password>
-        <cpf>864.004.935-14</cpf>
-        <isAdm>0</isAdm>
-        <token>PSliynb24DZFhqX4Ql7VN!qKuRveulNmSUDd$$8QeyX!3dw!6o</token>
-        <tokenEmpresa>QaS2$9j@2!zqPetJiQ0SsfPlAAvacILQ3Gk$HQewH90Wq3u4c9</tokenEmpresa>
-        <mainAcc>0</mainAcc>
-    </usuario>
-    <usuario>
-        <id>11</id>
-        <name>Linnycker</name>
-        <email>Lin@gmail.com</email>
-        <password>$2y$10$uAgB56EUsT6FJQ14ScSPN.rnbwgG1uUmaBIKK0XL9nSDcMVpT/0nS</password>
-        <cpf>123</cpf>
-        <isAdm>0</isAdm>
-        <token>VoVPsiV@qeZ4kKI27YCbFgg3CE#p2E@47#SnxZ1QdUmpsuhjON</token>
-        <tokenEmpresa>!xeVBOMv3K#RQLHTVy!8JBG197PD4PrkonKUga!NQmYAPfju$q</tokenEmpresa>
-    </usuario>
-    <usuario>
-        <id>12</id>
-        <name>Ianca Garcia</name>
-        <email>Garcia@gmail.com</email>
-        <password>$2y$10$0qMcO.BlR5NXYefHOSDv1e3MzoaVVWqrl70L.7h3k1yKxERUCB9k6</password>
-        <cpf>123</cpf>
-        <isAdm>1</isAdm>
-        <token>8WjWyMYSewetleDnZz8qwT@Ajd0SPAahoZFk1xBddXYcO0eKEp</token>
-        <tokenEmpresa>2wtDOJYz@snMaXJpEBTMjVOJT0RoNWjMW5NuI76nhuK3vytA9F</tokenEmpresa>
-    </usuario>
-    <usuario>
-        <id>3</id>
-        <name>Nathan Fellipe</name>
-        <email>Nathanferreira@gmail.com</email>
-        <password>$2y$10$qr//k1lTT0Slm27MR0e2lOjv0Gz9iAPLVrjI6FtYVEPkmpXkS7DQi</password>
-        <cpf>123456789</cpf>
-        <isAdm>0</isAdm>
-        <token>l4G6hgTQ8z00EnQx#swEPsVqlrLI550KNh5u5QCijhUW8Yc5iR</token>
-        <tokenEmpresa>ysDppB6s9N4Oufd07RjS7i$rxIVyok#xwN!qBi303i08QBFdVU</tokenEmpresa>
-    </usuario>
-
-    <usuario>
-        <id>5</id>
-        <name>Wilke Meireles</name>
-        <email>Wilke.meireles@outlook.com</email>
-        <password>$2y$10$1qEw79bna8GOeYZYuPAgMuzZEGiaEU4uMY8rieHtCmpiacHcGgcp6</password>
-        <cpf>123</cpf>
-        <isAdm>0</isAdm>
-        <token>2D1EMA3VHXLsniwejW#Dw7vr#F$5gbMCSuTrM0DKvOkhcUFmuw</token>
-        <tokenEmpresa>ysDppB6s9N4Oufd07RjS7i$rxIVyok#xwN!qBi303i08QBFdVU</tokenEmpresa>
-    </usuario>
-    <usuario>
-        <id>15</id>
-        <name>Nathan Felipe</name>
-        <email>Nathanferreira@gmail.com</email>
-        <password>$2y$10$IGfskhU6y4I1YQUx3yApTu85xWmjYzv9i3mmMppcoQSd2CAApZGfq</password>
-        <cpf>123.123.132-13</cpf>
-        <isAdm>1</isAdm>
-        <token>Z6QAm#mxz6zfMD6Oo5kS#U@bLEwzXwN2WWotqBX7PvGIzZGkAK</token>
-        <tokenEmpresa>QaS2$9j@2!zqPetJiQ0SsfPlAAvacILQ3Gk$HQewH90Wq3u4c9</tokenEmpresa>
-        <mainAcc>0</mainAcc>
-    </usuario>
-<usuario><id>15</id><name>Roman Reigns</name><email>Tribalchief@gmail.com</email><password>$2y$10$PYoTY0KIh2etG.LPqptN7ejkA8Qh6PAtOdFUGMKGlFUBVqOfcoxFq</password><cpf>546.825.126-65</cpf><isAdm>1</isAdm><token>bahHJjg4UXmWo5kK#pYee94v5KUrnhrAH8aYNF5kXAATpNDCC8</token><tokenEmpresa>r4twKYogXmLX79n2R4j6qZvlwaNO2yFxNX9MPfP91@tZI7kFe@</tokenEmpresa></usuario></root>
+    
+    
+<usuario><id>3</id><name>Nathan Fellipe</name><email>Nathanferreira@gmail.com</email><password>$2y$10$gVjX09U06yd2LCC6k83qYOcHYu2iOAUEZpwYfsQxl1psD7DKCQqf2</password><cpf>12312312312</cpf><isAdm>0</isAdm><token>LXloyFaX2n!x2m#CKVs8CGg1p3Nc#CW25K1LaXJX4bMQPfp#gp</token><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><mainAcc>0</mainAcc></usuario></root>
