@@ -4,6 +4,7 @@ require '../dao/tarefasDao.php';
 require '../models/setores.php';
 require '../dao/setoresDao.php'; 
 require '../models/Auth.php';
+require '../dao/usuarioDao.php';
 
 
 $auth = new Auth();

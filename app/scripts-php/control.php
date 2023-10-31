@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 //FUNÇÃO QUE ALTERA A COR DA TAREFA PELO STATUS DA TAREFA
 function alterarCorTarefa($status){
     if($status == 1){
