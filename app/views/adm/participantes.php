@@ -25,6 +25,11 @@
     exit;
   }
 
+  if($userInfo->getIsAdm() == 0){
+    header("Location: ../worker/control_colabora.php");
+    exit;
+  }
+
   $uDao = new UsuarioDaoXml();
   $infoAllUsers = $uDao->findAll(2, $userInfo->getTokenEmpresa());
 

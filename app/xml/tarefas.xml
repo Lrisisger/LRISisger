@@ -3,5 +3,18 @@
     <!-- SALVANDO INFORMAÇÕES DAS TAREFAS -->
 
 
+    <tarefa>
+        <id>9</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>4</status>
+        <descricao>879879</descricao>
+        <dataInicial>2023-10-17</dataInicial>
+        <dataLimite>2023-10-30</dataLimite>
+        <idColabora>6</idColabora>
+        <idAdm>5</idAdm>
+        <mensagemAtraso/>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
+        <tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor>
+    </tarefa>
     
-<tarefa><id>8</id><tituloTarefa>Adada</tituloTarefa><status>2</status><descricao>ada</descricao><dataInicial>2023-10-31</dataInicial><dataLimite>2023-10-31</dataLimite><idColabora>6</idColabora><idAdm>1</idAdm><mensagemAtraso/><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor></tarefa></root>
+<tarefa><id>10</id><tituloTarefa>Programar</tituloTarefa><status>2</status><descricao>Fazer as querys do banco</descricao><dataInicial>2023-10-10</dataInicial><dataLimite>2023-11-04</dataLimite><idColabora>6</idColabora><idAdm>1</idAdm><mensagemAtraso/><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor></tarefa><tarefa><id>8</id><tituloTarefa>Adada</tituloTarefa><status>5</status><descricao>ada</descricao><dataInicial/><dataLimite>2023-10-30</dataLimite><idColabora>6</idColabora><idAdm>1</idAdm><mensagemAtraso/><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor></tarefa></root>

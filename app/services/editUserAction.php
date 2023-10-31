@@ -22,21 +22,10 @@ $cpfCnpj = filter_input(INPUT_POST, 'cpfCnpj');
 $isAdm = filter_input(INPUT_POST, 'isAdm');
 $token = filter_input(INPUT_POST, 'token');
 
-
-
-
-echo 'name '.$name;
-echo 'email '.$email;
-echo 'Cppf '.$cpfCnpj;
-echo 'isADM '.$isAdm;
-echo 'token '.$token;
-
 if($name && $email && $cpfCnpj && ($isAdm == 0 || $isAdm == 1) && $token){
-       //CONTINUAR DAQUI
-       $usuario = $uDao->findByEmail($email);
-       echo '<pre>';
-       print_r($usuario);
-        
+      
+       $usuario = $uDao->findByToken($token);
+               
         $u = new Usuarios();
         $u->setId($usuario->getId());
         $u->setName($name);

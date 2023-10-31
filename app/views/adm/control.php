@@ -61,7 +61,7 @@
                 $dataTarefa = new DateTime($tarefa->getDataLimite());
                 
                 if($dataAtual > $dataTarefa){
-                    if($tarefa->getStatus() != 1){
+                    if($tarefa->getStatus() != 1 && $tarefa->getStatus() != 4){
                         $tarefa->setStatus(5);
                         $tDao = new TarefasDaoXml();
                         $tDao->update($tarefa);

@@ -30,7 +30,7 @@
   if($userInfo->getIsAdm() == 0){
     header("Location: ../worker/control_colabora.php");
     exit;
-}
+  }
   
   
   $sDao = new SetoresDaoXml();
