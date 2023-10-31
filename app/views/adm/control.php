@@ -44,6 +44,13 @@
         $sDao = new SetoresDaoXml();// INICIANDO DAO DE SETORES
         $setores = $sDao->findAll($userInfo->getTokenEmpresa());// RECEBENDO TAREFAS DA EMPRESA
 
+        function ordenarSetor($setorOne, $setorTwo){
+            return strcasecmp($setorOne->getName(), $setorTwo->getName());
+        }
+        
+        usort($setores, 'ordenarSetor');
+        
+
         
         $tDao = new TarefasDaoXml();// INICIANDO DAO DE TAREFAS
        

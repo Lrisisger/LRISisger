@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- PÁGINA DE LOGIN -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
         <!-- Image Mid -->
 
         <div class="bottom flex">
-            <a href="../adm/login.php">
+            <a href="../geral/login.php">
                 <button type="none" class="button signIn" type="">Entrar</button>
             </a>
         </div>

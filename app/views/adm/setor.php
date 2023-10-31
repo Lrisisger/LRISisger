@@ -21,6 +21,7 @@
   $auth = new Auth();
   $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
 
+
   if($userInfo == false){
       header("Location: ../../services/logOutAction.php");
       exit;
@@ -33,7 +34,13 @@
   
   
   $sDao = new SetoresDaoXml();
-  $setores = $sDao->findAll($userInfo->getTokenEmpresa());
+  $setores = $sDao->findAll($userInfo->getTokenEmpresa());  
+
+  function ordenarSetor($setorOne, $setorTwo){
+    return strcasecmp($setorOne->getName(), $setorTwo->getName());
+}
+
+usort($setores, 'ordenarSetor');
 
   echo "<script>let setores = [];</script>";
         

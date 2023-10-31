@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
+<!-- SALVANDO INFORMAÇÕES DAS TAREFAS -->
 
 
-
-</root>
+<tarefa><id>2</id><tituloTarefa>Fhfdhh</tituloTarefa><status>2</status><descricao>hdhfhd</descricao><dataInicial>2023-10-10</dataInicial><dataLimite>2023-10-25</dataLimite><idColabora>6</idColabora><idAdm>1</idAdm><mensagemAtraso/><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><tokenSetor>D6ISR5xqTSZQtHytQuqnF6w6MWzH9u7T4YJEjJ8kCg8Rhes1Xg</tokenSetor></tarefa></root>

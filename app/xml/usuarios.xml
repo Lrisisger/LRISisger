@@ -1,4 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
 
-<usuario><id>7</id><name>Lucas Eduardo</name><email>Lucas@gmail.com</email><password>$2y$10$8Udgx0YRKtB.mcbLUYjugeFRtM3TkoLVbjp7sajtq9M1WqF5IBDRi</password><cpf>123123132123</cpf><isAdm>1</isAdm><token>d8vLUthjz9P!xfH@VHkE@3MV#MOX@C@LGSQRs5QiH$1NrmsaUx</token><tokenEmpresa>tb#TylQZCycC48Ug!ShiS8K#5qAs7VyjqKY@T4rBjoYw9knikS</tokenEmpresa><mainAcc>1</mainAcc></usuario><usuario><id>8</id><name>Lucas Eduardo</name><email>Lucas@gmail.com</email><password>$2y$10$JN.x641P15oHxJNgnaLPXemHg04l8jGd1syg51haKslYTI6Yc8gHu</password><cpf>123123123123</cpf><isAdm>1</isAdm><token>kJzeVV@og2nAGkb6qMM@fDPbVZ@thCIzk@g$yUfIj8NozcLkTl</token><tokenEmpresa>WBRX8fyWZYibDar4LPOh5o0gT6Q0R@nvrrRoB1jRtmxNEnkw9k</tokenEmpresa><mainAcc>1</mainAcc></usuario><usuario><id>9</id><name>Enzo Souza Lima</name><email>Enzo@gmail.com</email><password>$2y$10$WKTUc50B4WBht/VsVp4S9ubYXJBxZStOKygpAS6fp7pUy.cm2FHae</password><cpf>123</cpf><isAdm>0</isAdm><token>51WKVVFYiyzcI$j@J4vEaVC6gbFwqOKZ5jAl9gANAAlZ2VIEOu</token><tokenEmpresa>tb#TylQZCycC48Ug!ShiS8K#5qAs7VyjqKY@T4rBjoYw9knikS</tokenEmpresa><mainAcc>0</mainAcc></usuario></root>
+
+    <!-- XML QUE SALVA AS INFORMAÇÕES DOS USUÁRIOS CADASTRADOS -->
+
+
+    <usuario>
+        <id>1</id>
+        <name>Lucas Eduardo Souza Da Silva</name>
+        <email>Lucas@gmail.com</email>
+        <password>$2y$10$Wfvm2PasIeDfXh4Yg1FIdOKioF/v2JhGooLNnLSH1VBre602RTPvy</password>
+        <cpf>864.004.935-14</cpf>
+        <isAdm>1</isAdm>
+        <token>0GHWy7QfN7f#Q2$3J$w5rH9UaM6a#O@fUQJO!bvcCQAGqjUkdi</token>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
+        <mainAcc>1</mainAcc>
+    </usuario>
+
+
+    
+    <usuario>
+        <id>6</id>
+        <name>Luca Soares</name>
+        <email>Luca@gmail.com</email>
+        <password>$2y$10$hxmoafK1TMdAyVkOFocQIegz/lYAprqaiwPOKfpCMessHGTcmhWk2</password>
+        <cpf>1234568976</cpf>
+        <isAdm>0</isAdm>
+        <token>trWce6oh9EbR8XXshOFWASxuh0G4f6yTizorv2hawRdw5NMiJf</token>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
+        <mainAcc>0</mainAcc>
+    </usuario>
+    <usuario>
+        <id>7</id>
+        <name>Robert Narcisio</name>
+        <email>Robert@gmail.com</email>
+        <password>$2y$10$xu2aUYnNtOev1Pn.0Mm5feqJHUbk47UOnTqGu4PRS6qgAVJ8m8pC6</password>
+        <cpf>1231231231</cpf>
+        <isAdm>0</isAdm>
+        <token>wdbQ7jQLSeRYb1fiUIy6MlMNcuUMl9apzL4M1!vfFTRK9CbziG</token>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
+        <mainAcc>0</mainAcc>
+    </usuario>
+    <usuario>
+        <id>4</id>
+        <name>Luiz Henrique</name>
+        <email>Luis@gmail.com</email>
+        <password>$2y$10$8G4/mMp5EfUsHFoGKcZ1nOa.dHgYHeOm83QPcY6CZHgII0bJdsB2a</password>
+        <cpf>123123123</cpf>
+        <isAdm>0</isAdm>
+        <token>J7bZKp0FbmG7CUcj!TWwFGQp!ncLQ87MWpQbjsg@DuZseQtlvr</token>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
+        <mainAcc>0</mainAcc>
+    </usuario>
+<usuario><id>5</id><name>Ianca Garcia</name><email>Garcia@gmail.com</email><password>$2y$10$re/1/i9ETIt6WIjbJqyFL.5pTcsMMpMNiSjO8MPUv8E5skE87O.K.</password><cpf>12345</cpf><isAdm>0</isAdm><token>#7ThILx7n!sYT2@cYrxHxHPVkCJOqJxwal$5kpTAVqwnDExhQ8</token><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><mainAcc>0</mainAcc></usuario><usuario><id>8</id><name>Ana Maria</name><email>Anamaria@gmail.com</email><password>$2y$10$jh9vPBfC.0PeNBSZC.eh2uv9PBnap023vOBwRSnEFsBfOkCKpxUAu</password><cpf>123</cpf><isAdm>0</isAdm><token>CrDOoNOL1YrQK2R75eshinEbWQS!TAi0Q4zCoP@Mbg!Z@vZRf!</token><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><mainAcc>0</mainAcc></usuario><usuario><id>9</id><name>Ana Marie</name><email>Ana@gmail.com</email><password>$2y$10$rYffwZi.JqdESm/vHLJWC.91dn2bLa7zSm8AbuOYXLB2YO/7sJ9lC</password><cpf>123</cpf><isAdm>0</isAdm><token>UbqHxn3o5A4zlUO$WdVqNO0Lw#ddjF@BKo2YgmXyN05yCFs4$w</token><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><mainAcc>0</mainAcc></usuario></root>

@@ -1,7 +1,5 @@
 <?php
 
-
-
 require '../dao/usuarioDao.php'; 
 require '../models/setores.php';
 require '../dao/setoresDao.php'; 

@@ -90,5 +90,11 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
 }
 
 
-header( 'Location: ../views/adm/participantes.php' );
-exit;
+if($mainAcc == 1){
+    header( 'Location: ../views/geral/login.php' );
+    exit; 
+}else{        
+    header( 'Location: ../views/adm/participantes.php' );
+    exit;
+}
+

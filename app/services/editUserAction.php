@@ -3,11 +3,18 @@
 require '../dao/usuarioDao.php'; 
 require '../models/setores.php';
 require '../dao/setoresDao.php'; 
+require '../models/Auth.php';
 
 $uDao = new UsuarioDaoXml();
-$sDao = new SetoresDaoXml();
+$auth = new Auth();
 
+$userInfo = $auth->checkToken();
+// AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
 
+if ( $userInfo == false ) {
+    header( 'Location: logOutAction.php' );
+    exit;
+}
 
 $name = ucwords( strtolower( filter_input( INPUT_POST, 'nome' ) ) );
 $email = filter_input( INPUT_POST, 'email' );
@@ -15,25 +22,37 @@ $cpfCnpj = filter_input(INPUT_POST, 'cpfCnpj');
 $isAdm = filter_input(INPUT_POST, 'isAdm');
 $token = filter_input(INPUT_POST, 'token');
 
-$usuario = $uDao->findByToken($_SESSION['token']);
 
 
+
+echo 'name '.$name;
+echo 'email '.$email;
+echo 'Cppf '.$cpfCnpj;
+echo 'isADM '.$isAdm;
+echo 'token '.$token;
 
 if($name && $email && $cpfCnpj && ($isAdm == 0 || $isAdm == 1) && $token){
        //CONTINUAR DAQUI
-        $setor = $sDao->findByToken($tokenSetor);
+       $usuario = $uDao->findByEmail($email);
+       echo '<pre>';
+       print_r($usuario);
+        
+        $u = new Usuarios();
+        $u->setId($usuario->getId());
+        $u->setName($name);
+        $u->setEmail($email);
+        $u->setCpf($cpfCnpj);
+        $u->setPass($usuario->getPass());
+        $u->setIsAdm($isAdm);
+        $u->setToken($token);
+        $u->setTokenEmpresa($usuario->getTokenEmpresa());
+        $u->setMainAcc($usuario->getMainAcc());
 
-        $s = new Setores();
-        $s->setId($setor->getId());
-        $s->setName($setorNome);
-        $s->setTokenSetor($tokenSetor);
-        $s->setTokenEmpresa($setor->getTokenEmpresa());
-
-        $sDao->update($s);
+       $uDao->update($u);
     
 }else{
     $_SESSION['avisoAdd'] = 'Preencha todos os campos';
 }
 
-header( 'Location: ../views/adm/setor.php' );
+header( 'Location: ../views/adm/participantes.php' );
 exit;

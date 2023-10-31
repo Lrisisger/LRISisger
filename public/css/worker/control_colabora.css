@@ -1,3 +1,5 @@
+/* CSS DA PÁGINA CENTRAL DE COLABORADOR (ONDE ELE RECEBE AS ATIVIDADES) */
+
 :root {
     --redbox: #E05D5D;
     --greenbox: #71B15A;
@@ -8,6 +10,8 @@
 
 main {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -27,7 +31,7 @@ textarea {
 }
 
 .cardTarefa {
-    background-color: #f1f1f1;
+    background-color: #e8e5e5;
     border-radius: 20px;
     min-width: 25%;
 }

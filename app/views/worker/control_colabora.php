@@ -25,6 +25,13 @@
         header("Location: ../../services/logOutAction.php");
         exit;
     }
+
+    if($userInfo->getIsAdm() == 1){
+        header("Location: ../adm/control.php");
+        exit;
+    }
+
+   
     ?>
 
     <header class="head">
@@ -68,6 +75,154 @@
     <!-- NAV BAR -->
 
     <main>
+        <div class="cardTarefa">
+            <div class="headRed">
+                <span class="titleTarefa">Tarefa 1</span>
+            </div>
+            <div class="body">
+                <form action="" method="post">
+                    <div class="inputArea respon">
+                        <label for="responsavel">Responsavel</label>
+                        <input type="text" name="responsavel" id="" disabled>
+                    </div>
+                    <div class="inputArea prazo">
+                        <label for="prazo">Prazo de entrega</label>
+                        <div class="datas">
+                            <input type="date" name="prazo" id="" disabled>
+                            <input type="date" name="prazo" id="" disabled>
+                        </div>
+                    </div>
+                    <div class="inputArea status pausado">
+                        <label for="status">Status</label>
+                        <input type="text" name="status" id="" value="Atraso" disabled>
+                    </div>
+                    <div class="inputArea descricao">
+                        <label for="descricao">Descrição</label>
+                        <textarea name="descricao" id="" disabled>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.</textarea>
+                    </div>
+                    <div class="inputArea observ">
+                        <label for="observacao">Observações</label>
+                        <textarea name="observacao" id="" disabled>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.</textarea>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit">Pausar</button>
+                        <button type="submit">Finalizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="cardTarefa">
+            <div class="headRed">
+                <span class="titleTarefa">Tarefa 1</span>
+            </div>
+            <div class="body">
+                <form action="" method="post">
+                    <div class="inputArea respon">
+                        <label for="responsavel">Responsavel</label>
+                        <input type="text" name="responsavel" id="" disabled>
+                    </div>
+                    <div class="inputArea prazo">
+                        <label for="prazo">Prazo de entrega</label>
+                        <div class="datas">
+                            <input type="date" name="prazo" id="" disabled>
+                            <input type="date" name="prazo" id="" disabled>
+                        </div>
+                    </div>
+                    <div class="inputArea status pausado">
+                        <label for="status">Status</label>
+                        <input type="text" name="status" id="" value="Atraso" disabled>
+                    </div>
+                    <div class="inputArea descricao">
+                        <label for="descricao">Descrição</label>
+                        <textarea name="descricao" id="" disabled>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.</textarea>
+                    </div>
+                    <div class="inputArea observ">
+                        <label for="observacao">Observações</label>
+                        <textarea name="observacao" id="" disabled>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.</textarea>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit">Pausar</button>
+                        <button type="submit">Finalizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="cardTarefa">
+            <div class="headRed">
+                <span class="titleTarefa">Tarefa 1</span>
+            </div>
+            <div class="body">
+                <form action="" method="post">
+                    <div class="inputArea respon">
+                        <label for="responsavel">Responsavel</label>
+                        <input type="text" name="responsavel" id="" disabled>
+                    </div>
+                    <div class="inputArea prazo">
+                        <label for="prazo">Prazo de entrega</label>
+                        <div class="datas">
+                            <input type="date" name="prazo" id="" disabled>
+                            <input type="date" name="prazo" id="" disabled>
+                        </div>
+                    </div>
+                    <div class="inputArea status pausado">
+                        <label for="status">Status</label>
+                        <input type="text" name="status" id="" value="Atraso" disabled>
+                    </div>
+                    <div class="inputArea descricao">
+                        <label for="descricao">Descrição</label>
+                        <textarea name="descricao" id="" disabled>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.</textarea>
+                    </div>
+                    <div class="inputArea observ">
+                        <label for="observacao">Observações</label>
+                        <textarea name="observacao" id="" disabled>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.</textarea>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit">Pausar</button>
+                        <button type="submit">Finalizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="cardTarefa">
+            <div class="headRed">
+                <span class="titleTarefa">Tarefa 1</span>
+            </div>
+            <div class="body">
+                <form action="" method="post">
+                    <div class="inputArea respon">
+                        <label for="responsavel">Responsavel</label>
+                        <input type="text" name="responsavel" id="" disabled>
+                    </div>
+                    <div class="inputArea prazo">
+                        <label for="prazo">Prazo de entrega</label>
+                        <div class="datas">
+                            <input type="date" name="prazo" id="" disabled>
+                            <input type="date" name="prazo" id="" disabled>
+                        </div>
+                    </div>
+                    <div class="inputArea status pausado">
+                        <label for="status">Status</label>
+                        <input type="text" name="status" id="" value="Atraso" disabled>
+                    </div>
+                    <div class="inputArea descricao">
+                        <label for="descricao">Descrição</label>
+                        <textarea name="descricao" id="" disabled>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.</textarea>
+                    </div>
+                    <div class="inputArea observ">
+                        <label for="observacao">Observações</label>
+                        <textarea name="observacao" id="" disabled>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.</textarea>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit">Pausar</button>
+                        <button type="submit">Finalizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <div class="cardTarefa">
             <div class="headRed">
                 <span class="titleTarefa">Tarefa 1</span>

@@ -1,6 +1,7 @@
 const modalNewPart = document.querySelector('.modal-new-user');
 const modalEditPart = document.querySelector('.modal-edit-user');
 const dark_screen = document.querySelector('.dark');
+const cpfNew = document.getElementById('cpfNew');
 const nameEdit = document.getElementById('nomeEdit');
 const emailEdit = document.getElementById('emailEdit');
 const cpfEdit = document.getElementById('cpfEdit');
@@ -49,3 +50,9 @@ const newUser = (typeModal, id) =>{
         
     }
 }
+
+
+
+cpfEdit.addEventListener('input', function() {
+ console.log('adsa')
+});

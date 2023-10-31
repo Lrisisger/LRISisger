@@ -20,13 +20,20 @@
   $auth = new Auth();
   $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
 
+  if($userInfo == false){
+    header("Location: ../../services/logOutAction.php");
+    exit;
+  }
+
   $uDao = new UsuarioDaoXml();
   $infoAllUsers = $uDao->findAll(2, $userInfo->getTokenEmpresa());
 
-  if($userInfo == false){
-      header("Location: ../../services/logOutAction.php");
-      exit;
+  function ordenarNome($userOne, $userTwo){
+      return strcasecmp($userOne->getName(), $userTwo->getName());
   }
+  
+  usort($infoAllUsers, 'ordenarNome');
+
 
   echo "<script>let usuarios = [];</script>";
         
@@ -133,8 +140,8 @@
           </div>
 
           <div class="botoes">
-            <div class="botao-edit" onclick="newUser('edit', <?= $users->getId()?>)">Editar</div>
-            <div class="botao-del">Deletar</div>
+            <a class="botao-edit" onclick="newUser('edit', <?= $users->getId()?>)">Editar</a>
+            <a href="../../services/delUserAction.php?id=<?= $users->getId()?>"  class="botao-del" onclick="return confirm('Tem certeza que deseja excluir?')">Deletar</a>
           </div>
           
         </div>
@@ -170,7 +177,7 @@
             <div class="container-cpf-User">
               <label>
                 <h4>CPF</h4>
-                <input type="text" name="cpfCnpj" style="width: 150px;">
+                <input type="text" id="cpfNew" name="cpfCnpj" style="width: 150px;">
               </label>
 
               <label>
@@ -201,12 +208,12 @@
 
       <div class="modal-edit-user">
         <div class="container-title">
-          <h3>Novo colaborador</h3>
+          <h3>Editar colaborador</h3>
           <img onclick="newUser('edit', false)" src="../../../public/img/svgs/arrow_back.svg" alt="">
         </div>
 
         <div class="container-form">
-          <form action="../../services/editUserAction.php">
+          <form action="../../services/editUserAction.php" method="post">
             <input type="hidden" name="token" id="tokenEdit" value="">
 
             <label>

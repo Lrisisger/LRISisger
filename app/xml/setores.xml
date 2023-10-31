@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
+<!-- ESSE XML SALVA OS DADOS DOS SETORES -->
 
 
-<setor><id>3</id><name>Compras</name><tokenSetor>ha0dk2fZwTnXVL9sXKiEsnuwFD1HXShFHJHAdiaMiSNppnWb20</tokenSetor><tokenEmpresa>tb#TylQZCycC48Ug!ShiS8K#5qAs7VyjqKY@T4rBjoYw9knikS</tokenEmpresa></setor></root>
+<setor><id>2</id><name>Vendas</name><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa></setor><setor><id>3</id><name>Compras</name><tokenSetor>fuTMqRefoKAeJqYZC9H4rqMKxd6v9kG1qCV6w5n7uFRNOamewO</tokenSetor><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa></setor><setor><id>4</id><name>Zacarias</name><tokenSetor>Dl1OBXaNMHVUvpyLDMM6VtWv6wDuUqQ0ohIHBuJHePmbbzMcoJ</tokenSetor><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa></setor><setor><id>5</id><name>Ana</name><tokenSetor>D6ISR5xqTSZQtHytQuqnF6w6MWzH9u7T4YJEjJ8kCg8Rhes1Xg</tokenSetor><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa></setor></root>
