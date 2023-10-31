@@ -1,7 +1,5 @@
 <?php
 
-
-
 require '../dao/usuarioDao.php'; 
 require '../models/setores.php';
 require '../dao/setoresDao.php'; 
@@ -15,7 +13,7 @@ $setorNome = ucwords( strtolower( filter_input( INPUT_POST, 'setor' ) ) );
 $senha = filter_input(INPUT_POST, 'senha');
 $usuario = $uDao->findByToken($_SESSION['token']);
 
-//FUNÇÃO QUE CRIA UM TOKEN ALEATÓRIO DE 100 CARACTERES
+//FUNÇÃO QUE CRIA UM TOKEN ALEATÓRIO DE 50 CARACTERES
 function token( $tamanho = 50 ) {
     $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     $charactersLength = strlen( $characters );
@@ -30,7 +28,7 @@ if($setorNome && $senha){
     if(password_verify($senha, $usuario->getPass())){
         $token = '';
         
-        //LOOPING QUE IMPOSSIBILITA A CRIAÇÃO DE USUARIOS COM TOKEN IGUAL       
+        //LOOPING QUE IMPOSSIBILITA A CRIAÇÃO DE SETORES COM TOKEN IGUAL       
         do {
             $token = token(); //CRIANDO TOKEN PARA O SETOR
             $verify = $sDao->findByToken( $token ); //VERIFICAÇÃO DE TOKENS 
