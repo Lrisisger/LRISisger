@@ -128,6 +128,15 @@
 
   <main>
 
+    
+      <?php 
+        //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
+        if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
+          echo "<div class='avisa'><span id='aviso'>".$_SESSION['aviso']."</span></div>";
+          $_SESSION['aviso'] = '';
+        }
+      ?> 
+    
     <div class="container-add">
       <div class="botao" onclick="newUser('new', false)">
         ADICIONAR PARTICIPANTES
@@ -203,7 +212,7 @@
               <h4>Confirmar Senha</h4>
               <input type="password" name="confirmPass">
             </label>
-
+             
             
             <input class="botao sub" type="submit">
            
@@ -247,7 +256,7 @@
             </div>
 
       
-
+                       
             
             <input class="botao sub" type="submit">
            

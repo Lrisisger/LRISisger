@@ -18,7 +18,6 @@
     </usuario>
 
 
-    
     <usuario>
         <id>7</id>
         <name>Robert Narcisio</name>
@@ -41,18 +40,58 @@
         <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
         <mainAcc>0</mainAcc>
     </usuario>
-    
+
+
     <usuario>
-        <id>10</id>
-        <name>Zacarias</name>
-        <email>Enzo@gmail.com</email>
-        <password>$2y$10$P4VGcJ6TYUAo7UHNYiN/IeTXL246WZydqGBDdHp5v.RWS886Qvg/S</password>
+        <id>11</id>
+        <name>Lynicker Abrel</name>
+        <email>Abrel@gmail.com</email>
+        <password>$2y$10$/ddyd0jkR2BHEax6iPHXROW4dP5D8goHjBhLVyf3LKMZ/Gj02KVU2</password>
         <cpf>123</cpf>
         <isAdm>0</isAdm>
-        <token>xiunufQ5DheHlVLYpML##kszyhGmQ!5D!3yCy1wGEky8AmO#PI</token>
+        <token>Nf7QioM4$DZ!cIOeTvcEhtq46rjEKaCnSiM7srjh7aVO4nw8S8</token>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
+        <mainAcc>0</mainAcc>
+    </usuario>
+    <usuario>
+        <id>6</id>
+        <name>Luca Soares</name>
+        <email>Luca@gmail.com</email>
+        <password>$2y$10$hxmoafK1TMdAyVkOFocQIegz/lYAprqaiwPOKfpCMessHGTcmhWk2</password>
+        <cpf>1234568976</cpf>
+        <isAdm>0</isAdm>
+        <token>trWce6oh9EbR8XXshOFWASxuh0G4f6yTizorv2hawRdw5NMiJf</token>
         <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
         <mainAcc>0</mainAcc>
     </usuario>
 
+    <usuario>
+        <id>12</id>
+        <name>Enzo Souza Lima</name>
+        <email>Enzo@gmail.com</email>
+        <password>$2y$10$4pB1FbV.wk3RM5dWBJCNZuGvGf1KzRRRrAFij1.Pn5bpY73wjgRS6</password>
+        <cpf>24.323.423/4234-24</cpf>
+        <isAdm>1</isAdm>
+        <token>@vw4tfwPB$U@OEjgIvfjnIffEKCTvFMw#0TrYlJz7QzPgvY3hy</token>
+        <tokenEmpresa>jfYB2GF#@TRHu!xSyR4Tkfex$RKm$SZTdiR9@tv#T6KSp5ihj7</tokenEmpresa>
+        <mainAcc>1</mainAcc>
+    </usuario>
     
-<usuario><id>11</id><name>Lynicker Abrel</name><email>Abrel@gmail.com</email><password>$2y$10$/ddyd0jkR2BHEax6iPHXROW4dP5D8goHjBhLVyf3LKMZ/Gj02KVU2</password><cpf>123</cpf><isAdm>0</isAdm><token>Nf7QioM4$DZ!cIOeTvcEhtq46rjEKaCnSiM7srjh7aVO4nw8S8</token><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><mainAcc>0</mainAcc></usuario><usuario><id>6</id><name>Luca Soares</name><email>Luca@gmail.com</email><password>$2y$10$hxmoafK1TMdAyVkOFocQIegz/lYAprqaiwPOKfpCMessHGTcmhWk2</password><cpf>1234568976</cpf><isAdm>0</isAdm><token>trWce6oh9EbR8XXshOFWASxuh0G4f6yTizorv2hawRdw5NMiJf</token><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><mainAcc>0</mainAcc></usuario><usuario><id>8</id><name>Ianca Garcia</name><email>Garcia@gmail.com</email><password>$2y$10$jh9vPBfC.0PeNBSZC.eh2uv9PBnap023vOBwRSnEFsBfOkCKpxUAu</password><cpf>123</cpf><isAdm>1</isAdm><token>CrDOoNOL1YrQK2R75eshinEbWQS!TAi0Q4zCoP@Mbg!Z@vZRf!</token><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><mainAcc>0</mainAcc></usuario></root>
+
+
+    <usuario>
+        <id>8</id>
+        <name>Ianca Garcia</name>
+        <email>Garcia@gmail.com</email>
+        <password>$2y$10$jh9vPBfC.0PeNBSZC.eh2uv9PBnap023vOBwRSnEFsBfOkCKpxUAu</password>
+        <cpf>1234</cpf>
+        <isAdm>1</isAdm>
+        <token>CrDOoNOL1YrQK2R75eshinEbWQS!TAi0Q4zCoP@Mbg!Z@vZRf!</token>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
+        <mainAcc>0</mainAcc>
+    </usuario>
+
+
+
+
+</root>

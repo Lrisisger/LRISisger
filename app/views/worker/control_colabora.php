@@ -113,7 +113,7 @@
             $dataLimiteFormatada = $dataLimite->format('d/m/Y');
         ?>
             <div class="cardTarefa">
-                <div class="headTask <?= TarefaCor($tarefa->getStatus()) ?>">
+                <div class="headTask cor-naoIniciada <?= TarefaCor($tarefa->getStatus()) ?>">
                     <span class="titleTarefa"><?=$tarefa->getTituloTarefa() ?></span>
                 </div>
                 <div class="body">
@@ -142,8 +142,20 @@
                             <textarea name="observacao" style="resize: none" id="" disabled><?=$tarefa->getMensagemAtraso()?></textarea>
                         </div>
                         <div class="buttons">
-                            <button type="submit">Pausar</button>
-                            <button type="submit">Finalizar</button>
+                            <?php
+                                if($tarefa->getStatus() == 5){
+                                    echo '<a class="button" type="submit">Pausar</a>
+                                          <a class="button" type="submit">Finalizar</a>';
+                                }else if($tarefa->getStatus() == 4){
+                                    echo '<a class="button" type="submit">Retomar</a>
+                                          <a class="button" type="submit">Finalizar</a>';
+                                } else if($tarefa->getStatus() == 3){
+                                    echo '<a class="button" type="submit">Pausar</a>
+                                          <a class="button" type="submit">Finalizar</a>';
+                                } else if($tarefa->getStatus() == 2){
+                                    echo '<a class="button" type="submit">Iniciar</a>';
+                                }
+                            ?>
                         </div>
                     </form>
                 </div>
