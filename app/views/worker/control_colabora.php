@@ -54,7 +54,11 @@
 
     verificaStatus($tarefas);
 
-
+    // FUNÇÃO QUE ORDENA AS TAREFAS NA TELA DE ACORDO COM O STATUS
+    function ordenarStatus($statusOne, $statusTwo){
+        return  $statusTwo->getStatus() - $statusOne->getStatus();
+    }
+    usort($tarefas, 'ordenarStatus');   
    
     ?>
 
@@ -63,7 +67,7 @@
             <img src="../../../public/img/icons/list.svg" alt="menu">
         </div>
         <div class="title">
-            <h1>CENTRAL DE CONTROLE</h1>
+            <h1>COLABORADOR</h1>
         </div>
     </header>
 
@@ -109,7 +113,7 @@
             $dataLimiteFormatada = $dataLimite->format('d/m/Y');
         ?>
             <div class="cardTarefa">
-                <div class="headRed">
+                <div class="headTask <?= TarefaCor($tarefa->getStatus()) ?>">
                     <span class="titleTarefa"><?=$tarefa->getTituloTarefa() ?></span>
                 </div>
                 <div class="body">
@@ -125,17 +129,17 @@
                                 <input type="text" name="prazo" id="" value="<?=$dataLimiteFormatada?>" disabled>
                             </div>
                         </div>
-                        <div class="inputArea status pausado">
+                        <div class="inputArea status">
                             <label for="status">Status</label>
-                            <input type="text" name="status" id="" value="<?=nomeStatus($tarefa->getStatus()) ?> " disabled>
+                            <input class="<?= TarefaCor($tarefa->getStatus()) ?>" type="text" name="status" id="" value="<?=nomeStatus($tarefa->getStatus()) ?> " disabled>
                         </div>
                         <div class="inputArea descricao">
                             <label for="descricao">Descrição</label>
-                            <textarea name="descricao" id="" disabled>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.</textarea>
+                            <textarea name="descricao" style="resize: none" id="" disabled><?=$tarefa->getDescricao()?></textarea>
                         </div>
                         <div class="inputArea observ">
                             <label for="observacao">Observações</label>
-                            <textarea name="observacao" id="" disabled>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.</textarea>
+                            <textarea name="observacao" style="resize: none" id="" disabled><?=$tarefa->getMensagemAtraso()?></textarea>
                         </div>
                         <div class="buttons">
                             <button type="submit">Pausar</button>

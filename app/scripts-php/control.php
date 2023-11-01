@@ -70,3 +70,25 @@ function nomeStatus($stat){
 
     }
 }
+
+function TarefaCor($stat){
+    switch ($stat) {
+        case 1:
+            return 'cor-finalizada';
+            break;
+
+        case 2:
+            return 'cor-naoIniciada';
+            break;
+        case 3:
+            return 'cor-emAndamento';
+            break;
+        case 4:
+            return 'cor-pausada';
+            break;
+        case 5:
+            return 'cor-atrasada';
+            break;
+
+    }
+}

@@ -16,5 +16,34 @@
         <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
         <tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor>
     </tarefa>
+
+    <tarefa>
+        <id>10</id>
+        <tituloTarefa>Programar</tituloTarefa>
+        <status>3</status>
+        <descricao>Fazer as querys do banco</descricao>
+        <dataInicial>2023-10-10</dataInicial>
+        <dataLimite>2023-11-04</dataLimite>
+        <idColabora>6</idColabora>
+        <idAdm>1</idAdm>
+        <mensagemAtraso/>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
+        <tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor>
+    </tarefa>
+
+
+    <tarefa>
+        <id>11</id>
+        <tituloTarefa>Limpar A Casa</tituloTarefa>
+        <status>3</status>
+        <descricao>Varrer todos os cantos</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-01</dataLimite>
+        <idColabora>6</idColabora>
+        <idAdm>1</idAdm>
+        <mensagemAtraso/>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
+        <tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor>
+    </tarefa>
     
-<tarefa><id>10</id><tituloTarefa>Programar</tituloTarefa><status>2</status><descricao>Fazer as querys do banco</descricao><dataInicial>2023-10-10</dataInicial><dataLimite>2023-11-04</dataLimite><idColabora>6</idColabora><idAdm>1</idAdm><mensagemAtraso/><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor></tarefa><tarefa><id>8</id><tituloTarefa>Adada</tituloTarefa><status>5</status><descricao>ada</descricao><dataInicial/><dataLimite>2023-10-30</dataLimite><idColabora>6</idColabora><idAdm>1</idAdm><mensagemAtraso/><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor></tarefa></root>
+<tarefa><id>8</id><tituloTarefa>Adada</tituloTarefa><status>5</status><descricao>Lembrar de fazer todas a quetys do sistema e voltar para casa</descricao><dataInicial/><dataLimite>2023-10-30</dataLimite><idColabora>6</idColabora><idAdm>1</idAdm><mensagemAtraso/><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor></tarefa></root>
