@@ -138,6 +138,7 @@
         public function findAll($tokenEmpresa);
         public function findById($id);
         public function findBySetor($tokenSetor);
+        public function findByWorker($idWorker);
         public function update(Tarefas $t);
         public function delete($id);
     }

@@ -173,6 +173,37 @@ class TarefasDaoXml implements TarefasDAO {
         return false;
     }
 
+    //FUNÇÃO QUE BUSCA A TAREFA PELO ID DO COLABORADOR
+    public function findByWorker($idWorker) {
+        $array = [];
+
+        $xml = $this->xmlFile;
+        if (count($xml->children()) > 0){
+            foreach ($xml as $item) {
+                if ($item->idColabora == $idWorker) {
+                    $t = new Tarefas();
+                    $t->setId($item->id);
+                    $t->setTituloTarefa($item->tituloTarefa);
+                    $t->setStatus($item->status);
+                    $t->setDescricao($item->descricao);
+                    $t->setDataInicial($item->dataIncial);
+                    $t->setDataLimite($item->dataLimite);
+                    $t->setIdColabora($item->idColabora);
+                    $t->setIdAdm($item->idAdm);
+                    $t->setMensagemAtraso($item->mensagemAtraso);
+                    $t->setTokenEmpresa($item->tokenEmpresa);
+                    $t->setTokenSetor($item->tokenSetor);
+    
+                    $array[] = $t;
+                    
+                }
+            }
+            return $array;
+        }
+
+        return false;
+    }
+
     //FUNÇÃO QUE EDITA A TAREFA
     //PRIMIRO ELE CHAMA A FUNÇÃO DE DELETAR A TAREFA
     //DEPOIS ELE CHAMA A FUNÇÃO DE ADICIONAR A TAREFA COM OS NOVOS DADOS

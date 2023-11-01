@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-<!-- ESSE XML SALVA OS DADOS DOS SETORES -->
+    <!-- ESSE XML SALVA OS DADOS DOS SETORES -->
 
 
-<setor><id>2</id><name>Carros</name><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa></setor></root>
+    
+    
+    
+    
+<setor><id>4</id><name>Compras</name><tokenSetor>Dl1OBXaNMHVUvpyLDMM6VtWv6wDuUqQ0ohIHBuJHePmbbzMcoJ</tokenSetor><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa></setor><setor><id>2</id><name>Ações</name><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa></setor></root>

@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 //FUNÇÃO QUE ALTERA A COR DA TAREFA PELO STATUS DA TAREFA
 function alterarCorTarefa($status){
     if($status == 1){
@@ -45,3 +48,47 @@ function alterarImgTarefa($status){
     }
 }
 
+
+function nomeStatus($stat){
+    switch ($stat) {
+        case 1:
+            return 'Tarefa finalizada';
+            break;
+
+        case 2:
+            return 'Tarefa não iniciada';
+            break;
+        case 3:
+            return 'Tarefa em andamento';
+            break;
+        case 4:
+            return 'Tarefa pausada';
+            break;
+        case 5:
+            return 'Tarefa atrasada';
+            break;
+
+    }
+}
+
+function TarefaCor($stat){
+    switch ($stat) {
+        case 1:
+            return 'cor-finalizada';
+            break;
+
+        case 2:
+            return 'cor-naoIniciada';
+            break;
+        case 3:
+            return 'cor-emAndamento';
+            break;
+        case 4:
+            return 'cor-pausada';
+            break;
+        case 5:
+            return 'cor-atrasada';
+            break;
+
+    }
+}

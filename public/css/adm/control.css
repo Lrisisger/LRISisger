@@ -66,21 +66,7 @@ main {
     cursor: pointer;
 
 }
-.task-naoIniciada{
-    background-color: #FEFFFE;
-}
-.task-emAndamento{
-    background-color: #D9FFF8;
-}
-.task-pausada{
-    background-color: #FFFAE3;
-}
-.task-atrasada{
-    background-color: #f8dfdf;
-}
-.task-finalizada{
-    background-color: #E3FFDE ;
-}
+
 
 
 .task span {
@@ -294,4 +280,20 @@ main {
 }
 .cor-finalizada{
     background-color: #68CF44 ;
+}
+
+.task-naoIniciada{
+    background-color: #FEFFFE;
+}
+.task-emAndamento{
+    background-color: #D9FFF8;
+}
+.task-pausada{
+    background-color: #FFFAE3;
+}
+.task-atrasada{
+    background-color: #f8dfdf;
+}
+.task-finalizada{
+    background-color: #E3FFDE ;
 }

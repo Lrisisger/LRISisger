@@ -23,10 +23,10 @@ if($email && $pass){
             $_SESSION['token'] = $u->getToken(); //SE LOGIN APROVADO CRIAR SESSAO COM TOKEN DO USUARIO  
 
             if($u->getIsAdm() == 1){
-                header('Location: ../views/adm/control.php');//CASO LOGIN APROVADO REDIRECIONAR PARA TELA DE CONTROLE
+                header('Location: ../views/adm/control.php');//CASO LOGIN APROVADO REDIRECIONAR PARA TELA DE CONTROLE ADM
                 exit;
             }else{
-                header('Location: ../views/worker/control_colabora.php');//CASO LOGIN APROVADO REDIRECIONAR PARA TELA DE CONTROLE
+                header('Location: ../views/worker/control_colabora.php');//CASO LOGIN APROVADO REDIRECIONAR PARA TELA DE CONTROLE COLABORADOR
                 exit; 
             }
 

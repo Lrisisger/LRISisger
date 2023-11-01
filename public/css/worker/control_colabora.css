@@ -1,15 +1,9 @@
 /* CSS DA PÁGINA CENTRAL DE COLABORADOR (ONDE ELE RECEBE AS ATIVIDADES) */
 
-:root {
-    --redbox: #E05D5D;
-    --greenbox: #71B15A;
-    --goldbox: #DFBD0C;
-    --startbox: #17A1FA;
-    --bluebutton: #5BA5D8;
-}
-
 main {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -18,6 +12,7 @@ main {
 
 label {
     font-weight: 500;
+    font-size: 18px;
 }
 
 input,
@@ -29,44 +24,18 @@ textarea {
 }
 
 .cardTarefa {
-    background-color: #f1f1f1;
+    background-color: #e8e5e5;
     border-radius: 20px;
     min-width: 25%;
 }
 
 .titleTarefa {
-    font-size: 2em;
+    font-size: 1.7em;
     font-weight: 600;
-    margin: 8px 0 12px 8px;
     color: white;
 }
 
-.headRed {
-    background-color: var(--redbox);
-    position: relative;
-    width: 100%;
-    border-radius: 20px 20px 0 0;
-    padding: 5%;
-}
-
-.headBlue {
-    background-color: var(--startbox);
-    position: relative;
-    width: 100%;
-    border-radius: 20px 20px 0 0;
-    padding: 5%;
-}
-
-.headGreen {
-    background-color: var(--greenbox);
-    position: relative;
-    width: 100%;
-    border-radius: 20px 20px 0 0;
-    padding: 5%;
-}
-
-.headGold {
-    background-color: var(--goldbox);
+.headTask{
     position: relative;
     width: 100%;
     border-radius: 20px 20px 0 0;
@@ -81,9 +50,16 @@ textarea {
     padding: 10px 16px;
 }
 
+
+.inputArea input, .inputArea textarea{
+    font-size: 16px;
+}
+
+
 .respon input {
     width: 100%;
     padding: 8px;
+    font-size: 17px;
 }
 
 .prazo input {
@@ -92,27 +68,9 @@ textarea {
 
 .status input {
     padding: 8px;
+    color: #fff;
 }
 
-.atraso input {
-    background-color: var(--redbox);
-    color: white;
-}
-
-.concluido input {
-    background-color: var(--greenbox);
-    color: white;
-}
-
-.iniciado input {
-    background-color: var(--startbox);
-    color: white;
-}
-
-.pausado input {
-    background-color: var(--goldbox);
-    color: white;
-}
 
 .descricao textarea {
     padding: 8px;
@@ -150,4 +108,22 @@ textarea {
 
 .buttons button:hover {
     background-color: #525AB3;
+}
+
+/*classes que mudam a cor da tarefa de acordo com o status*/
+
+.cor-naoIniciada{
+    background-color: #C8CBC7;
+}
+.cor-emAndamento{
+    background-color: #17A1FA;
+}
+.cor-pausada{
+    background-color: #DFBD0C;
+}
+.cor-atrasada{
+    background-color: #FF3838;
+}
+.cor-finalizada{
+    background-color: #68CF44 ;
 }

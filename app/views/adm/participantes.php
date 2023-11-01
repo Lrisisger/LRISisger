@@ -25,10 +25,20 @@
     exit;
   }
 
+  if($userInfo->getIsAdm() == 0){
+    header("Location: ../worker/control_colabora.php");
+    exit;
+  }
+
   $uDao = new UsuarioDaoXml();
   $infoAllUsers = $uDao->findAll(2, $userInfo->getTokenEmpresa());
 
+  function ordenarNome($userOne, $userTwo){
+      return strcasecmp($userOne->getName(), $userTwo->getName());
+  }
   
+  usort($infoAllUsers, 'ordenarNome');
+
 
   echo "<script>let usuarios = [];</script>";
         
