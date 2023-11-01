@@ -35,7 +35,7 @@
         <email>Luis@gmail.com</email>
         <password>$2y$10$8G4/mMp5EfUsHFoGKcZ1nOa.dHgYHeOm83QPcY6CZHgII0bJdsB2a</password>
         <cpf>123123123</cpf>
-        <isAdm>0</isAdm>
+        <isAdm>1</isAdm>
         <token>J7bZKp0FbmG7CUcj!TWwFGQp!ncLQ87MWpQbjsg@DuZseQtlvr</token>
         <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
         <mainAcc>0</mainAcc>
