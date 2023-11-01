@@ -20,7 +20,7 @@
     <tarefa>
         <id>10</id>
         <tituloTarefa>Programar</tituloTarefa>
-        <status>3</status>
+        <status>2</status>
         <descricao>Fazer as querys do banco</descricao>
         <dataInicial>2023-10-10</dataInicial>
         <dataLimite>2023-11-04</dataLimite>
@@ -46,4 +46,4 @@
         <tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor>
     </tarefa>
     
-<tarefa><id>8</id><tituloTarefa>Adada</tituloTarefa><status>5</status><descricao>Lembrar de fazer todas a quetys do sistema e voltar para casa</descricao><dataInicial/><dataLimite>2023-10-30</dataLimite><idColabora>6</idColabora><idAdm>1</idAdm><mensagemAtraso/><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor></tarefa></root>
+<tarefa><id>12</id><tituloTarefa>Abc</tituloTarefa><status>2</status><descricao>abcdefg</descricao><dataInicial>2023-11-15</dataInicial><dataLimite>2023-12-06</dataLimite><idColabora>13</idColabora><idAdm>12</idAdm><mensagemAtraso/><tokenEmpresa>jfYB2GF#@TRHu!xSyR4Tkfex$RKm$SZTdiR9@tv#T6KSp5ihj7</tokenEmpresa><tokenSetor>jMJ7fERW7v1A5HI87W8sdOlVhjDjCYtvJYpoj1Lf8JJAv3dy92</tokenSetor></tarefa><tarefa><id>8</id><tituloTarefa>Adada</tituloTarefa><status>5</status><descricao>Lembrar de fazer todas a quetys do sistema e voltar para casa</descricao><dataInicial/><dataLimite>2023-10-30</dataLimite><idColabora>6</idColabora><idAdm>1</idAdm><mensagemAtraso/><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor></tarefa></root>

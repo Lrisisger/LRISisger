@@ -6,7 +6,7 @@ require '../dao/usuarioDao.php';
 $uDao = new UsuarioDaoXml();
 
 $name = ucwords( strtolower( filter_input( INPUT_POST, 'nome' ) ) );// RECEBENDO NOME DO USUARIO
-$email = strtolower( filter_input( INPUT_POST, 'email', FILTER_VALIDATE_EMAIL ) );//RECEBENDO EMAIL
+$email = ucwords( strtolower( filter_input( INPUT_POST, 'email', FILTER_VALIDATE_EMAIL )) );//RECEBENDO EMAIL
 $cpf = ucwords( strtolower( filter_input( INPUT_POST, 'cpfCnpj' ) ) );//RECEBENDO CPF OU CNPJ DO USUARIO
 $pass = filter_input( INPUT_POST, 'pass' );//RECEBENDO SENHA DO USUARIO
 $confirmPass = filter_input(INPUT_POST, 'confirmPass');//RECEBENDO CONFIRMAÇÃO DE SENHA
@@ -30,6 +30,23 @@ function token( $tamanho = 50 ) {
 
 //VERIFICANDO SE TODOS OS DADOS FORAM RECEBIDOS CORRETAMENTE
 if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm == 0) && ($mainAcc == 0 || $mainAcc == 1)) {
+    
+    $emailInvalido = $uDao->findByEmail($email); 
+
+    if($emailInvalido){
+
+        print_r($emailInvalido);
+        if($mainAcc == 1){
+            $_SESSION['aviso'] = 'Email já existe em nosso sistema';
+            header('Location: ../views/adm/singup.php');
+            exit;
+        }else{
+            $_SESSION['aviso'] = 'Email já existe em nosso sistema';
+            header('Location: ../views/adm/participantes.php');
+            exit;
+        }
+    }
+ 
 
     //VERIFICANDO SE A SENHA E A CONFIRMAÇÃO DA SENHA SÃO IGUAIS
     if($pass != $confirmPass){
@@ -78,7 +95,7 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
 
     $uDao->add( $u ); //ENVIANDO USUARIO PARA O DAO ADICIONAR NO XML
 
-} else {
+}else {
     $_SESSION['aviso'] = 'Preencha todos os campos'; //SE EMAIL OU SENHA NÃO FOREM PREENCHIDOS CRIAR SESSAO COM AVISO 
     if($mainAcc == 1){
         header( 'Location: ../views/adm/singup.php' );

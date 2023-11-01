@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../../public/css/general/main.css">
-        <link rel="stylesheet" href="../../../public//css/adm/login.css">
+        <link rel="stylesheet" href="../../../public//css/general/login.css">
         <title>SISGER</title>
     </head>
     <body>

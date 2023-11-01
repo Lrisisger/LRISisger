@@ -1,5 +1,12 @@
 /* CSS DA PÁGINA DE PARTICIPANTES */
-
+.avisa{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: red;
+}
 .container-add{
     display: flex;
     width: 100%;
