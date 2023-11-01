@@ -21,7 +21,7 @@
         require realpath( dirname( __FILE__ ) . '/../../../config/config.php' );
         require realpath( dirname( __FILE__ ) . '/../../models/Auth.php');
         require realpath( dirname( __FILE__ ) . '/../../dao/usuarioDao.php');
-        require realpath( dirname( __FILE__ ) . '/../../scripts-php/adm/control.php');
+        require realpath( dirname( __FILE__ ) . '/../../scripts-php/control.php');
         require realpath( dirname( __FILE__ ) . '/../../dao/tarefasDao.php');
         require realpath( dirname( __FILE__ ) . '/../../dao/setoresDao.php');
 
@@ -44,15 +44,37 @@
         $sDao = new SetoresDaoXml();// INICIANDO DAO DE SETORES
         $setores = $sDao->findAll($userInfo->getTokenEmpresa());// RECEBENDO TAREFAS DA EMPRESA
 
+        function ordenarSetor($setorOne, $setorTwo){
+            return strcasecmp($setorOne->getName(), $setorTwo->getName());
+        }
         
-        $tDao = new TarefasDaoXml();// INICIANDO DAO DE TAREFAS
-       
-            
-        //echo "<script>var nome = '$nome';</script>";
-        
-   
-        $tarefasGeral = $tDao->findAll($userInfo->getTokenEmpresa());// RECEBENDO TAREFAS DA EMPRESA
+        usort($setores, 'ordenarSetor');   
 
+        $tDao = new TarefasDaoXml();// INICIANDO DAO DE TAREFAS
+        $tarefasStatus =  $tDao->findAll($userInfo->getTokenEmpresa());
+
+        function verificaStatus($tarefas){
+            $dataAtual = new DateTime();
+            $dataAtual->setTime(0, 0);
+        
+            foreach($tarefas as $tarefa){
+                $dataTarefa = new DateTime($tarefa->getDataLimite());
+                
+                if($dataAtual > $dataTarefa){
+                    if($tarefa->getStatus() != 1 && $tarefa->getStatus() != 4){
+                        $tarefa->setStatus(5);
+                        $tDao = new TarefasDaoXml();
+                        $tDao->update($tarefa);
+                    }
+                }
+            }
+                      
+        }
+
+        verificaStatus($tarefasStatus);
+   
+        
+        $tarefasGeral = $tDao->findAll($userInfo->getTokenEmpresa());// RECEBENDO TAREFAS DA EMPRESA;
         
 
         // FUNÇÃO QUE ORDENA AS TAREFAS NA TELA DE ACORDO COM O STATUS
@@ -64,7 +86,11 @@
         echo "<script>let tarefasGeral = [];</script>";
 
         foreach($tarefasGeral as $tarefa){
+            $dataInicial = new DateTime($tarefa->getDataInicial());
+            $dataInicialFormatada = $dataInicial->format('d/m/Y');
 
+            $dataLimite = new DateTime($tarefa->getDataLimite());
+            $dataLimiteFormatada = $dataLimite->format('d/m/Y');
 
             echo "<script>array = {
                     id: ".$tarefa->getId().",
@@ -72,8 +98,8 @@
                     tituloTarefa: '".$tarefa->getTituloTarefa()."',                    
                     status: ".$tarefa->getStatus().",
                     descricao: '".$tarefa->getDescricao()."',                    
-                    dataInicial: '".$tarefa->getDataInicial()."',
-                    dataLimite: '".$tarefa->getDataLimite()."',
+                    dataInicial: '".$dataInicialFormatada."',
+                    dataLimite: '".$dataLimiteFormatada."',
                     mensagemAtraso: '".$tarefa->getMensagemAtraso()."',
 
                 }

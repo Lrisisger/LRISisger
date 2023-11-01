@@ -1,31 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
+    <!-- SALVANDO INFORMAÇÕES DAS TAREFAS -->
 
 
     <tarefa>
-        <id>4</id>
+        <id>9</id>
         <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
-        <status>2</status>
-        <descricao>Fazer as querys do banco</descricao>
-        <dataInicial>2023-10-18</dataInicial>
-        <dataLimite>2023-10-27</dataLimite>
-        <idColabora>12</idColabora>
-        <idAdm>15</idAdm>
+        <status>4</status>
+        <descricao>879879</descricao>
+        <dataInicial>2023-10-17</dataInicial>
+        <dataLimite>2023-10-30</dataLimite>
+        <idColabora>6</idColabora>
+        <idAdm>5</idAdm>
         <mensagemAtraso/>
-        <tokenEmpresa>r4twKYogXmLX79n2R4j6qZvlwaNO2yFxNX9MPfP91@tZI7kFe@</tokenEmpresa>
-        <tokenSetor>6z7hEjAq9Rki0z2JoyAElSihswMwErEgadW8zXekK44V36YBLZ</tokenSetor>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
+        <tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor>
     </tarefa>
+
     <tarefa>
-        <id>5</id>
-        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
-        <status>2</status>
+        <id>10</id>
+        <tituloTarefa>Programar</tituloTarefa>
+        <status>3</status>
         <descricao>Fazer as querys do banco</descricao>
-        <dataInicial>2023-10-25</dataInicial>
-        <dataLimite>2023-10-27</dataLimite>
-        <idColabora>14</idColabora>
-        <idAdm>15</idAdm>
+        <dataInicial>2023-10-10</dataInicial>
+        <dataLimite>2023-11-04</dataLimite>
+        <idColabora>6</idColabora>
+        <idAdm>1</idAdm>
         <mensagemAtraso/>
-        <tokenEmpresa>r4twKYogXmLX79n2R4j6qZvlwaNO2yFxNX9MPfP91@tZI7kFe@</tokenEmpresa>
-        <tokenSetor>VKTe7aJ9obmFkQFvclN17RwFngbVG9O0UX5H4KLfkDL5bqp0Bf</tokenSetor>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
+        <tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor>
     </tarefa>
-<tarefa><id>6</id><tituloTarefa>Rendimentos Lucros</tituloTarefa><status>2</status><descricao>Fazer um breve relatório de todos os rendimentos da empresa que geraram lucro.</descricao><dataInicial>2023-10-30</dataInicial><dataLimite>2023-12-05</dataLimite><idColabora>16</idColabora><idAdm>15</idAdm><mensagemAtraso/><tokenEmpresa>ysDppB6s9N4Oufd07RjS7i$rxIVyok#xwN!qBi303i08QBFdVU</tokenEmpresa><tokenSetor>S17KdgClDywROJRzyiRDnyDuaZ9kGFGAsvbHe90QGuSMKHjs7n</tokenSetor></tarefa></root>
+
+
+    <tarefa>
+        <id>11</id>
+        <tituloTarefa>Limpar A Casa</tituloTarefa>
+        <status>3</status>
+        <descricao>Varrer todos os cantos</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-01</dataLimite>
+        <idColabora>6</idColabora>
+        <idAdm>1</idAdm>
+        <mensagemAtraso/>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
+        <tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor>
+    </tarefa>
+    
+<tarefa><id>8</id><tituloTarefa>Adada</tituloTarefa><status>5</status><descricao>Lembrar de fazer todas a quetys do sistema e voltar para casa</descricao><dataInicial/><dataLimite>2023-10-30</dataLimite><idColabora>6</idColabora><idAdm>1</idAdm><mensagemAtraso/><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor></tarefa></root>
