@@ -23,10 +23,11 @@ $isAdm = filter_input(INPUT_POST, 'isAdm');
 $token = filter_input(INPUT_POST, 'token');
 
 if($name && $email && $cpfCnpj && ($isAdm == 0 || $isAdm == 1) && $token){
-
+   
+    $usuario = $uDao->findByToken($token);
     $emailInvalido = $uDao->findByEmail($email); 
 
-    if($emailInvalido){
+    if($emailInvalido && $email != $usuario->getEmail()){
 
         print_r($emailInvalido);
         if($mainAcc == 1){
@@ -39,20 +40,20 @@ if($name && $email && $cpfCnpj && ($isAdm == 0 || $isAdm == 1) && $token){
             exit;
         }
     }
-       $usuario = $uDao->findByToken($token);
+       
                
-        $u = new Usuarios();
-        $u->setId($usuario->getId());
-        $u->setName($name);
-        $u->setEmail($email);
-        $u->setCpf($cpfCnpj);
-        $u->setPass($usuario->getPass());
-        $u->setIsAdm($isAdm);
-        $u->setToken($token);
-        $u->setTokenEmpresa($usuario->getTokenEmpresa());
-        $u->setMainAcc($usuario->getMainAcc());
+    $u = new Usuarios();
+    $u->setId($usuario->getId());
+    $u->setName($name);
+    $u->setEmail($email);
+    $u->setCpf($cpfCnpj);
+    $u->setPass($usuario->getPass());
+    $u->setIsAdm($isAdm);
+    $u->setToken($token);
+    $u->setTokenEmpresa($usuario->getTokenEmpresa());
+    $u->setMainAcc($usuario->getMainAcc());
 
-       $uDao->update($u);
+    $uDao->update($u);
     
 }else{
     $_SESSION['avisoAdd'] = 'Preencha todos os campos';

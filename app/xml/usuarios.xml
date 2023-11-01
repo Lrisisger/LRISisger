@@ -41,18 +41,6 @@
         <mainAcc>0</mainAcc>
     </usuario>
 
-    <usuario>
-        <id>10</id>
-        <name>Zacarias</name>
-        <email>Enzo1@gmail.com</email>
-        <password>$2y$10$P4VGcJ6TYUAo7UHNYiN/IeTXL246WZydqGBDdHp5v.RWS886Qvg/S</password>
-        <cpf>123</cpf>
-        <isAdm>0</isAdm>
-        <token>xiunufQ5DheHlVLYpML##kszyhGmQ!5D!3yCy1wGEky8AmO#PI</token>
-        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
-        <mainAcc>0</mainAcc>
-    </usuario>
-
 
     <usuario>
         <id>11</id>
@@ -76,7 +64,7 @@
         <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
         <mainAcc>0</mainAcc>
     </usuario>
-    
+
     <usuario>
         <id>12</id>
         <name>Enzo Souza Lima</name>
@@ -88,17 +76,22 @@
         <tokenEmpresa>jfYB2GF#@TRHu!xSyR4Tkfex$RKm$SZTdiR9@tv#T6KSp5ihj7</tokenEmpresa>
         <mainAcc>1</mainAcc>
     </usuario>
+    
+
+
     <usuario>
-        <id>13</id>
-        <name>Antonio</name>
-        <email>Ant@gmail.com</email>
-        <password>$2y$10$x.X5ZyRh1PWz3ZwDspMuCehMBG8ZsIFvC.UjrPG4rgKfVdoJswVwu</password>
-        <cpf>123</cpf>
-        <isAdm>0</isAdm>
-        <token>mI3Ksvvg9kLJxEO09H@q$hXJ78neoekj8jh!TPQyQ@Qoc@vL9Z</token>
-        <tokenEmpresa>jfYB2GF#@TRHu!xSyR4Tkfex$RKm$SZTdiR9@tv#T6KSp5ihj7</tokenEmpresa>
+        <id>8</id>
+        <name>Ianca Garcia</name>
+        <email>Garcia@gmail.com</email>
+        <password>$2y$10$jh9vPBfC.0PeNBSZC.eh2uv9PBnap023vOBwRSnEFsBfOkCKpxUAu</password>
+        <cpf>1234</cpf>
+        <isAdm>1</isAdm>
+        <token>CrDOoNOL1YrQK2R75eshinEbWQS!TAi0Q4zCoP@Mbg!Z@vZRf!</token>
+        <tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa>
         <mainAcc>0</mainAcc>
     </usuario>
 
-   
-<usuario><id>8</id><name>Ianca Garcia</name><email>Garcia@gmail.com</email><password>$2y$10$jh9vPBfC.0PeNBSZC.eh2uv9PBnap023vOBwRSnEFsBfOkCKpxUAu</password><cpf>123</cpf><isAdm>1</isAdm><token>CrDOoNOL1YrQK2R75eshinEbWQS!TAi0Q4zCoP@Mbg!Z@vZRf!</token><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa><mainAcc>0</mainAcc></usuario></root>
+
+
+
+</root>
