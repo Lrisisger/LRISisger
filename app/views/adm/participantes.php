@@ -129,13 +129,7 @@
   <main>
 
     
-      <?php 
-        //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
-        if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
-          echo "<div class='avisa'><span id='aviso'>".$_SESSION['aviso']."</span></div>";
-          $_SESSION['aviso'] = '';
-        }
-      ?> 
+     
     
     <div class="container-add">
       <div class="botao" onclick="newUser('new', false)">
@@ -174,18 +168,24 @@
           <h3>Novo colaborador</h3>
           <img onclick="newUser('new', false)"  src="../../../public/img/svgs/arrow_back.svg" alt="">
         </div>
-
+        <?php 
+        //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
+        if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
+          echo "<div class='avisa'><span id='aviso'>".$_SESSION['aviso']."</span></div>";
+          $_SESSION['aviso'] = '';
+        }
+      ?> 
         <div class="container-form">
           <form action="../../services/singUpAction.php" method="post">
 
             <label>
               <h4>Nome completo</h4>
-              <input type="text" name="nome">
+              <input type="text" name="nome" id="nome">
             </label>
 
             <label>
               <h4>Email</h4>
-              <input type="email" name="email">
+              <input type="email" name="email" id="email">
             </label>
 
             <div class="container-cpf-User">
@@ -270,6 +270,31 @@
 
   <script src="../../../public/js/general/main.js"></script>  
   <script src="../../../public/js/adm/participantes.js"></script>
+
+  <?php 
+            if(!empty($_SESSION['conteudo'])){
+                echo "<script>
+                    newUser('new', false)
+                    let recovery = {}
+        
+                    recovery.nome = '".$_SESSION['conteudo']['nome']."',
+                    recovery.email = '".$_SESSION['conteudo']['email']."',
+                    recovery.cpfCnpj = '".$_SESSION['conteudo']['cpfCnpj']."'
+                    
+                    const inputNome = document.getElementById('nome');
+                    const inputEmail = document.getElementById('email');
+                    const inputCpfCnpj = document.getElementById('cpfNew');
+
+                    inputNome.value = recovery.nome;
+                    inputEmail.value = recovery.email;
+                    inputCpfCnpj.value = recovery.cpfCnpj;
+
+                    </script>
+                    ";
+        
+                $_SESSION['conteudo'] = [];       
+            }
+    ?>
 
 </body>
 

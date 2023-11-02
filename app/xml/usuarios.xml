@@ -5,5 +5,4 @@
     <!-- XML QUE SALVA AS INFORMAÇÕES DOS USUÁRIOS CADASTRADOS -->
 
 
-</root>
-
+<usuario><id>1</id><name>Yasmin Souza Lima</name><email>Yasmin@hotmail.com</email><password>$2y$10$Zt94z/gihxS/25y3pTUlg.kfxRgqZ4voZsfGRoswYjMNZ2GFgiwi2</password><cpf>123</cpf><isAdm>1</isAdm><token>x!#F!1vcKej8ZWd1#kSOX$#3MxFMiBPETm#031IrasHR#mwJEB</token><tokenEmpresa>q767IEFIIBG2WL#@JdY7Z5$$MPFr1HOmwDlbRzmpGMoIwZk@3I</tokenEmpresa><mainAcc>1</mainAcc></usuario></root>

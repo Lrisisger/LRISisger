@@ -2,7 +2,7 @@
 <root>
 
 
+    <idSetor>0</idSetor>
     
-    
-    
-<idSetor>2</idSetor><idUser>3</idUser><idTarefa>3</idTarefa></root>
+    <idTarefa>0</idTarefa>
+<idUser>1</idUser></root>
