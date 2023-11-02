@@ -131,7 +131,6 @@ main {
     display: flex;
     align-items: center;
     color: white;
-    font: 600;
     font-size: 25px;
     justify-content: space-between;
     padding: 0 10px;
@@ -149,7 +148,6 @@ main {
 }
 
 .modal-new-task form h4{
-    font: 300;
     margin: 10px 0px -8px 20px;
 }
 
