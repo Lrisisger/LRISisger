@@ -89,7 +89,7 @@ const handleModalTask = (id) => {
     const dataFinal = document.getElementById('task-dataFinal');
     const status = document.getElementById('task-status');
     const descricao = document.getElementById('task-descricao');
-    const mensagem = document.getElementById('task-mensagem');
+    const mensagemHt = document.getElementById('task-mensagem');
     const containerCor = document.getElementById('container-title');
 
     
@@ -101,8 +101,8 @@ const handleModalTask = (id) => {
         status.innerHTML = statusType(tarefasGeral[`id${id}`].status);
         descricao.innerHTML = tarefasGeral[`id${id}`].descricao;
 
-        if (tarefasGeral[`id${id}`].mensagemAtraso != '') {
-            mensagem.innerHTML = tartarefasGeraletarefasGeralfas[`id${id}`].mensagemAtraso;
+        if (tarefasGeral[`id${id}`].mensagem != '' ) {
+            mensagemHt.innerHTML = tarefasGeral[`id${id}`].mensagem;
         }
 
         containerCor.classList.add(handleColor(tarefasGeral[`id${id}`].status));

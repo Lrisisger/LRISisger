@@ -32,7 +32,7 @@
 
     $tDao = new TarefasDaoXml();
 
-    $tarefas =  $tDao->findByWorker($userInfo->getId());
+    $tarefas =  $tDao->findByWorker($userInfo->getId()) ? $tDao->findByWorker($userInfo->getId()) : [];
 
     function verificaStatus($tarefas){
         $dataAtual = new DateTime();
@@ -139,21 +139,20 @@
                         </div>
                         <div class="inputArea observ">
                             <label for="observacao">Observações</label>
-                            <textarea name="observacao" style="resize: none" id="" disabled><?=$tarefa->getMensagemAtraso()?></textarea>
+                            <textarea name="observacao" style="resize: none" id="" disabled><?=$tarefa->getMensagem()?></textarea>
                         </div>
                         <div class="buttons">
                             <?php
                                 if($tarefa->getStatus() == 5){
-                                    echo '<a class="button" type="submit">Pausar</a>
-                                          <a class="button" type="submit">Finalizar</a>';
+                                    echo '<a onclick="popupTask('.$tarefa->getId().', 1)" class="button" type="submit">Finalizar</a>';
                                 }else if($tarefa->getStatus() == 4){
-                                    echo '<a class="button" type="submit">Retomar</a>
-                                          <a class="button" type="submit">Finalizar</a>';
+                                    echo '<a href="../../services/treatTask.php?action=3&id='.$tarefa->getId().'" class="button" type="submit">Retomar</a>
+                                          <a onclick="popupTask('.$tarefa->getId().', 1)" class="button" type="submit">Finalizar</a>';
                                 } else if($tarefa->getStatus() == 3){
-                                    echo '<a class="button" type="submit">Pausar</a>
-                                          <a class="button" type="submit">Finalizar</a>';
+                                    echo '<a onclick="popupTask('.$tarefa->getId().', 4)" class="button" type="submit">Pausar</a>
+                                          <a onclick="popupTask('.$tarefa->getId().', 1)" class="button" type="submit">Finalizar</a>';
                                 } else if($tarefa->getStatus() == 2){
-                                    echo '<a class="button" type="submit">Iniciar</a>';
+                                    echo '<a href="../../services/treatTask.php?action=3&id='.$tarefa->getId().'" class="button" type="submit">Iniciar</a>';
                                 }
                             ?>
                         </div>
@@ -164,7 +163,33 @@
  
     </main>
 
+    <div class="dark">
+        <div class="modal-obs">
+        <div class="header">
+            <h2>Deixe uma observação</h2>
+            <img onclick="popupTask(false, false)" class="close-modal" src="../../../public/img/svgs/arrow_back.svg" alt="">
+        </div>
+
+        <div class="modal-container">
+            <form class="mensage-send" action="../../services/treatTask.php" method="GET">
+                <input type="hidden" name="id"  id="idTask" value="">
+                <input type="hidden" name="action" id="actionTask" value="">
+                <textarea name="mensagem" id="input-mensagem" rows="6" cols="35" style="resize: none;"> </textarea>
+            <?php 
+                //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
+                if(!empty($_SESSION['avisoEdit']) && $_SESSION['avisoEdit']){
+                echo "<span class='aviso'>".$_SESSION['avisoEdit']."</span>";
+                $_SESSION['avisoEdit'] = '';
+                }
+            ?>
+            <input type="submit" class="button-enviar" value="Confirmar">
+            </form>
+        </div>
+        </div>
+
+</div>
     <script src="../../../public/js/general/main.js"></script>
+    <script src="../../../public/js/worker/control_colabora.js"></script>
 </body>
 
 

@@ -53,9 +53,7 @@
                             $_SESSION['aviso'] = '';
                         }
                     ?>
-                    <div class="esqueceusenha text-btn">
-                        <a href="#">Esqueceu a senha?</a>
-                    </div>
+                   
                     <div class="colab text-btn">
                         <a href="../adm/singUp.php">Cadastre-se</a>
                     </div>

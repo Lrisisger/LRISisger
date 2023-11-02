@@ -69,4 +69,5 @@ main {
     font-weight: 600;
     margin: 8px 0;
     transition: 0.5s;
+    cursor: pointer;
 }
