@@ -87,7 +87,7 @@ usort($setores, 'ordenarSetor');
       <a href="control.php">
         <li>
           <div class="menu-button">
-            <img style="height:30px;" src="../../../public/img/icons/setor.svg" alt="">
+            <img style="height:30px;" src="../../../public/img/icons/central.svg" alt="">
           </div>
 
           <h3>Central</h3>
@@ -113,6 +113,18 @@ usort($setores, 'ordenarSetor');
           <h3>Participante</h3>
         </li>
       </a>
+
+      <?php if($userInfo->getMainAcc() == 0): ?>
+                <a href="../worker/control_colabora.php">
+                <li>
+                    <div class="menu-button">
+                        <img style="height:30px;"  src="../../../public/img/icons/tarefas.svg" alt="">
+                    </div>
+
+                    <h3>Minhas Tarefas</h3>
+                </li>
+            </a> 
+      <?php endif; ?> 
 
       <a href="../../services/logoutAction.php">
         <li>
