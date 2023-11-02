@@ -1,6 +1,7 @@
 <?php
 require '../models/usuarios.php';
 require '../dao/usuarioDao.php';
+require_once '../../config/config.php';
 
 //INICIALIZANDO DAO DE USUARIOS
 $uDao = new UsuarioDaoXml();
@@ -34,14 +35,18 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
     $emailInvalido = $uDao->findByEmail($email); 
 
     if($emailInvalido){
+        $_SESSION['conteudo'] = [
+            'nome' => $name,
+            'email' => '',
+            'cpfCnpj' => $cpf
+        ];
 
-        print_r($emailInvalido);
+        
+        $_SESSION['aviso'] = 'Email já existe em nosso sistema';
         if($mainAcc == 1){
-            $_SESSION['aviso'] = 'Email já existe em nosso sistema';
             header('Location: ../views/adm/singup.php');
             exit;
         }else{
-            $_SESSION['aviso'] = 'Email já existe em nosso sistema';
             header('Location: ../views/adm/participantes.php');
             exit;
         }
@@ -50,6 +55,11 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
 
     //VERIFICANDO SE A SENHA E A CONFIRMAÇÃO DA SENHA SÃO IGUAIS
     if($pass != $confirmPass){
+        $_SESSION['conteudo'] = [
+            'nome' => $name,
+            'email' => $email,
+            'cpfCnpj' => $cpf
+        ];
         if($mainAcc == 1){
             $_SESSION['aviso'] = 'Senhas diferentes';
             header('Location: ../views/adm/singup.php');
@@ -63,6 +73,13 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
 
     //VERIFICANDO TAMANHO MINIMO DA SENHA
     if(strlen($pass) < 8){
+
+        $_SESSION['conteudo'] = [
+            'nome' => $name,
+            'email' => $email,
+            'cpfCnpj' => $cpf
+        ];
+
         if($mainAcc == 1){
             $_SESSION['aviso'] = 'Senha deve ter no minimo 8 caracteres';
             header('Location: ../views/adm/singup.php');
@@ -109,6 +126,12 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
     $uDao->add( $u ); //ENVIANDO USUARIO PARA O DAO ADICIONAR NO XML
 
 }else {
+    $_SESSION['conteudo'] = [
+        'nome' => $name,
+        'email' => $email,
+        'cpfCnpj' => $cpf
+    ];
+
     $_SESSION['aviso'] = 'Preencha todos os campos'; //SE EMAIL OU SENHA NÃO FOREM PREENCHIDOS CRIAR SESSAO COM AVISO 
     if($mainAcc == 1){
         header( 'Location: ../views/adm/singup.php' );

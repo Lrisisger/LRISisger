@@ -86,7 +86,7 @@ class UsuarioDaoXml implements UsuarioDAO {
             if ( count( $xml->children() ) > 0 ) {
                 foreach ( $xml as $item ) {
 
-                    if ( $item->isAdm == '0' && $item->tokenEmpresa == $tokenEmpresa) {
+                    if ( $item->mainAcc == '0' && $item->tokenEmpresa == $tokenEmpresa) {
                         $u = new Usuarios();
                         $u->setId( $item->id );
                         $u->setName( $item->name );

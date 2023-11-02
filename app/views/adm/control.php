@@ -109,7 +109,7 @@
             ";
         };
      
-
+      
     ?>
 
     <header class="head">
@@ -167,6 +167,18 @@
                     <h3>Setores</h3>
                 </li>
             </a>  
+
+            <?php if($userInfo->getMainAcc() == 0): ?>
+                <a href="../worker/control_colabora.php">
+                <li>
+                    <div class="menu-button">
+                        <img style="height:30px;"  src="../../../public/img/icons/tarefas.svg" alt="">
+                    </div>
+
+                    <h3>Minhas Tarefas</h3>
+                </li>
+            </a> 
+            <?php endif; ?> 
 
             <a href="../../services/logoutAction.php">
                 <li>

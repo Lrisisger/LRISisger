@@ -5,5 +5,37 @@
     <!-- XML QUE SALVA AS INFORMAÇÕES DOS USUÁRIOS CADASTRADOS -->
 
 
+    <usuario>
+        <id>1</id>
+        <name>Yasmin Souza Lima</name>
+        <email>Yasmin@hotmail.com</email>
+        <password>$2y$10$Zt94z/gihxS/25y3pTUlg.kfxRgqZ4voZsfGRoswYjMNZ2GFgiwi2</password>
+        <cpf>123</cpf>
+        <isAdm>1</isAdm>
+        <token>x!#F!1vcKej8ZWd1#kSOX$#3MxFMiBPETm#031IrasHR#mwJEB</token>
+        <tokenEmpresa>q767IEFIIBG2WL#@JdY7Z5$$MPFr1HOmwDlbRzmpGMoIwZk@3I</tokenEmpresa>
+        <mainAcc>1</mainAcc>
+    </usuario>
+    <usuario>
+        <id>2</id>
+        <name>Lucca Soares</name>
+        <email>Luca@gmail.com</email>
+        <password>$2y$10$ihUGh3L4Ozzopau3VqOt5.GYcaCnfmvDinBo8.B37R61K8MwuPOCa</password>
+        <cpf>123123</cpf>
+        <isAdm>1</isAdm>
+        <token>Pn$kYGPn7573xDV7MdNzQjedVyq@A$RR8T9$vL9CSp@$ZHDYW!</token>
+        <tokenEmpresa>q767IEFIIBG2WL#@JdY7Z5$$MPFr1HOmwDlbRzmpGMoIwZk@3I</tokenEmpresa>
+        <mainAcc>0</mainAcc>
+    </usuario>
+    <usuario>
+        <id>3</id>
+        <name>Vanilson</name>
+        <email>Vanilson.carreta668@gmail.com</email>
+        <password>$2y$10$YgERMw13.JCZ1abXIa4hrOIULH.BsxrLhXbeytnwWQ1dqxk4Xaokm</password>
+        <cpf>123</cpf>
+        <isAdm>0</isAdm>
+        <token>k7ikiJvtpMxBQ4MOYySXtqLYb74lt3kBGetKqYcC3jDzrkWK$A</token>
+        <tokenEmpresa>q767IEFIIBG2WL#@JdY7Z5$$MPFr1HOmwDlbRzmpGMoIwZk@3I</tokenEmpresa>
+        <mainAcc>0</mainAcc>
+    </usuario>
 </root>
-

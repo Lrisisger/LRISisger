@@ -8,11 +8,17 @@
     <link rel="stylesheet" href="../../../public/css/general/main.css">
     <title>LRISisger - Cadastro</title>
 </head>
+
+<body>
 <?php
     
     require realpath( dirname( __FILE__ ) . '/../../../config/config.php' );
+
+   
+
+   
+
 ?>
-<body>
     <!-- Left Side -->
     <div class="left loginUser flex">
         <!--  Title  -->
@@ -46,19 +52,19 @@
             <div class="titleText">Cadastro</div>
             <div>
                 <div>
-                    <input name="nome" placeholder="Nome completo ou razão social">
+                    <input id="nome" name="nome" placeholder="Nome completo ou razão social">
                 </div>
                 <div>
-                    <input name="email" placeholder="E-mail">
+                    <input id="email" name="email" placeholder="E-mail">
                 </div>
                 <div>
                     <input name="cpfCnpj" placeholder="CPF ou CNPJ" maxlength="17" id="cpfCnpj">
                 </div>
                 <div>
-                    <input name="pass" type="password" placeholder="Senha" min="8">
+                    <input id="pass"  name="pass" type="password" placeholder="Senha" min="8">
                 </div>
                 <div>
-                    <input name="confirmPass" type="password" placeholder="Confirme a senha" min="8">
+                    <input id="confirmPass"  name="confirmPass" type="password" placeholder="Confirme a senha" min="8">
                 </div>
 
                 <?php 
@@ -76,6 +82,28 @@
     </div>
 
     <script src="../../../public/js/adm/signUp.js"></script>
+
+    <?php 
+            if(!empty($_SESSION['conteudo'])){
+                echo "<script>let recovery = {}
+        
+                    recovery.nome = '".$_SESSION['conteudo']['nome']."',
+                    recovery.email = '".$_SESSION['conteudo']['email']."',
+                    recovery.cpfCnpj = '".$_SESSION['conteudo']['cpfCnpj']."'
+                    
+                    const inputNome = document.getElementById('nome');
+                    const inputEmail = document.getElementById('email');
+
+                    inputNome.value = recovery.nome;
+                    inputEmail.value = recovery.email;
+                    inputCpfCnpj.value = recovery.cpfCnpj;
+
+                    </script>
+                    ";
+        
+                $_SESSION['conteudo'] = [];       
+            }
+    ?>
 </body>
 
 </html>

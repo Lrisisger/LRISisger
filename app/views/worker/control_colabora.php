@@ -25,7 +25,7 @@
         exit;
     }
 
-    if($userInfo->getIsAdm() == 1){
+    if($userInfo->getMainAcc() == 1){
         header("Location: ../adm/control.php");
         exit;
     }
@@ -82,6 +82,19 @@
                 </div>
                 <h3>Menu</h3>
             </li>
+
+            <?php if($userInfo->getMainAcc() == 0): ?>
+
+                <a href="../adm/control.php">
+                    <li>
+                    <div class="menu-button">
+                        <img style="height:30px;" src="../../../public/img/icons/central.svg" alt="">
+                    </div>
+
+                    <h3>Central</h3>
+                    </li>
+                </a>
+            <?php endif; ?> 
             <a href="#">
                 <li>
                     <div class="menu-button">
@@ -90,6 +103,39 @@
                     <h3>Conta</h3>
                 </li>
             </a>
+
+
+            
+
+            <?php if($userInfo->getMainAcc() == 0): ?>
+             
+               
+
+
+                <a href="../adm/participantes.php">
+                    <li>
+                        <div class="menu-button">
+                            <img style="height:30px;"  src="../../../public/img/icons/people.svg" alt="">
+                        </div>
+
+                        <h3>Participante</h3>
+                    </li>
+                </a>    
+            
+            <a href="../adm/setor.php">
+                <li>
+                    <div class="menu-button">
+                        <img style="height:30px;"  src="../../../public/img/icons/setor.svg" alt="">
+                    </div>
+
+                    <h3>Setores</h3>
+                </li>
+            </a> 
+
+
+            <?php endif; ?> 
+
+            
             <a href="../../services/logoutAction.php">
                 <li>
                     <div class="menu-button">
