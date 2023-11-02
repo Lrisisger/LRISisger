@@ -6,6 +6,7 @@ class Auth {
     public function checkToken() {
         if(!empty($_SESSION['token'])){
             $token = $_SESSION['token'];
+            // $token = $_SESSION['isADM'];
             $uDao = new UsuarioDaoXml();
             $user = $uDao->findByToken($token);
             

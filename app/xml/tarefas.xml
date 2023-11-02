@@ -2,6 +2,4 @@
 <root>
     <!-- SALVANDO INFORMAÇÕES DAS TAREFAS -->
 
-
-   
-<tarefa><id>3</id><tituloTarefa>Estudar A Musica</tituloTarefa><status>2</status><descricao>Crie a musica até o dia 26</descricao><dataInicial>2023-11-02</dataInicial><dataLimite>2023-11-09</dataLimite><idColabora>3</idColabora><idAdm>1</idAdm><mensagem/><tokenEmpresa>uqhahJ395BGyFvY9I262m1U#Tn36nJWVub38xAovrsDN$4ftgE</tokenEmpresa><tokenSetor>wRqOHguJRusiA6hKc8LNGVx9hkE8zWW9LqPfd5iTj6bqexXkYC</tokenSetor></tarefa><tarefa><id>1</id><tituloTarefa>Compras Materiais</tituloTarefa><status>3</status><descricao>Comprar</descricao><dataInicial/><dataLimite>2023-11-06</dataLimite><idColabora>2</idColabora><idAdm>1</idAdm><mensagem/><tokenEmpresa>uqhahJ395BGyFvY9I262m1U#Tn36nJWVub38xAovrsDN$4ftgE</tokenEmpresa><tokenSetor>wRqOHguJRusiA6hKc8LNGVx9hkE8zWW9LqPfd5iTj6bqexXkYC</tokenSetor></tarefa><tarefa><id>2</id><tituloTarefa>Financeiro</tituloTarefa><status>1</status><descricao>Pagar contas</descricao><dataInicial/><dataLimite>2023-11-03</dataLimite><idColabora>2</idColabora><idAdm>1</idAdm><mensagem>Finalizada</mensagem><tokenEmpresa>uqhahJ395BGyFvY9I262m1U#Tn36nJWVub38xAovrsDN$4ftgE</tokenEmpresa><tokenSetor>erHgAjqLLdHyMWwsGLav6GNeu9LDCXTCrBbRupV0iTzMI7NoqN</tokenSetor></tarefa></root>
+</root>

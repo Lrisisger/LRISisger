@@ -5,15 +5,5 @@
     <!-- XML QUE SALVA AS INFORMAÇÕES DOS USUÁRIOS CADASTRADOS -->
 
 
-    <usuario>
-        <id>1</id>
-        <name>Ailla Almeida Dos Santos</name>
-        <email>Aaylla5@gmail.com</email>
-        <password>$2y$10$tCqKnAdTT8pwpvkmtl8jBewWM8OsQ/NAp.3Lc0Dcd6G4EF0QuoJFO</password>
-        <cpf>062.423.525-40</cpf>
-        <isAdm>1</isAdm>
-        <token>8Q9nFyFdJHiBNLcglyecEibzu@!GlACoRmox#5$5liLlSDbPsU</token>
-        <tokenEmpresa>uqhahJ395BGyFvY9I262m1U#Tn36nJWVub38xAovrsDN$4ftgE</tokenEmpresa>
-        <mainAcc>1</mainAcc>
-    </usuario>
-<usuario><id>2</id><name>Clovis Almeida Dos Satos</name><email>Clovis.76@hotmail.com</email><password>$2y$10$0CUHD/LBtFnFFg.O.6l9MeqxxxKzINk0cBll2qqxXfZMCf/Mb0iLW</password><cpf>56803095568</cpf><isAdm>0</isAdm><token>RMmLMPZRP2Q!1Omuq7OyCGWPuBQmipcKnn#ClpqpDHdP8PACBr</token><tokenEmpresa>uqhahJ395BGyFvY9I262m1U#Tn36nJWVub38xAovrsDN$4ftgE</tokenEmpresa><mainAcc>0</mainAcc></usuario><usuario><id>3</id><name>Lucas</name><email>Lucas@gmail.com</email><password>$2y$10$fgoLGeuzsGM4ZvZy9a2epOh.lmMORHah1MrVu0mN7fy9RY.2DBZA6</password><cpf>868555962541</cpf><isAdm>0</isAdm><token>Pjvvh#4Wnt73gSI1Ub@iJc5@lSolIokPOEThPOgsxg2P3WaAei</token><tokenEmpresa>uqhahJ395BGyFvY9I262m1U#Tn36nJWVub38xAovrsDN$4ftgE</tokenEmpresa><mainAcc>0</mainAcc></usuario></root>
+</root>
+

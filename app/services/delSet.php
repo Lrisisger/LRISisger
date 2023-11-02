@@ -24,13 +24,16 @@ $token = filter_input(INPUT_GET, 'token');
 $setor = $sDao->findByToken($token);
 $tarefasSet = $tDao->findBySetor($token);
 
-
-if($tarefasSet){
-    foreach($tarefasSet as $tarefa){
-        $tDao->delete($tarefa->getId());
+if ($userInfo->getIsAdm()==1 && $userInfo->getTokenEmpresa()==$setor->getTokenEmpresa()){
+    if($tarefasSet){
+        foreach($tarefasSet as $tarefa){
+            $tDao->delete($tarefa->getId());
+        }
     }
+    $sDao->delete($setor->getId());
 }
-$sDao->delete($setor->getId());
+
+
 
 header( 'Location: ../views/adm/setor.php' );
 exit;
