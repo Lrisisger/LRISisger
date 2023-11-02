@@ -11,7 +11,7 @@
         private $idAdm; 
         private $tokenEmpresa; 
         private $tokenSetor;
-        private $mensagemAtraso;  
+        private $mensagem;  
        
       
       //FUNÇÃO QUE PEGA O VALOR DO ID
@@ -116,12 +116,12 @@
 
 
         //FUNÇÃO QUE PEGA O VALOR DA MENSAGEM DE ATRASO
-        public function getMensagemAtraso(){
+        public function getMensagem(){
             return $this->mensagemAtraso;
         }
 
         //FUNÇÃO QUE ALTERA O VALOR DA MENSAGEM DE ATRASO
-        public function setMensagemAtraso($n){
+        public function setMensagem($n){
             $this->mensagemAtraso = trim($n);
         }
 

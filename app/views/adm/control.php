@@ -100,7 +100,7 @@
                     descricao: '".$tarefa->getDescricao()."',                    
                     dataInicial: '".$dataInicialFormatada."',
                     dataLimite: '".$dataLimiteFormatada."',
-                    mensagemAtraso: '".$tarefa->getMensagemAtraso()."',
+                    mensagem: '".$tarefa->getMensagem()."',
 
                 }
              
@@ -312,7 +312,7 @@
 
                 <div class="obs">
                     <h4 class="task-title">Observações</h4>
-                    <div id="task-meensagem" class="container-info" style="height: 80px;"></div>
+                    <div id="task-mensagem" class="container-info" style="height: 80px; align-items: start; overflow-y:scroll;"></div>
                 </div>
             </div>
         </div>

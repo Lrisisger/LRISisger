@@ -2,9 +2,5 @@
 <root>
     <!-- ESSE XML SALVA OS DADOS DOS SETORES -->
 
-
     
-    
-    
-    
-<setor><id>4</id><name>Compras</name><tokenSetor>Dl1OBXaNMHVUvpyLDMM6VtWv6wDuUqQ0ohIHBuJHePmbbzMcoJ</tokenSetor><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa></setor><setor><id>2</id><name>Ações</name><tokenSetor>T1esOO7CYXH1WvuyZAWzRbrvHP20MlobiT3xSDEECOanTGEHYD</tokenSetor><tokenEmpresa>VWVHvF!E0FQFJyTnQa$gUDf6uSNYjiuI4m5O@pcvp@aNr172w2</tokenEmpresa></setor><setor><id>6</id><name>Vendas</name><tokenSetor>jMJ7fERW7v1A5HI87W8sdOlVhjDjCYtvJYpoj1Lf8JJAv3dy92</tokenSetor><tokenEmpresa>jfYB2GF#@TRHu!xSyR4Tkfex$RKm$SZTdiR9@tv#T6KSp5ihj7</tokenEmpresa></setor></root>
+<setor><id>1</id><name>Med Center</name><tokenSetor>erHgAjqLLdHyMWwsGLav6GNeu9LDCXTCrBbRupV0iTzMI7NoqN</tokenSetor><tokenEmpresa>uqhahJ395BGyFvY9I262m1U#Tn36nJWVub38xAovrsDN$4ftgE</tokenEmpresa></setor><setor><id>2</id><name>Hemodinamica</name><tokenSetor>wRqOHguJRusiA6hKc8LNGVx9hkE8zWW9LqPfd5iTj6bqexXkYC</tokenSetor><tokenEmpresa>uqhahJ395BGyFvY9I262m1U#Tn36nJWVub38xAovrsDN$4ftgE</tokenEmpresa></setor></root>

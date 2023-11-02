@@ -61,6 +61,19 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
         }
     }
 
+    //VERIFICANDO TAMANHO MINIMO DA SENHA
+    if(strlen($pass) < 8){
+        if($mainAcc == 1){
+            $_SESSION['aviso'] = 'Senha deve ter no minimo 8 caracteres';
+            header('Location: ../views/adm/singup.php');
+            exit;
+        }else{
+            $_SESSION['aviso'] = 'Senha deve ter no minimo 8 caracteres';
+            header('Location: ../views/adm/participantes.php');
+            exit;
+        }
+    }
+
 
     $token = '';
     $tokenNovaEmpresa = '';

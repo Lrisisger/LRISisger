@@ -35,7 +35,7 @@ class TarefasDaoXml implements TarefasDAO {
         $novoRegistro->addChild('dataLimite', $t->getDataLimite());
         $novoRegistro->addChild('idColabora', $t->getIdColabora());
         $novoRegistro->addChild('idAdm', $t->getIdAdm());
-        $novoRegistro->addChild('mensagemAtraso', $t->getMensagemAtraso());
+        $novoRegistro->addChild('mensagem', $t->getMensagem());
         $novoRegistro->addChild('tokenEmpresa', $t->getTokenEmpresa());
         $novoRegistro->addChild('tokenSetor', $t->getTokenSetor());
 
@@ -92,7 +92,7 @@ class TarefasDaoXml implements TarefasDAO {
                     $t->setDataLimite($item->dataLimite);
                     $t->setIdColabora($item->idColabora);
                     $t->setIdAdm($item->idAdm);
-                    $t->setMensagemAtraso($item->mensagemAtraso);
+                    $t->setMensagem($item->mensagem);
                     $t->setTokenEmpresa($item->tokenEmpresa);
                     $t->setTokenSetor($item->tokenSetor);
 
@@ -122,15 +122,15 @@ class TarefasDaoXml implements TarefasDAO {
                     $t->setDataLimite($item->dataLimite);
                     $t->setIdColabora($item->idColabora);
                     $t->setIdAdm($item->idAdm);
-                    $t->setMensagemAtraso($item->mensagemAtraso);
+                    $t->setMensagem($item->mensagem);
                     $t->setTokenEmpresa($item->tokenEmpresa);
                     $t->setTokenSetor($item->tokenSetor);
                     
 
-                    $array[] = $t;
+                    
+                    return $t;
                 }
             }
-            return $array;
         }
 
         return false;
@@ -159,7 +159,7 @@ class TarefasDaoXml implements TarefasDAO {
                         $t->setDataLimite($item->dataLimite);
                         $t->setIdColabora($item->idColabora);
                         $t->setIdAdm($item->idAdm);
-                        $t->setMensagemAtraso($item->mensagemAtraso);
+                        $t->setMensagem($item->mensagem);
                         $t->setTokenEmpresa($item->tokenEmpresa);
                         $t->setTokenSetor($item->tokenSetor);
     
@@ -190,7 +190,7 @@ class TarefasDaoXml implements TarefasDAO {
                     $t->setDataLimite($item->dataLimite);
                     $t->setIdColabora($item->idColabora);
                     $t->setIdAdm($item->idAdm);
-                    $t->setMensagemAtraso($item->mensagemAtraso);
+                    $t->setMensagem($item->mensagem);
                     $t->setTokenEmpresa($item->tokenEmpresa);
                     $t->setTokenSetor($item->tokenSetor);
     

@@ -122,6 +122,71 @@ textarea {
     background-color: #8589b1;
 }
 
+/*modal de confirmação*/
+
+.modal-obs{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.header{
+    background-color: var(--default_blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    color: #fff;
+    padding: 20px;
+}
+.modal-container{
+    padding: 20px;
+}
+.modal-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.modal-container .info{
+    background-color: #DBE0EA;
+    border: none;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 80%;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 16px;
+
+}
+
+.button-enviar{
+    border: none;
+    background-color: #4A7DFF;
+    color: #fff;
+    font: bold;
+    font-size: 20px;
+    height: 35px;
+    width: 200px;
+    border-radius: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .5s all;
+}
+
+.button-enviar:hover{
+    background-color: #95b1f8;
+}
+
+.close-modal{
+    cursor: pointer;
+}
+
 /*classes que mudam a cor da tarefa de acordo com o status*/
 
 
@@ -140,4 +205,9 @@ textarea {
 }
 .cor-finalizada{
     background-color:var(--task_concluded) ;
+}
+
+.mensage-send textarea{
+    padding: 15px; 
+    font-size: 16px;
 }

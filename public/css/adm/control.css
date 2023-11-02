@@ -131,6 +131,9 @@ main {
     display: flex;
     align-items: center;
     color: white;
+
+    font-weight: 600;
+
     font-size: 25px;
     justify-content: space-between;
     padding: 0 10px;
