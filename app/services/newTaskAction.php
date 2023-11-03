@@ -14,18 +14,12 @@ $tokenEmpresa = filter_input(INPUT_POST, 'tokenEmpresa');//RECEBENDO TOKEN DA EM
 $tokenSetor = filter_input(INPUT_POST, 'tokenSetor');//RECEBENDO TOKEN DO SETOR
 $status = 2;// SETANDO STATUS INICIAL PARA A TAREFA
 
-echo 'adm: '.$idAdm.'<br/>';
-echo 'id colabora: '.$idColabora.'<br/>';
-echo 'Titulo: '.$tituloTarefa.'<br/>';
-echo 'Inicial: '.$dataInicial.'<br/>';
-echo 'Limite: '.$dataLimite.'<br/>';
-echo 'descricao: '.$descricao.'<br/>';
-echo 'tokem empresa: '.$tokenEmpresa.'<br/>';
-echo 'token setor: '.$tokenSetor.'<br/>';
-
+if(!$descricao){
+    $descricao = '...';
+}
 
 // VERIFICANDO SE TODOS OS DADOS FORAM RECEBIDOS
-if($idAdm && $idColabora && $tituloTarefa && $dataInicial && $dataLimite && $descricao && $status && $tokenEmpresa && $tokenSetor){
+if($idAdm && $idColabora && $tituloTarefa && $dataInicial && $dataLimite && $status && $tokenEmpresa && $tokenSetor){
     $t = new Tarefas();//INSTACIANDO MODELO DE TAREFAS
     $t->setTituloTarefa($tituloTarefa);//SETANDO TITULO DA TAREFA
     $t->setStatus($status);//SETANDO STATUS DA TAREFA
