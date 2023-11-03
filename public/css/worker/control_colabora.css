@@ -97,7 +97,7 @@ textarea {
     text-align: justify;
 }
 
-.observ textarea::-webkit-scrollbar {
+.observ textarea::-webkit-scrollbar, #input-mensagem::-webkit-scrollbar {
     width: 8px; 
     box-sizing:content-box;
     background-color: #a29e9e;
@@ -106,12 +106,15 @@ textarea {
   
 
   
-  .observ textarea::-webkit-scrollbar-thumb {
+.observ textarea::-webkit-scrollbar-thumb, #input-mensagem::-webkit-scrollbar-thumb {
     background-color: var(--default_blue);    
     border-radius: 20px;       
     margin-left: 15px;
 
-  }
+}
+
+
+
 
 .buttons {
     display: flex;
@@ -226,4 +229,5 @@ textarea {
 .mensage-send textarea{
     padding: 15px; 
     font-size: 16px;
+    border-radius: 0px;
 }

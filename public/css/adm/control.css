@@ -25,7 +25,7 @@ main {
     align-items: center;
     flex-direction: column;
     background-color: var(--default_white);
-    width: 300px;
+    width: 320px;
     height: 550px;
     border-radius: 20px;
     margin: 0px 30px;
@@ -231,6 +231,8 @@ main {
     margin-top: 10px;
 }
 .container-info{
+    display: flex;
+    flex-wrap: wrap;
     background-color: #DBE0EA;
     height: 40px;
     border-radius: 12px;
@@ -240,8 +242,27 @@ main {
     padding: 0 10px;
     margin-top: 3px;
     flex:1;
+    
     overflow-x: auto;
 }
+.container-info::-webkit-scrollbar, .input-area::-webkit-scrollbar {
+    width: 8px; 
+    box-sizing:content-box;
+    background-color: #a29e9e;
+    border-radius: 20px;  
+  }
+  
+
+  
+.container-info::-webkit-scrollbar-thumb, .input-area::-webkit-scrollbar-thumb{
+    background-color: #626ABA;    
+    border-radius: 20px;       
+    margin-left: 15px;
+}
+
+
+
+
 .container-date{
     display: flex;
     gap: 5px;    
@@ -361,7 +382,7 @@ main {
   }
   
 .container-inst .cont::-webkit-scrollbar-thumb {
-    background-color: var(--default_blue);    
+    background-color: #626ABA;    
     border-radius: 20px;       
     margin-left: 15px;
 
