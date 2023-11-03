@@ -83,7 +83,7 @@
                 <h3>Menu</h3>
             </li>
 
-            <?php if($userInfo->getMainAcc() == 0): ?>
+            <?php if($userInfo->getIsAdm() == 1): ?>
 
                 <a href="../adm/control.php">
                     <li>
@@ -107,7 +107,7 @@
 
             
 
-            <?php if($userInfo->getMainAcc() == 0): ?>
+            <?php if($userInfo->getIsAdm() == 1): ?>
              
                
 
