@@ -18,5 +18,182 @@
     </tarefa>
 
 
+    <tarefa>
+        <id>9</id>
+        <tituloTarefa>Limpar A Casa</tituloTarefa>
+        <status>1</status>
+        <descricao>metodo almeida dia</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-12</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>5</idAdm>
+        <mensagem>Finalizado sem problemas!</mensagem>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+    <tarefa>
+        <id>10</id>
+        <tituloTarefa>Dadasd</tituloTarefa>
+        <status>2</status>
+        <descricao/>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-04</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem/>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+
+
+    <tarefa>
+        <id>15</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>2</status>
+        <descricao>...</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-04</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem/>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+    <tarefa>
+        <id>14</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>2</status>
+        <descricao>...</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-04</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem/>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+    <tarefa>
+        <id>16</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>2</status>
+        <descricao>...</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-04</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem/>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+    <tarefa>
+        <id>17</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>2</status>
+        <descricao>...</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-04</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem/>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+    <tarefa>
+        <id>13</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>3</status>
+        <descricao>...</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-04</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem/>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+    <tarefa>
+        <id>12</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>3</status>
+        <descricao>...</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-04</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem/>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+
+
+    <tarefa>
+        <id>11</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>3</status>
+        <descricao>...</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-12</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem/>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+    <tarefa>
+        <id>117</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>4</status>
+        <descricao>...</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-22</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem/>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+
+
+    <tarefa>
+        <id>113</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>1</status>
+        <descricao>...</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-02</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem/>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+    <tarefa>
+        <id>121</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>1</status>
+        <descricao>...</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-02</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem/>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+    <tarefa>
+        <id>111</id>
+        <tituloTarefa>Vamos Fazer A Parada</tituloTarefa>
+        <status>1</status>
+        <descricao>...</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-02</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem/>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
     
-<tarefa><id>9</id><tituloTarefa>Limpar A Casa</tituloTarefa><status>1</status><descricao>metodo almeida dia</descricao><dataInicial>2023-11-01</dataInicial><dataLimite>2023-11-12</dataLimite><idColabora>5</idColabora><idAdm>5</idAdm><mensagem>Finalizado sem problemas!</mensagem><tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa><tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor></tarefa><tarefa><id>10</id><tituloTarefa>Dadasd</tituloTarefa><status>2</status><descricao/><dataInicial>2023-11-01</dataInicial><dataLimite>2023-11-04</dataLimite><idColabora>5</idColabora><idAdm>4</idAdm><mensagem/><tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa><tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor></tarefa><tarefa><id>11</id><tituloTarefa>Vamos Fazer A Parada</tituloTarefa><status>2</status><descricao>...</descricao><dataInicial>2023-11-01</dataInicial><dataLimite>2023-11-04</dataLimite><idColabora>5</idColabora><idAdm>4</idAdm><mensagem/><tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa><tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor></tarefa></root>
+    
+    
+<tarefa><id>116</id><tituloTarefa>Vamos Fazer A Parada</tituloTarefa><status>5</status><descricao>...</descricao><dataInicial>2023-11-01</dataInicial><dataLimite>2023-11-02</dataLimite><idColabora>5</idColabora><idAdm>4</idAdm><mensagem/><tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa><tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor></tarefa><tarefa><id>115</id><tituloTarefa>Vamos Fazer A Parada</tituloTarefa><status>5</status><descricao>...</descricao><dataInicial>2023-11-01</dataInicial><dataLimite>2023-11-02</dataLimite><idColabora>5</idColabora><idAdm>4</idAdm><mensagem/><tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa><tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor></tarefa><tarefa><id>114</id><tituloTarefa>Vamos Fazer A Parada</tituloTarefa><status>5</status><descricao>...</descricao><dataInicial>2023-11-01</dataInicial><dataLimite>2023-11-02</dataLimite><idColabora>5</idColabora><idAdm>4</idAdm><mensagem/><tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa><tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor></tarefa></root>

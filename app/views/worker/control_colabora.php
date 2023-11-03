@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../public/css/worker/control_colabora.css">
     <link rel="stylesheet" href="../../../public/css/general/main.css">
+    <link rel="shortcut icon" href="../../../public/img/svgs/favi.png" type="image/x-icon">
     <title>SISGER</title>
 </head>
 
