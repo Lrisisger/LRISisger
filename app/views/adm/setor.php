@@ -172,7 +172,7 @@ usort($setores, 'ordenarSetor');
       <div class="modal-container">
         <form action="../../services/newSecAction.php" method="post">
           <input type="text" name="setor" class="info" placeholder="Nome do setor">
-          <input type="password" name="senha" class="info" placeholder="Senha">
+          <input type="password" name="senha" class="info" placeholder="Senha do usuário">
           <?php 
             //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
             if(!empty($_SESSION['avisoAdd']) && $_SESSION['avisoAdd']){

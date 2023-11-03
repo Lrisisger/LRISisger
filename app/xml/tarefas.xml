@@ -2,4 +2,33 @@
 <root>
     <!-- SALVANDO INFORMAÇÕES DAS TAREFAS -->
 
-<tarefa><id>1</id><tituloTarefa>Estudar A Musica</tituloTarefa><status>3</status><descricao>faça o commit da ultima tarefa</descricao><dataInicial/><dataLimite>2023-11-16</dataLimite><idColabora>2</idColabora><idAdm>1</idAdm><mensagem/><tokenEmpresa>q767IEFIIBG2WL#@JdY7Z5$$MPFr1HOmwDlbRzmpGMoIwZk@3I</tokenEmpresa><tokenSetor>0OatWzEQsx9rViYhzsM6ixzGf066VQSd0lYEO7DADq4vqAMCul</tokenSetor></tarefa></root>
+
+    <tarefa>
+        <id>8</id>
+        <tituloTarefa>Fazer Comida</tituloTarefa>
+        <status>3</status>
+        <descricao>Limpe primeiro o quarto depois a cozinha</descricao>
+        <dataInicial>2023-11-16</dataInicial>
+        <dataLimite>2023-11-23</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>4</idAdm>
+        <mensagem>Aqui deixo essa observação para que o meu nobre patrão entenda o motivo</mensagem>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+
+
+    <tarefa>
+        <id>9</id>
+        <tituloTarefa>Limpar A Casa</tituloTarefa>
+        <status>5</status>
+        <descricao>metodo almeida dia</descricao>
+        <dataInicial>2023-11-01</dataInicial>
+        <dataLimite>2023-11-12</dataLimite>
+        <idColabora>5</idColabora>
+        <idAdm>5</idAdm>
+        <mensagem />
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+    </tarefa>
+</root>

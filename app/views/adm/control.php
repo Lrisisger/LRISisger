@@ -310,9 +310,9 @@
                 </div>
 
                 <div class="status">
-                    <div class="">
-                        <h4 class="task-title">Status</h4>
-                        <div id="task-status" class="container-info"></div>
+                    <div>
+                        <h4 class="task-title" >Status</h4>
+                        <div  id="task-status" class="container-info" style="color: #fff;"></div>
                     </div>
 
                 </div>
