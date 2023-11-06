@@ -87,9 +87,10 @@
     <div id="popup" class="modal">
         <div class="modal-content">
             <div class="mensagem">
-                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnh2aTI4dXo5Y292M29hYjNrdDFocmN5YmIyMjRvcWU3bnphY2VsOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wU1jgXwPzd8UoHSXS0/giphy.gif" class="checkGif" />
+                <img alt="Cadastro realizado!" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnh2aTI4dXo5Y292M29hYjNrdDFocmN5YmIyMjRvcWU3bnphY2VsOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wU1jgXwPzd8UoHSXS0/giphy.gif" class="checkGif" />
+                
                 <p>Cadastro realizado com sucesso</p>
-                <a href="../geral/login.php" id="closeModalBtn">Okay</a>
+                <a href="../geral/login.php" id="closeModalBtn">Login</a>
             </div>
         </div>
     </div>
@@ -106,10 +107,11 @@
                     
                     const inputNome = document.getElementById('nome');
                     const inputEmail = document.getElementById('email');
+                    const inputCpf = document.getElementById('cpfCnpj');
 
                     inputNome.value = recovery.nome;
                     inputEmail.value = recovery.email;
-                    inputCpfCnpj.value = recovery.cpfCnpj;
+                    inputCpf.value = recovery.cpfCnpj;
 
                     </script>
                     ";

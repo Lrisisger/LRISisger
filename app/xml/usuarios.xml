@@ -4,16 +4,4 @@
 
     <!-- XML QUE SALVA AS INFORMAÇÕES DOS USUÁRIOS CADASTRADOS -->
 
-
-    <usuario>
-        <id>7</id>
-        <name>Lucas</name>
-        <email>Lucas@gmail.com</email>
-        <password>$2y$10$FhuKU8DzbaGjx//gFflmM.t6srZnU2AU78nuGWPOYllx6wF4I8zsW</password>
-        <cpf>123</cpf>
-        <isAdm>1</isAdm>
-        <token>bjTqnrYe4vUVoo#YuaPZ1#sS6Lc$jhowUTW8yVIPlaVXvOcase</token>
-        <tokenEmpresa>FkFuE16vPqMXQczW9@aZgbCDcz$GhznMvAtLTAqfnbL9P5lsTI</tokenEmpresa>
-        <mainAcc>1</mainAcc>
-    </usuario>
-</root>
+<usuario><id>1</id><name>Lucas Eduardo Souza Da Silva</name><email>Lesaads2001@gmail.com</email><password>$2y$10$.oPTfDszu//QxjJx2ZeDMOW5runHv/eZsvlU58ERkAzzEMfkqTkGi</password><cpf>9595</cpf><isAdm>1</isAdm><token>#n6GO5YE@7wsT!@@C!!y15ylHCeGZn9SDXRMPMbzfRW!w1o$Mm</token><tokenEmpresa>!URhXoWFRHzL3!@hqRErJ9NCWK!@azSsudtp4GEFRKRpM@cIP2</tokenEmpresa><mainAcc>1</mainAcc></usuario><usuario><id>2</id><name>Ailla Almeida Dos Santos</name><email>Aaylla5@gmail.com</email><password>$2y$10$z1QupOLHYBt67TnKiTlFm.xRVqVjw4V.nsm.bma25kFBbwBXm3Ldq</password><cpf>062.423.525-40</cpf><isAdm>1</isAdm><token>Ccz5isAjYP8sNFBj#CgqK9M2H55@njhRongTfnHqPslDs4#Fdy</token><tokenEmpresa>7ko5F2Tn4ZLdCO0HpM@MlD6NJd8s3rHLCmPtAFC0$v1I!Zu0Ks</tokenEmpresa><mainAcc>1</mainAcc></usuario><usuario><id>3</id><name>Ianca Garcia</name><email>Garcia@gmail.com</email><password>$2y$10$haJoYlDQe69.NEa1kbfqBOKVYFlUbcvsYiJRroxgeSPlvwbYVNNcm</password><cpf>123</cpf><isAdm>1</isAdm><token>ftxOS0EdCh!djsr6kXK!d1cHH10TYYK@JAVjY27B!6ZnHz36Oj</token><tokenEmpresa>9djgFRky4V1@8Ql1PrWKBkmnnGerbCuJJfGDcwlsK5u$Q9ar5f</tokenEmpresa><mainAcc>1</mainAcc></usuario><usuario><id>4</id><name>Lucas Eduardo Souza Da Silva</name><email>Lesds20f01@gmail.com</email><password>$2y$10$94y5AccpOaEpY1Qc.bv4UubSZx4VqXw4pkUDOL1aCVL3kX.en3Q7S</password><cpf>123</cpf><isAdm>1</isAdm><token>iC@0xM7HkCsyW0bjAh2f84bLMkK2#9I@YQLFAhoBOb#GP8WyCS</token><tokenEmpresa>9djgFRky4V1@8Ql1PrWKBkmnnGerbCuJJfGDcwlsK5u$Q9ar5f</tokenEmpresa><mainAcc>0</mainAcc></usuario></root>

@@ -137,6 +137,14 @@ input {
   justify-content: center;
 }
 
+.mensagem a{
+  background-color: #626aba;
+  color: #fff;
+  padding: 10px 45px;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
 .checkGif {
   width: 150px;
   height: 150px;

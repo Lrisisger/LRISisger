@@ -3,4 +3,4 @@
     <!-- SALVANDO INFORMAÇÕES DAS TAREFAS -->
 
 
-</root>
+<tarefa><id>1</id><tituloTarefa>Aa</tituloTarefa><status>2</status><descricao>...</descricao><dataInicial>2023-10-30</dataInicial><dataLimite>2023-11-07</dataLimite><idColabora>4</idColabora><idAdm>3</idAdm><mensagem/><tokenEmpresa>9djgFRky4V1@8Ql1PrWKBkmnnGerbCuJJfGDcwlsK5u$Q9ar5f</tokenEmpresa><tokenSetor>CCO59D7q8rDWcqAoubundixMt9nE6aGGc4EY7CP3IdJ6Q7whgT</tokenSetor></tarefa></root>
