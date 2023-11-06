@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../../public/css/adm/participantes.css">
-  <link rel="stylesheet" href="../../../public/css/general/main.css">
+  <link rel="stylesheet" href="../../../public/css/general/main.css">  
+  <link rel="shortcut icon" href="../../../public/img/svgs/favi.png" type="image/x-icon">
   <title>SISGER</title>
 </head>
 
@@ -94,7 +95,7 @@
         </li>
       </a>
 
-      <a href="conta.php">
+      <a href="../geral/conta.php">
         <li>
           <div class="menu-button">
             <img src="../../../public/img/icons/person.svg" alt="">
@@ -110,7 +111,7 @@
             <img style="height:30px;" src="../../../public/img/icons/setor.svg" alt="">
           </div>
 
-          <h3>Setor</h3>
+          <h3>Setores</h3>
         </li>
       </a>
 

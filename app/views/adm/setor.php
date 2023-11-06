@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../../public/css/adm/setor.css">
   <link rel="stylesheet" href="../../../public/css/general/main.css">
+  <link rel="shortcut icon" href="../../../public/img/svgs/favi.png" type="image/x-icon">
   <title>SISGER</title>
 </head>
 
@@ -94,7 +95,7 @@ usort($setores, 'ordenarSetor');
         </li>
       </a>
 
-      <a href="conta.php">
+      <a href="../geral/conta.php">
         <li>
           <div class="menu-button">
             <img src="../../../public/img/icons/person.svg" alt="">
@@ -172,7 +173,7 @@ usort($setores, 'ordenarSetor');
       <div class="modal-container">
         <form action="../../services/newSecAction.php" method="post">
           <input type="text" name="setor" class="info" placeholder="Nome do setor">
-          <input type="password" name="senha" class="info" placeholder="Senha">
+          <input type="password" name="senha" class="info" placeholder="Senha do usuário">
           <?php 
             //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
             if(!empty($_SESSION['avisoAdd']) && $_SESSION['avisoAdd']){

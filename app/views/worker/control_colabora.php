@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../public/css/worker/control_colabora.css">
     <link rel="stylesheet" href="../../../public/css/general/main.css">
+    <link rel="shortcut icon" href="../../../public/img/svgs/favi.png" type="image/x-icon">
     <title>SISGER</title>
 </head>
 
@@ -83,7 +84,7 @@
                 <h3>Menu</h3>
             </li>
 
-            <?php if($userInfo->getMainAcc() == 0): ?>
+            <?php if($userInfo->getIsAdm() == 1): ?>
 
                 <a href="../adm/control.php">
                     <li>
@@ -95,7 +96,7 @@
                     </li>
                 </a>
             <?php endif; ?> 
-            <a href="#">
+            <a href="../geral/conta.php">
                 <li>
                     <div class="menu-button">
                         <img src="../../../public/img/icons/person.svg" alt="">
@@ -107,7 +108,7 @@
 
             
 
-            <?php if($userInfo->getMainAcc() == 0): ?>
+            <?php if($userInfo->getIsAdm() == 1): ?>
              
                
 

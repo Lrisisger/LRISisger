@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../public/css/adm/signUp.css">
     <link rel="stylesheet" href="../../../public/css/general/main.css">
+    <link rel="shortcut icon" href="../../../public/img/svgs/favi.png" type="image/x-icon">
     <title>LRISisger - Cadastro</title>
 </head>
 

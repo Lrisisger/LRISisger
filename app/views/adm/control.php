@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../public/css/adm/control.css">
     <link rel="stylesheet" href="../../../public/css/general/main.css">
+    <link rel="shortcut icon" href="../../../public/img/svgs/favi.png" type="image/x-icon">
     
     
     
@@ -138,7 +139,7 @@
                 <h3>Menu</h3>
             </li>
 
-            <a href="conta.php">
+            <a href="../geral/conta.php">
                 <li>
                     <div class="menu-button">
                         <img src="../../../public/img/icons/person.svg" alt="">
@@ -310,9 +311,9 @@
                 </div>
 
                 <div class="status">
-                    <div class="">
-                        <h4 class="task-title">Status</h4>
-                        <div id="task-status" class="container-info"></div>
+                    <div>
+                        <h4 class="task-title" >Status</h4>
+                        <div  id="task-status" class="container-info" style="color: #fff;"></div>
                     </div>
 
                 </div>

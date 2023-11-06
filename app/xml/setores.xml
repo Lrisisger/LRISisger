@@ -3,5 +3,16 @@
     <!-- ESSE XML SALVA OS DADOS DOS SETORES -->
 
 
-  
-<setor><id>1</id><name>Vendas</name><tokenSetor>0OatWzEQsx9rViYhzsM6ixzGf066VQSd0lYEO7DADq4vqAMCul</tokenSetor><tokenEmpresa>q767IEFIIBG2WL#@JdY7Z5$$MPFr1HOmwDlbRzmpGMoIwZk@3I</tokenEmpresa></setor></root>
+    <setor>
+        <id>1</id>
+        <name>Vendas</name>
+        <tokenSetor>0OatWzEQsx9rViYhzsM6ixzGf066VQSd0lYEO7DADq4vqAMCul</tokenSetor>
+        <tokenEmpresa>q767IEFIIBG2WL#@JdY7Z5$$MPFr1HOmwDlbRzmpGMoIwZk@3I</tokenEmpresa>
+    </setor>
+    <setor>
+        <id>2</id>
+        <name>Vendas</name>
+        <tokenSetor>jgtvX3vtfFqrXhSHsCKM2Fnw0yxQuEMgxbF4JwuTbzab5jJZcs</tokenSetor>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+    </setor>
+</root>

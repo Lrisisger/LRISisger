@@ -91,6 +91,7 @@ const handleModalTask = (id) => {
     const descricao = document.getElementById('task-descricao');
     const mensagemHt = document.getElementById('task-mensagem');
     const containerCor = document.getElementById('container-title');
+    const statusColor = document.getElementById('task-status')
 
     
     if (id != false) {
@@ -106,6 +107,7 @@ const handleModalTask = (id) => {
         }
 
         containerCor.classList.add(handleColor(tarefasGeral[`id${id}`].status));
+        statusColor.classList.add(handleColor(tarefasGeral[`id${id}`].status));
     } else {
 
         const timer_color = setTimeout(() => {
@@ -115,7 +117,26 @@ const handleModalTask = (id) => {
             containerCor.classList.remove('cor-pausada');
             containerCor.classList.remove('cor-atrasada');
 
+            statusColor.classList.remove('cor-finalizada');
+            statusColor.classList.remove('cor-naoIniciada');
+            statusColor.classList.remove('cor-emAndamento');
+            statusColor.classList.remove('cor-pausada');
+            statusColor.classList.remove('cor-atrasada');
+
+
+            titulo.innerHTML = '';
+            nome.innerHTML = '';
+            dataInicial.innerHTML = '';
+            dataFinal.innerHTML = '';
+            status.innerHTML = '';
+            descricao.innerHTML = '';
+            mensagemHt.innerHTML = '';
+
         }, 800)
+
+        
+        
+
 
     }
 

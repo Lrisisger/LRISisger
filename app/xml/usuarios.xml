@@ -38,4 +38,27 @@
         <tokenEmpresa>q767IEFIIBG2WL#@JdY7Z5$$MPFr1HOmwDlbRzmpGMoIwZk@3I</tokenEmpresa>
         <mainAcc>0</mainAcc>
     </usuario>
+    <usuario>
+        <id>4</id>
+        <name>Lucas Eduardo Souza Da Silva</name>
+        <email>Lucas@gmail.com</email>
+        <password>$2y$10$rTIdO4pb.BEG4HFYudvkP.c8voWTYaeMM1e.Mo7EXLHI3eEO0c4AC</password>
+        <cpf>864.004.935-14</cpf>
+        <isAdm>1</isAdm>
+        <token>etsTjPPoyXiy888jbUKJ8j2I93U1iuHxOvT7@0fLMmCaR9pyh4</token>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <mainAcc>1</mainAcc>
+    </usuario>
+
+    <usuario>
+        <id>5</id>
+        <name>Ailla Almeida dos Santos</name>
+        <email>Ailla@gmail.com</email>
+        <password>$2y$10$KhIM9RWJwlimERnqZsP9qe1Fb6BhcGOdJRr9llcI9y0.c5M8vjc9e</password>
+        <cpf>06242352540</cpf>
+        <isAdm>1</isAdm>
+        <token>AhfrntAR3CACoerXzmVD4fm##P1LXT7hlXTmm!X#7fXWb6cGlz</token>
+        <tokenEmpresa>GG1!TIn2ezzYQ5@ZhtMDub#pm9xmbP2#!SplyilUhsQAR@#KGn</tokenEmpresa>
+        <mainAcc>0</mainAcc>
+    </usuario>
 </root>
