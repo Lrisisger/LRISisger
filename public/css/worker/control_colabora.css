@@ -97,6 +97,22 @@ textarea {
     text-align: justify;
 }
 
+.observ textarea::-webkit-scrollbar {
+    width: 8px; /* width of the entire scrollbar */
+    box-sizing:content-box;
+    background-color: #a29e9e;
+    border-radius: 20px;  
+  }
+  
+
+  
+  .observ textarea::-webkit-scrollbar-thumb {
+    background-color: var(--default_blue);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb *//* creates padding around scroll thumb */
+    margin-left: 15px;
+
+  }
+
 .buttons {
     display: flex;
     justify-content: center;
