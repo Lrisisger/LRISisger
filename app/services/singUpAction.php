@@ -144,7 +144,8 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
 
 
 if($mainAcc == 1){
-    header( 'Location: ../views/geral/login.php' );
+    $_SESSION['verifyCad'] = true;
+    header( 'Location: ../views/adm/singUp.php' );
     exit; 
 }else{        
     header( 'Location: ../views/adm/participantes.php' );
