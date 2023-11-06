@@ -96,7 +96,7 @@
                     </li>
                 </a>
             <?php endif; ?> 
-            <a href="#">
+            <a href="../geral/conta.php">
                 <li>
                     <div class="menu-button">
                         <img src="../../../public/img/icons/person.svg" alt="">

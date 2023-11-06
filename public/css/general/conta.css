@@ -1,0 +1,30 @@
+main{
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    margin-top: 50px;
+}
+
+.container-central{
+    margin: auto;
+    height: 100%;
+    width: 500px;
+
+}
+
+.container-central h4{
+    color: #aaa;
+
+}
+
+.container-central input{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 35px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    background-color:#DBE0EA;
+    font-weight: 600;
+    font-size: 17px;
+}
