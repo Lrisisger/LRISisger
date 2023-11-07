@@ -50,7 +50,7 @@
         </div>
         <h3>Menu</h3>
       </li>
-
+      <?php if($userInfo->getIsAdm() == 1): ?>
       <a href="../adm/control.php">
         <li>
           <div class="menu-button">
@@ -71,7 +71,7 @@
                 </li>
             </a> 
 
-
+      
       <a href="../adm/participantes.php">
         <li>
           <div class="menu-button">
@@ -81,7 +81,7 @@
           <h3>Participante</h3>
         </li>
       </a>
-
+      <?php endif; ?> 
       <?php if($userInfo->getMainAcc() == 0): ?>
                 <a href="../worker/control_colabora.php">
                 <li>

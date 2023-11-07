@@ -291,7 +291,11 @@
 
             <div class="modal-task-body">
                 <div class="colab">
-                    <h4 class="task-title">Responsável</h4>
+                    
+                    <div class="container-title-del">
+                        <h4 class="task-title">Responsável</h4>
+                        <a href="../../services/delTask.php?id=this.id" id="4"><img src="../../../public/img/icons/delete.svg" alt=""></a>
+                    </div>
                     <div id="task-name" class="container-info">
                         
                     </div>
