@@ -109,6 +109,8 @@
             </script>
             ";
         };
+
+        
      
       
     ?>
@@ -291,7 +293,11 @@
 
             <div class="modal-task-body">
                 <div class="colab">
-                    <h4 class="task-title">Responsável</h4>
+                    
+                    <div class="container-title-del">
+                        <h4 class="task-title">Responsável</h4>
+                        <a onclick="delTask()" style="cursor: pointer;"><img src="../../../public/img/icons/delete.svg" alt=""></a>
+                    </div>
                     <div id="task-name" class="container-info">
                         
                     </div>
@@ -330,24 +336,29 @@
             </div>
         </div>
 
-        <div class="del-task">
+        <div id="del-task" class="del-task">
             <div class="header">
-                <h2>Novo Setor</h2>
+                <h2>Tem certeza que deseja excluir?</h2>
                 <img onclick="delTask()" class="close-modal" src="../../../public/img/svgs/arrow_back.svg" alt="">
             </div>
 
             <div class="modal-container">
-                <form action="../../services/newSecAction.php" method="post">
-                <input type="text" name="setor" class="info" placeholder="Nome do setor">
-                <input type="password" name="senha" class="info" placeholder="Senha do usuário">
-                <?php 
-                    //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
-                    if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
-                    echo "<span class='aviso'>".$_SESSION['aviso']."</span>";
-                    $_SESSION['aviso'] = '';
-                    }
-                ?>
-                <input type="submit" class="button-enviar" value="Confirmar">
+                <form action="../../services/delTask.php" method="post">
+                   <input type="hidden" name="idTask" id="idTask" value="0">     
+
+                    <input type="password" name="senha" class="info" id="passDelTask" placeholder="Senha do usuário">
+                    <?php 
+                        //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
+                        if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
+                        echo "<span class='aviso'>".$_SESSION['aviso']."</span>";
+                        $_SESSION['aviso'] = '';
+                        }
+                    ?>
+                    <div style="display: flex;">
+                        <input type="submit" class="button-enviar" value="Sim">
+                        <div style="margin-left: 8px; display: flex; justify-content: center;" class="button-enviar" onclick="delTask()">Não</div>
+                    </div>
+                
                 </form>
             </div>
         </div>

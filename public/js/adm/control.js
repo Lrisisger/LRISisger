@@ -1,8 +1,10 @@
 const dark_screen = document.querySelector('.dark');
+const modalDel = document.getElementById('del-task');
+const modalTask = document.querySelector('.modal-task')
 let current_scroll = window.scrollY;
 
 const handleModalNewTask = (token) => {
-    const modal = document.querySelector('.modal-new-task')
+    const modalNTask = document.querySelector('.modal-new-task')
     const inputHidden = document.getElementById('tokenSetor')
    
     if(token){
@@ -16,7 +18,7 @@ const handleModalNewTask = (token) => {
 
             const timer_two = setTimeout(() => {
                 dark_screen.style.display = 'none';
-                modal.style.display = 'none';
+                modalNTask.style.display = 'none';
 
             }, 800)
 
@@ -26,7 +28,7 @@ const handleModalNewTask = (token) => {
     } else {
         dark_screen.style.display = 'flex';
         dark_screen.style.opacity = 0;
-        modal.style.display = 'flex';
+        modalNTask.style.display = 'flex';
 
         current_scroll = window.scrollY;
         const timer = setTimeout(() => {
@@ -82,7 +84,7 @@ const handleModalTask = (id) => {
         }
     }
 
-    const modal = document.querySelector('.modal-task')
+    
     const titulo = document.getElementById('task-title');
     const nome = document.getElementById('task-name');
     const dataInicial = document.getElementById('task-dataInicial');
@@ -91,8 +93,10 @@ const handleModalTask = (id) => {
     const descricao = document.getElementById('task-descricao');
     const mensagemHt = document.getElementById('task-mensagem');
     const containerCor = document.getElementById('container-title');
-    const statusColor = document.getElementById('task-status')
+    const statusColor = document.getElementById('task-status');
+    const formDelTask = document.getElementById('idTask');
 
+    formDelTask.value = id;
     
     if (id != false) {
         titulo.innerHTML = tarefasGeral[`id${id}`].tituloTarefa;
@@ -152,7 +156,7 @@ const handleModalTask = (id) => {
 
             const timer_two = setTimeout(() => {
                 dark_screen.style.display = 'none';
-                modal.style.display = 'none';
+                modalTask.style.display = 'none';
 
             }, 800)
 
@@ -162,12 +166,25 @@ const handleModalTask = (id) => {
     } else {
         dark_screen.style.display = 'flex';
         dark_screen.style.opacity = 0;
-        modal.style.display = 'flex';
+        modalTask.style.display = 'flex';
 
         current_scroll = window.scrollY;
         const timer = setTimeout(() => {
             dark_screen.style.opacity = 1;
         }, 50)
+    }
+}
+
+const delTask = () =>{
+    if (window.getComputedStyle(modalDel).display == 'flex') {       
+        
+        modalTask.style.display = 'flex';          
+        modalDel.style.display = 'none';   
+
+    } else {
+        modalDel.style.display = 'flex';
+        modalTask.style.display = 'none';
+        document.getElementById('passDelTask').value = "";
     }
 }
 
@@ -184,3 +201,4 @@ addEventListener('scroll', () => {
 
 
 
+//('#form').attr('id', 'form_form_modulo'):
