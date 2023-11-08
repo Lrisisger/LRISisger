@@ -60,12 +60,13 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
             'email' => $email,
             'cpfCnpj' => $cpf
         ];
-        if($mainAcc == 1){
-            $_SESSION['aviso'] = 'Senhas diferentes';
+
+        $_SESSION['aviso'] = 'Senhas diferentes';
+
+        if($mainAcc == 1){            
             header('Location: ../views/adm/singup.php');
             exit;
-        }else{
-            $_SESSION['aviso'] = 'Senhas diferentes';
+        }else{            
             header('Location: ../views/adm/participantes.php');
             exit;
         }
@@ -79,13 +80,13 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
             'email' => $email,
             'cpfCnpj' => $cpf
         ];
+        
+        $_SESSION['aviso'] = 'Senha deve ter no minimo 8 caracteres';
 
         if($mainAcc == 1){
-            $_SESSION['aviso'] = 'Senha deve ter no minimo 8 caracteres';
             header('Location: ../views/adm/singup.php');
             exit;
         }else{
-            $_SESSION['aviso'] = 'Senha deve ter no minimo 8 caracteres';
             header('Location: ../views/adm/participantes.php');
             exit;
         }
@@ -101,8 +102,7 @@ if ( $name && $email && $cpf && $pass && $confirmPass && ($isAdm == 1 || $isAdm 
         $tokenNovaEmpresa = token(); // CRIANDO TOKEN PARA EMPRESA
         $verify = $uDao->findByToken( $token ) && $uDao->findByToken( $tokenNovaEmpresa ); //VERIFICANDO DE TOKENS 
 
-    }
-    while( $verify );
+    }while( $verify );
 
     // VERIFICANDO SE USUARIO A SER ADICIONADO NECESSITA DE UM TOKEN DE EMPRESA NOVO OU USARA O DA EMPRESA JÁ EXISTENTE
     if($mainAcc == 1){

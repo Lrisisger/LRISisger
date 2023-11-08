@@ -82,6 +82,7 @@
     overflow: hidden;
     background-color: #fff;
 }
+
 .header{
     background-color: var(--default_blue);
     display: flex;
@@ -133,4 +134,23 @@
 
 .close-modal{
     cursor: pointer;
+}
+
+.del-set{
+    display: none;
+    flex-direction: column;
+    height: 200px;
+    width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.del-set .header{
+    font-size: 12px;
+}
+
+.del-set .button-enviar{
+    height: 25px;
+    width: 80px;
 }

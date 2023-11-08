@@ -154,13 +154,15 @@ usort($setores, 'ordenarSetor');
           </div>
 
           <div class="botoes">
-            <a href="../../services/delSet.php?token=<?=$setor->getTokenSetor()?>" onclick="return confirm('Tem certeza que deseja excluir?')" class="del">Deletar</a>
+            <a href="#" onclick="delSet(this.id)" id="<?=$setor->getTokenSetor();?>" class="del">Deletar</a>
             <a href="#" onclick="newSector('edit', this.id)" id="<?=$setor->getId()?>" class="edit">Editar</a>
           </div>
         </div>
       <?php endforeach; ?>
 
     </div>
+
+
   </main>
   <div class="dark">
 
@@ -210,10 +212,41 @@ usort($setores, 'ordenarSetor');
       </div>
     </div>
 
+    <div id="del-set" class="del-set">
+            <div class="header">
+                <h2>Tem certeza que deseja excluir?</h2>
+                <img onclick="delSet(false)" class="close-modal" src="../../../public/img/svgs/arrow_back.svg" alt="">
+            </div>
+
+            <div class="modal-container">
+                <form action="../../services/delSet.php" method="post">
+                   <input type="hidden" name="tokenSet" id="tokenSet" value="">     
+
+                    <input type="password" name="senha" class="info" id="passDelTask" placeholder="Senha do usuário">
+                    <?php 
+                        //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
+                        if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
+                        echo "<span class='aviso'>".$_SESSION['aviso']."</span>";
+                       
+                        $_SESSION['aviso'] = '';
+                        }
+                    ?>
+                    <div style="display: flex;">
+                        <input type="submit" class="button-enviar" value="Sim">
+                        <div style="margin-left: 8px; display: flex; justify-content: center;" class="button-enviar" onclick="delSet(false)">Não</div>
+                    </div>
+                
+                </form>
+            </div>
+        </div>
+
   </div>
+
+
 
   <script src="../../../public/js/general/main.js"></script>  
   <script src="../../../public/js/adm/setor.js"></script>
+
 
 </body>
 

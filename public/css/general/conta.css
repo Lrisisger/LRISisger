@@ -2,6 +2,7 @@ main{
     width: 100vw;
     height: 500px;
     display: flex;
+    flex-direction: column;
     margin-top: 50px;
 }
 
@@ -9,7 +10,8 @@ main{
     margin: auto;
     height: 100%;
     width: 500px;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .container-central h4{
@@ -27,4 +29,79 @@ main{
     background-color:#DBE0EA;
     font-weight: 600;
     font-size: 17px;
+}
+
+.area-button-senha{
+    background-color: #626ABA;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 15px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.trocar-senha{
+    display: none;
+    flex-direction: column;
+    height: 320px;
+    width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+
+}
+.header{
+    background-color: var(--default_blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    color: #fff;
+    padding: 20px;
+    font-size: 12px;
+}
+.modal-container{
+    padding: 20px;
+}
+.modal-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.modal-container .info{
+    background-color: #DBE0EA;
+    border: none;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 80%;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 16px;
+
+}
+
+.button-enviar{
+    border: none;
+    background-color: #4A7DFF;
+    color: #fff;
+    font: bold;
+    font-size: 20px;
+    height: 25px;
+    width: 80px;
+    border-radius: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .5s all;
+}
+
+.button-enviar:hover{
+    background-color: #95b1f8;
+}
+
+.close-modal{
+    cursor: pointer;
 }
