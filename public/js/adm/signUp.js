@@ -2,7 +2,7 @@ const inputCpfCnpj = document.getElementById('cpfCnpj');
 
 
 inputCpfCnpj.addEventListener("input", function () {
-  console.log('123')
+ 
   const value = this.value.replace(/\D/g, "");
 
 
@@ -24,13 +24,6 @@ inputCpfCnpj.addEventListener("blur", function () {
   this.dispatchEvent(new Event("input"));
 });
 
-// MODAL
-
-const openModalBtn = document.getElementById("openModalBtn");
-const closeModalBtn = document.getElementById("closeModalBtn");
 
 
-closeModalBtn.addEventListener("click", function () {
-  modal.style.display = "none";
-});
 

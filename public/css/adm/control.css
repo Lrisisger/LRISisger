@@ -216,6 +216,13 @@ main {
     padding: 10px 15px;
     width: 380px;
 }
+.container-title-del{
+    display: flex; 
+    width: 100%; 
+    justify-content:space-between;
+    align-items: center;
+}
+
 
 .task-title{
     color: #333;
@@ -251,6 +258,69 @@ main {
 
 .current-task{
     background-color: rgb(34, 125, 92);
+}
+
+.del-task{
+    display: none;
+    flex-direction: column;
+    height: 200px;
+    width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.header{
+    background-color: var(--default_blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    color: #fff;
+    padding: 20px;
+    font-size: 12px;
+}
+.modal-container{
+    padding: 20px;
+}
+.modal-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.modal-container .info{
+    background-color: #DBE0EA;
+    border: none;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 80%;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 16px;
+
+}
+
+.button-enviar{
+    border: none;
+    background-color: #4A7DFF;
+    color: #fff;
+    font: bold;
+    font-size: 20px;
+    height: 25px;
+    width: 80px;
+    border-radius: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .5s all;
+}
+
+.button-enviar:hover{
+    background-color: #95b1f8;
+}
+
+.close-modal{
+    cursor: pointer;
 }
 /* Iniciando responsividade */
 

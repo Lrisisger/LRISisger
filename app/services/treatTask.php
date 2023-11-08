@@ -35,11 +35,5 @@ if($action && $id){
     }
 }
 
-echo '<pre>';
-print_r($tarefa);
-
-echo'<pre>';
-print_r($userInfo);
-
 header('Location: ../views/worker/control_colabora.php');
 exit;

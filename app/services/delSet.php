@@ -19,18 +19,26 @@ if ( $userInfo == false ) {
 $sDao = new SetoresDaoXml();
 $tDao = new TarefasDaoXml();
 
-$token = filter_input(INPUT_GET, 'token');
+$token = filter_input(INPUT_POST, 'tokenSet');
+$senha = filter_input(INPUT_POST, 'senha');
+
 
 $setor = $sDao->findByToken($token);
 $tarefasSet = $tDao->findBySetor($token);
 
-if ($userInfo->getIsAdm()==1 && $userInfo->getTokenEmpresa()==$setor->getTokenEmpresa()){
-    if($tarefasSet){
-        foreach($tarefasSet as $tarefa){
-            $tDao->delete($tarefa->getId());
+if($senha && $token){
+    if ($userInfo->getIsAdm()==1 && $userInfo->getTokenEmpresa()==$setor->getTokenEmpresa() && password_verify($senha, $userInfo->getPass())){
+        if($tarefasSet){
+            foreach($tarefasSet as $tarefa){
+                $tDao->delete($tarefa->getId());
+            }
         }
+        $sDao->delete($setor->getId());
+    }else{
+        $_SESSION['aviso'] = 'senha incorreta';
     }
-    $sDao->delete($setor->getId());
+}else{
+    $_SESSION['aviso'] = 'Campos incompletos';
 }
 
 
