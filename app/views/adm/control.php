@@ -301,7 +301,7 @@
 
                 <label>
                     <h4>Descrição da tarefa</h4>
-                    <input type="text" name="task_description" class="input-area input-model">
+                    <textarea style="resize: none; height: 100px; border-radius: 5px;" type="text" name="task_description"  class="input-area input-model"> </textarea>
                 </label>
 
                 <input type="submit" value="Adicionar" class="btn-modal">
@@ -350,7 +350,7 @@
                 </div>
 
                 <div class="desc">
-                    <h4 class="task-title">Descrição da tarefa</h4>
+                    <h4 class="task-title">Descrição da  tarefa</h4>
                     <div id="task-descricao" class="container-info"></div>
                 </div>
 
