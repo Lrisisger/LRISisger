@@ -16,26 +16,26 @@ if ( $userInfo == false ) {
     exit;
 }
 
+//RECEBENDO DADOS
 $name = ucwords( strtolower( filter_input( INPUT_POST, 'nome' ) ) );
 $email = ucwords(filter_input( INPUT_POST, 'email' ));
 $cpfCnpj = filter_input(INPUT_POST, 'cpfCnpj');
 $isAdm = filter_input(INPUT_POST, 'isAdm');
 $token = filter_input(INPUT_POST, 'token');
 
+//VERIFICANDO SE TODAS AS VARIAVEIS FORAM ENVIADAS
 if($name && $email && $cpfCnpj && ($isAdm == 0 || $isAdm == 1) && $token){
    
     $usuario = $uDao->findByToken($token);
     $emailInvalido = $uDao->findByEmail($email); 
 
     if($emailInvalido && $email != $usuario->getEmail()){
-
-        print_r($emailInvalido);
-        if($mainAcc == 1){
-            $_SESSION['aviso'] = 'Email já existe em nosso sistema';
+        $_SESSION['aviso'] = 'Email já existe em nosso sistema';
+        
+        if($mainAcc == 1){            
             header('Location: ../views/adm/singup.php');
             exit;
-        }else{
-            $_SESSION['aviso'] = 'Email já existe em nosso sistema';
+        }else{            
             header('Location: ../views/adm/participantes.php');
             exit;
         }

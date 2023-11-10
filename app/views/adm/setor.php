@@ -22,12 +22,13 @@
   $auth = new Auth();
   $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
 
-
+    //VERIFICANDO DE HÁ USUARIO LOGADO
   if($userInfo == false){
       header("Location: ../../services/logOutAction.php");
       exit;
   }
   
+  //VERIFICA SE USUARIO TEM PODERES DE ADMINISTRADOR
   if($userInfo->getIsAdm() == 0){
     header("Location: ../worker/control_colabora.php");
     exit;
@@ -41,10 +42,11 @@
     return strcasecmp($setorOne->getName(), $setorTwo->getName());
 }
 
-usort($setores, 'ordenarSetor');
+  usort($setores, 'ordenarSetor');
 
   echo "<script>let setores = [];</script>";
-        
+
+  //PASSANDO VALORES DO PHP PARA O JAVASCRIPT
   foreach($setores as $setor){
 
       echo "<script>array = {
@@ -71,6 +73,7 @@ usort($setores, 'ordenarSetor');
   </header>
 
   <!-- NAV BAR -->
+  <!-- NO ASIDE VERIFICO O NIVEL DO USUARIO E DAI EXIBO AS TELAS QUE ELE PODE ACESSAR -->
   <aside>
 
     <div class="container-blue">
@@ -111,7 +114,7 @@ usort($setores, 'ordenarSetor');
             <img style="height:30px;" src="../../../public/img/icons/people.svg" alt="">
           </div>
 
-          <h3>Participante</h3>
+          <h3>Participantes</h3>
         </li>
       </a>
 

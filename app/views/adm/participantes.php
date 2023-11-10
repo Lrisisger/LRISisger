@@ -21,11 +21,13 @@
   $auth = new Auth();
   $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
 
+  //VARIFICANDO DE HÁ USUARIO LOGADO
   if($userInfo == false){
     header("Location: ../../services/logOutAction.php");
     exit;
   }
 
+  //VERIFICANDO SE USUARIO TEM PODERES ADMINISTRADOR
   if($userInfo->getIsAdm() == 0){
     header("Location: ../worker/control_colabora.php");
     exit;
@@ -34,6 +36,7 @@
   $uDao = new UsuarioDaoXml();
   $infoAllUsers = $uDao->findAll(2, $userInfo->getTokenEmpresa());
 
+  //ORDENANDO NOMES EM ORDEM ALFABÉTICA
   function ordenarNome($userOne, $userTwo){
       return strcasecmp($userOne->getName(), $userTwo->getName());
   }
@@ -42,7 +45,8 @@
 
 
   echo "<script>let usuarios = [];</script>";
-        
+  
+  //PASSANDO INFORMAÇÕES PARA O JAVASCRIPT
   foreach($infoAllUsers as $user){ 
     if($user->getMainAcc() == 0){
       echo "<script>array = {
@@ -71,6 +75,7 @@
   </header>
 
   <!-- NAV BAR -->
+  <!-- NO ASIDE VERIFICO O NIVEL DO USUARIO E DAI EXIBO AS TELAS QUE ELE PODE ACESSAR -->
   <aside>
 
     <div class="container-blue">
@@ -210,7 +215,9 @@
               <label>
                 <h4>Tipo de usuario</h4>
                 <select name="isAdm">
+                  
                   <option value="1">Administrador</option>
+                  
                   <option value="0">Colaborador</option>
                 </select>
               </label>

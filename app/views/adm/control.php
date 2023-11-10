@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="../../../public/css/adm/control.css">
     <link rel="stylesheet" href="../../../public/css/general/main.css">
     <link rel="shortcut icon" href="../../../public/img/svgs/favi.png" type="image/x-icon">
-    
-    
-    
     <title>SISGER</title>
 </head>
 
@@ -29,11 +26,13 @@
         $auth = new Auth();
         $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
 
+        //VERIFICANDO SE HÁ USUARIO LOGADO
         if($userInfo == false){
             header("Location: ../../services/logOutAction.php");
             exit;
         }
-
+        
+        //VERIFICANDO SE USUARIO É UM ADMINISTRADOR
         if($userInfo->getIsAdm() == 0){
             header("Location: ../worker/control_colabora.php");
             exit;
@@ -45,6 +44,7 @@
         $sDao = new SetoresDaoXml();// INICIANDO DAO DE SETORES
         $setores = $sDao->findAll($userInfo->getTokenEmpresa());// RECEBENDO TAREFAS DA EMPRESA
 
+        //COLOCANDO SETORES EM ORDEM ALFABÉTICA
         function ordenarSetor($setorOne, $setorTwo){
             return strcasecmp($setorOne->getName(), $setorTwo->getName());
         }
@@ -54,6 +54,7 @@
         $tDao = new TarefasDaoXml();// INICIANDO DAO DE TAREFAS
         $tarefasStatus =  $tDao->findAll($userInfo->getTokenEmpresa());
 
+        //VERIFICANDO A DATA DAS TAREFAS, SE TIVER ALGUMA ATRASADA, MUDAMOS O STATUS
         function verificaStatus($tarefas){
             $dataAtual = new DateTime();
             $dataAtual->setTime(0, 0);
@@ -127,6 +128,7 @@
 
 
     <!-- NAV BAR -->
+    <!-- NO ASIDE VERIFICO O NIVEL DO USUARIO E DAI EXIBO AS TELAS QUE ELE PODE ACESSAR -->
     <aside>
 
         <div class="container-blue">
@@ -157,7 +159,7 @@
                         <img style="height:30px;"  src="../../../public/img/icons/people.svg" alt="">
                     </div>
 
-                    <h3>Participante</h3>
+                    <h3>Participantes</h3>
                 </li>
             </a>    
             
@@ -232,6 +234,29 @@
 
                 </div>
             <?php endforeach ?>
+                        
+        
+            <?php if(!$setores): ?>
+                <div class="container-inst">
+                    <div class="title">
+                        <h2>Instruções</h2>
+                    </div>
+
+                    <div class="cont">
+                        <p>Ao entrar pela primeira vez, inicie criando os setores da sua empresa. Em seguida, adicione os participantes da empresa, ou seja, colaboradores e administradores.</p>
+
+
+                        <p>Vá para a seção "Setores". Crie setores relevantes para a sua empresa (por exemplo: Vendas, Marketing, Desenvolvimento).</p>
+
+                        <p>Acesse a seção "Participantes". Adicione colaboradores e administradores à sua equipe.</p>
+
+                        <p>Logo após, volte para a Central de controle. Crie uma nova tarefa, especificando título, descrição e delegue a tarefa ao membro específico. Os moderadores também podem criar e delegar tarefas.</p>
+
+                       
+                    </div>
+                </div>
+            <?php endif; ?>
+          
 
         </section>
 
@@ -362,6 +387,8 @@
                 </form>
             </div>
         </div>
+
+      
     </div>
 
     

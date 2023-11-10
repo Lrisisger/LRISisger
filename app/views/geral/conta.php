@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
@@ -18,7 +18,8 @@
 
     $auth = new Auth();
     $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
-
+    
+    //VERIFICANDO DE HÁ USUARIO LOGADO
     if ($userInfo == false) {
         header("Location: ../../services/logOutAction.php");
         exit;
@@ -37,6 +38,7 @@
 </header>
 
 <!-- NAV BAR -->
+<!-- NO ASIDE VERIFICO O NIVEL DO USUARIO E DAI EXIBO AS TELAS QUE ELE PODE ACESSAR -->
 <aside>
 
     <div class="container-blue">
@@ -78,7 +80,7 @@
             <img style="height:30px;" src="../../../public/img/icons/people.svg" alt="">
           </div>
 
-          <h3>Participante</h3>
+          <h3>Participantes</h3>
         </li>
       </a>
       <?php endif; ?> 
@@ -109,7 +111,7 @@
 <main>
 
     <div class="container-central">
-        <form action="editUser">
+        <form>
             <label>
                 <h4>Nome:</h4>
                 <input type="text" name="nome" value="<?=$userInfo->getName()?>" disabled>
@@ -128,9 +130,18 @@
         <?php 
             //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
             if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
-            echo "<span style='margin:auto; margin-bottom: 0px; margin-top: 0px;' class='aviso'>".$_SESSION['aviso']."</span>";
-            $_SESSION['aviso'] = '';
-          }
+              echo "<span style='margin:auto; margin-bottom: 0px; margin-top: 0px;' class='aviso'>".$_SESSION['aviso']."</span>";
+              $_SESSION['aviso'] = '';
+            }
+          
+        ?>
+        <?php 
+            //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
+            if(!empty($_SESSION['sucesso']) && $_SESSION['sucesso']){
+              echo "<span style='margin:auto; margin-bottom: 0px; margin-top: 0px; color: #080;' class='aviso'>".$_SESSION['sucesso']."</span>";
+              $_SESSION['sucesso'] = '';
+            }
+          
         ?>
         <div class="area-button-senha" onclick="handleNewPass(this.id)" id="<?=$userInfo->getToken()?>">
           <div class="button-senha">

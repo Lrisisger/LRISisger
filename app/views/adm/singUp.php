@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <!-- PÁGINA DE LOGIN -->
 
 <head>
@@ -13,13 +13,7 @@
 
 <body>
     <?php
-
     require realpath(dirname(__FILE__) . '/../../../config/config.php');
-
-
-
-
-
     ?>
     <!-- Left Side -->
     <div class="left loginUser flex">
@@ -83,11 +77,11 @@
         </form>
     </div>
 
-<!-- MODAL OKAY -->
+<!-- MODAL CADASTRO BEM SUCEDIDO -->
     <div id="popup" class="modal">
         <div class="modal-content">
             <div class="mensagem">
-                <img alt="Cadastro realizado!" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnh2aTI4dXo5Y292M29hYjNrdDFocmN5YmIyMjRvcWU3bnphY2VsOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wU1jgXwPzd8UoHSXS0/giphy.gif" class="checkGif" />
+                <img alt="Cadastro realizado!" src="../../../public/img/icons/gif.gif" class="checkGif" />
                 
                 <p>Cadastro realizado com sucesso</p>
                 <a href="../geral/login.php" id="closeModalBtn">Login</a>
@@ -98,27 +92,29 @@
    
 
     <?php
+    //RETORNANDO VALORES DOS INPUTS CASO CADASTRO NÃO SEJA BEM SUCEDIDO
     if (!empty($_SESSION['conteudo'])) {
         echo "<script>let recovery = {}
         
-                    recovery.nome = '" . $_SESSION['conteudo']['nome'] . "',
-                    recovery.email = '" . $_SESSION['conteudo']['email'] . "',
-                    recovery.cpfCnpj = '" . $_SESSION['conteudo']['cpfCnpj'] . "'
+                recovery.nome = '" . $_SESSION['conteudo']['nome'] . "',
+                recovery.email = '" . $_SESSION['conteudo']['email'] . "',
+                recovery.cpfCnpj = '" . $_SESSION['conteudo']['cpfCnpj'] . "'
                     
-                    const inputNome = document.getElementById('nome');
-                    const inputEmail = document.getElementById('email');
-                    const inputCpf = document.getElementById('cpfCnpj');
+                const inputNome = document.getElementById('nome');
+                const inputEmail = document.getElementById('email');
+                const inputCpf = document.getElementById('cpfCnpj');
 
-                    inputNome.value = recovery.nome;
-                    inputEmail.value = recovery.email;
-                    inputCpf.value = recovery.cpfCnpj;
+                inputNome.value = recovery.nome;
+                inputEmail.value = recovery.email;
+                inputCpf.value = recovery.cpfCnpj;
 
-                    </script>
-                    ";
+                </script>
+            ";
 
         $_SESSION['conteudo'] = [];
     }
 
+    //VERIFICANDO SE CADASTRO FOI BEM SUCEDIDO E EXIBINDO AVISO EM TELA
     if(!empty($_SESSION['verifyCad']) && $_SESSION['verifyCad'] == true){
         echo '<script> document.getElementById("popup").style.display = "block"; </script>';        
         $_SESSION['verifyCad'] = false;
