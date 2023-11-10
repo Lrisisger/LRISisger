@@ -5,5 +5,4 @@
     <!-- XML QUE SALVA AS INFORMAÇÕES DOS USUÁRIOS CADASTRADOS -->
 
 
-
-<usuario><id>2</id><name>Lucas Eduardo</name><email>Lucaas@gmail.com</email><password>$2y$10$Y6MQRc0MDnR5/vE6opZwNOje3eypNWYdcJsUynPjx0u7.3s6RPh5q</password><cpf>5995</cpf><isAdm>1</isAdm><token>qpTwumBiFClGjFkOJcIm9IcEk5nN8Uhg4V!fr721$j7SVgbKtV</token><tokenEmpresa>NhW0fwuciASuJ4RuFLWvjRgZ6x0AUHgAQ01UQ9dWn$ZAmUfrQC</tokenEmpresa><mainAcc>0</mainAcc></usuario><usuario><id>1</id><name>Lucas Eduardo</name><email>Lucas@gmail.com</email><password>$2y$10$5ArQOPwDI3kbvdZzCawEbu21OvyKeYW7saYH9ah1B.sd5aQkcZY3e</password><cpf>864.004.935-14</cpf><isAdm>1</isAdm><token>2#cIusw8qFiizCVtcFx8L4UNuKpLEHKgjFTtg3ErE2qZN28l2f</token><tokenEmpresa>NhW0fwuciASuJ4RuFLWvjRgZ6x0AUHgAQ01UQ9dWn$ZAmUfrQC</tokenEmpresa><mainAcc>1</mainAcc></usuario><usuario><id>3</id><name>Enzo Souza Lima</name><email>Enzo@gmail.com</email><password>$2y$10$PYDiJMWfNOyb76dL25GqWepZRIlXpIWzFnZK8iyUxbczT0Ml1MOeS</password><cpf>86400493514</cpf><isAdm>1</isAdm><token>My3d$cwNVoCVBIrZjdGpEX0b94yrV3PdvEOfKq$it5PiFEAHyn</token><tokenEmpresa>NhW0fwuciASuJ4RuFLWvjRgZ6x0AUHgAQ01UQ9dWn$ZAmUfrQC</tokenEmpresa><mainAcc>0</mainAcc></usuario></root>
+</root>
