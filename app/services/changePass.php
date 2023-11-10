@@ -52,6 +52,7 @@ if($token && $senhaAtual && $novaSenha){
         $u->setMainAcc($usuario->getMainAcc());
 
         $uDao->update($u);
+        $_SESSION['sucesso'] = 'Senha alterada com sucesso!';
    }else{
         $_SESSION['aviso'] = 'Senha incorreta!';
    }

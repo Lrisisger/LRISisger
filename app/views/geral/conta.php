@@ -128,9 +128,18 @@
         <?php 
             //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
             if(!empty($_SESSION['aviso']) && $_SESSION['aviso']){
-            echo "<span style='margin:auto; margin-bottom: 0px; margin-top: 0px;' class='aviso'>".$_SESSION['aviso']."</span>";
-            $_SESSION['aviso'] = '';
-          }
+              echo "<span style='margin:auto; margin-bottom: 0px; margin-top: 0px;' class='aviso'>".$_SESSION['aviso']."</span>";
+              $_SESSION['aviso'] = '';
+            }
+          
+        ?>
+        <?php 
+            //VERIFICANDO SE EXISTE SESSÃO DE AVISO ATIVA E IMPRIMINDO AVISO NA TELA CASO EXISTA
+            if(!empty($_SESSION['sucesso']) && $_SESSION['sucesso']){
+              echo "<span style='margin:auto; margin-bottom: 0px; margin-top: 0px; color: #080;' class='aviso'>".$_SESSION['sucesso']."</span>";
+              $_SESSION['sucesso'] = '';
+            }
+          
         ?>
         <div class="area-button-senha" onclick="handleNewPass(this.id)" id="<?=$userInfo->getToken()?>">
           <div class="button-senha">
