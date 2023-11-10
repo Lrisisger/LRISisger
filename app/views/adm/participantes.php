@@ -215,9 +215,9 @@
               <label>
                 <h4>Tipo de usuario</h4>
                 <select name="isAdm">
-                  <?php
+                  
                   <option value="1">Administrador</option>
-                  ?>
+                  
                   <option value="0">Colaborador</option>
                 </select>
               </label>
