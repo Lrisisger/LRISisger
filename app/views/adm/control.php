@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="../../../public/css/adm/control.css">
     <link rel="stylesheet" href="../../../public/css/general/main.css">
     <link rel="shortcut icon" href="../../../public/img/svgs/favi.png" type="image/x-icon">
-    
-    
-    
     <title>SISGER</title>
 </head>
 
@@ -29,11 +26,13 @@
         $auth = new Auth();
         $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
 
+        //VERIFICANDO SE HÁ USUARIO LOGADO
         if($userInfo == false){
             header("Location: ../../services/logOutAction.php");
             exit;
         }
-
+        
+        //VERIFICANDO SE USUARIO É UM ADMINISTRADOR
         if($userInfo->getIsAdm() == 0){
             header("Location: ../worker/control_colabora.php");
             exit;
@@ -45,6 +44,7 @@
         $sDao = new SetoresDaoXml();// INICIANDO DAO DE SETORES
         $setores = $sDao->findAll($userInfo->getTokenEmpresa());// RECEBENDO TAREFAS DA EMPRESA
 
+        //COLOCANDO SETORES EM ORDEM ALFABÉTICA
         function ordenarSetor($setorOne, $setorTwo){
             return strcasecmp($setorOne->getName(), $setorTwo->getName());
         }
@@ -54,6 +54,7 @@
         $tDao = new TarefasDaoXml();// INICIANDO DAO DE TAREFAS
         $tarefasStatus =  $tDao->findAll($userInfo->getTokenEmpresa());
 
+        //VERIFICANDO A DATA DAS TAREFAS, SE TIVER ALGUMA ATRASADA, MUDAMOS O STATUS
         function verificaStatus($tarefas){
             $dataAtual = new DateTime();
             $dataAtual->setTime(0, 0);
@@ -127,6 +128,7 @@
 
 
     <!-- NAV BAR -->
+    <!-- NO ASIDE VERIFICO O NIVEL DO USUARIO E DAI EXIBO AS TELAS QUE ELE PODE ACESSAR -->
     <aside>
 
         <div class="container-blue">

@@ -18,7 +18,8 @@
 
     $auth = new Auth();
     $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
-
+    
+    //VERIFICANDO DE HÁ USUARIO LOGADO
     if ($userInfo == false) {
         header("Location: ../../services/logOutAction.php");
         exit;
@@ -37,6 +38,7 @@
 </header>
 
 <!-- NAV BAR -->
+<!-- NO ASIDE VERIFICO O NIVEL DO USUARIO E DAI EXIBO AS TELAS QUE ELE PODE ACESSAR -->
 <aside>
 
     <div class="container-blue">
@@ -109,7 +111,7 @@
 <main>
 
     <div class="container-central">
-        <form action="editUser">
+        <form>
             <label>
                 <h4>Nome:</h4>
                 <input type="text" name="nome" value="<?=$userInfo->getName()?>" disabled>

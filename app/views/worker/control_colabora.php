@@ -21,11 +21,13 @@
     $auth = new Auth();
     $userInfo = $auth->checkToken(); // AUTENTICAÇÃO DE TOKEN DO USUARIO PARA CONFIRMAR O LOGIN
 
+    //VERIFICANDO DE HÁ USUARIO LOGADO
     if ($userInfo == false) {
         header("Location: ../../services/logOutAction.php");
         exit;
     }
 
+    //VERIFICANDO SE USUARIO LOGADO É A CONTA PRINCIPAL DA EMPRESA, SE FOR NÃO PODE FICAR NA TELA DE COLABORADOR
     if($userInfo->getMainAcc() == 1){
         header("Location: ../adm/control.php");
         exit;
@@ -33,8 +35,9 @@
 
     $tDao = new TarefasDaoXml();
 
-    $tarefas =  $tDao->findByWorker($userInfo->getId()) ? $tDao->findByWorker($userInfo->getId()) : [];
+    $tarefas =  $tDao->findByWorker($userInfo->getId()) ? $tDao->findByWorker($userInfo->getId()) : []; // PEGANDO TODAS AS TAREFAS DO USUARIO LOGADO
 
+    //VERIFICANDO AS DATAS, SE TIVER ALGUM ATRASADA ALTERAR O STATUS
     function verificaStatus($tarefas){
         $dataAtual = new DateTime();
         $dataAtual->setTime(0, 0);
@@ -73,6 +76,7 @@
     </header>
 
     <!-- NAV BAR -->
+    <!-- NO ASIDE VERIFICO O NIVEL DO USUARIO E DAI EXIBO AS TELAS QUE ELE PODE ACESSAR -->
     <aside>
         <div class="container-blue">
         </div>
@@ -105,13 +109,7 @@
                 </li>
             </a>
 
-
-            
-
             <?php if($userInfo->getIsAdm() == 1): ?>
-             
-               
-
 
                 <a href="../adm/participantes.php">
                     <li>
@@ -150,7 +148,8 @@
     <!-- NAV BAR -->
 
     <main>
-
+        
+         <!-- DANDO UM FOREACH NO ARRAY DE TAREFAS PARA IMPRIMIR NA TELA UMA POR UMA -->
         <?php foreach($tarefas as $tarefa): 
             
             $dataInicial = new DateTime($tarefa->getDataInicial());
@@ -190,6 +189,7 @@
                         </div>
                         <div class="buttons">
                             <?php
+                                //VERIFICANDO QUAL O STATUS DA TAREFA, E EXIBINDO SUAS RESPECTIVAS AÇÕES 
                                 if($tarefa->getStatus() == 5){
                                     echo '<a onclick="popupTask('.$tarefa->getId().', 1)" class="button" type="submit">Finalizar</a>';
                                 }else if($tarefa->getStatus() == 4){
@@ -210,6 +210,7 @@
  
     </main>
 
+     <!-- TELA DO MODAL -->
     <div class="dark">
         <div class="modal-obs">
         <div class="header">
