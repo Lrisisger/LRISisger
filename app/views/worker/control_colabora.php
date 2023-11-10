@@ -117,7 +117,7 @@
                             <img style="height:30px;"  src="../../../public/img/icons/people.svg" alt="">
                         </div>
 
-                        <h3>Participante</h3>
+                        <h3>Participantes</h3>
                     </li>
                 </a>    
             

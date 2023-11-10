@@ -2,40 +2,4 @@
 <root>
     <!-- ESSE XML SALVA OS DADOS DOS SETORES -->
 
-    <setor>
-        <id>1</id>
-        <name>Aaa</name>
-        <tokenSetor>CCO59D7q8rDWcqAoubundixMt9nE6aGGc4EY7CP3IdJ6Q7whgT</tokenSetor>
-        <tokenEmpresa>9djgFRky4V1@8Ql1PrWKBkmnnGerbCuJJfGDcwlsK5u$Q9ar5f</tokenEmpresa>
-    </setor>
-    <setor>
-        <id>2</id>
-        <name>Bbb</name>
-        <tokenSetor>qCRCfw2RgoJyfSnKrkXMf9ei0vB4fRHUj0vZZP3Cz9Jfvv45Hh</tokenSetor>
-        <tokenEmpresa>9djgFRky4V1@8Ql1PrWKBkmnnGerbCuJJfGDcwlsK5u$Q9ar5f</tokenEmpresa>
-    </setor>
-    <setor>
-        <id>3</id>
-        <name>Ccc</name>
-        <tokenSetor>tORccPglwAdUkFjBmulvRWmmxKxa8VRSQqlTyjX0TdIUPG5ILC</tokenSetor>
-        <tokenEmpresa>9djgFRky4V1@8Ql1PrWKBkmnnGerbCuJJfGDcwlsK5u$Q9ar5f</tokenEmpresa>
-    </setor>
-    <setor>
-        <id>4</id>
-        <name>Vendas</name>
-        <tokenSetor>YKPnqTurn2WM9cEXLsfeggtLWFmRR3E7lDqwi3WDUTP76wugOb</tokenSetor>
-        <tokenEmpresa>FaUuV7tRPGHi!Qm0wBrUvtgu5nDfNOxj1E6fSzUQy0hgoWEUsM</tokenEmpresa>
-    </setor>
-    <setor>
-        <id>5</id>
-        <name>Vendas</name>
-        <tokenSetor>s7mRqCgLWfWchUHbf27a2mUCknCAxSWZRp1MGL8yLlQQokzDp8</tokenSetor>
-        <tokenEmpresa>LRiGMIF94oJB#b8oEnji5zoSreW@x6QW5iT1fXMhlZVL@cab#j</tokenEmpresa>
-    </setor>
-    <setor>
-        <id>6</id>
-        <name>Compras</name>
-        <tokenSetor>RrJkslPBRBZHFkwEJqFYYvk2iD9n7ajVAm3Z6k8uXqKsXH232O</tokenSetor>
-        <tokenEmpresa>LRiGMIF94oJB#b8oEnji5zoSreW@x6QW5iT1fXMhlZVL@cab#j</tokenEmpresa>
-    </setor>
-<setor><id>16</id><name>Robbert</name><tokenSetor>ErxANJpvunUaVXNdIetyg5L5me1NZcOq7FbrMd3rtx3In4MUcE</tokenSetor><tokenEmpresa>yOJGg9UWBC7I0Q5uilN#GtT8eoo2S$jNtb#!9zuX4h6WJJ5kga</tokenEmpresa></setor><setor><id>17</id><name>Vendas</name><tokenSetor>exfmTKbD20ywUYvjK4lUJJEMvUD4aW6kU0KcHfhdev4tJEyQO0</tokenSetor><tokenEmpresa>U!kRD3eUZP7eigs2NcYCsc#z#Gc$efHYHU0WXaWGxROedtO4O7</tokenEmpresa></setor><setor><id>18</id><name>A</name><tokenSetor>Bxkf6YOw7IUlkGpcmHVjtFxKlW7ismrd5iEffch1gQfImCCmTL</tokenSetor><tokenEmpresa>#sYQD9sdIDdkTYH2O@ZGycaFAO6XEUetEs9p2Ky9rJW87W!qvL</tokenEmpresa></setor></root>
+</root>

@@ -159,7 +159,7 @@
                         <img style="height:30px;"  src="../../../public/img/icons/people.svg" alt="">
                     </div>
 
-                    <h3>Participante</h3>
+                    <h3>Participantes</h3>
                 </li>
             </a>    
             
@@ -234,7 +234,28 @@
 
                 </div>
             <?php endforeach ?>
+                        
+        
+            <?php if(!$setores): ?>
+                <div class="container-inst">
+                    <div class="title">
+                        <h2>Instruções</h2>
+                    </div>
 
+                    <div class="cont">
+                        <p>Ao entrar pela primeira vez, inicie criando os setores da sua empresa. Em seguida, adicione os participantes da empresa, ou seja, colaboradores e administradores.</p>
+
+
+                        <p>Vá para a seção "Setores". Crie setores relevantes para a sua empresa (por exemplo: Vendas, Marketing, Desenvolvimento).</p>
+
+                        <p>Acesse a seção "Participantes". Adicione colaboradores e administradores à sua equipe.</p>
+
+                        <p>Logo após, volte para a Central de controle. Crie uma nova tarefa, especificando título, descrição e delegue a tarefa ao membro específico. Os moderadores também podem criar e delegar tarefas.</p>
+
+                       
+                    </div>
+                </div>
+            <?php endif; ?>
           
 
         </section>
