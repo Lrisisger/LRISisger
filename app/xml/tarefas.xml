@@ -2,4 +2,4 @@
 <root>
     <!-- SALVANDO INFORMAÇÕES DAS TAREFAS -->
 
-</root>
+<tarefa><id>2</id><tituloTarefa>Comprar Aa</tituloTarefa><status>3</status><descricao/><dataInicial>2023-11-10</dataInicial><dataLimite>2023-11-11</dataLimite><idColabora>3</idColabora><idAdm>1</idAdm><mensagem/><tokenEmpresa>gXYUcxYYM8GH1LegEEciV2urlyMFUHGkn0Ur9Lnj5J2av!BmzV</tokenEmpresa><tokenSetor>Yjbrv9edL6EpmuehPQYQi3NZg7A1AuHSSNV00OkuNsevZi39iT</tokenSetor></tarefa></root>
