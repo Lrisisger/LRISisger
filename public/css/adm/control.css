@@ -130,7 +130,7 @@ main {
 
 .modal-new-task{
     background-color: #fff;
-    height: 500px;
+    height: 550px;
     width: 380px;
     display: none;
     flex-direction: column;

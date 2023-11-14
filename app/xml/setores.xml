@@ -2,4 +2,4 @@
 <root>
     <!-- ESSE XML SALVA OS DADOS DOS SETORES -->
 
-</root>
+<setor><id>2</id><name>Vendas</name><tokenSetor>onPwU31GpqzhZQmawQT6uV1TziRNYbLpCuL5w5R1Gc02xwE4JS</tokenSetor><tokenEmpresa>gXYUcxYYM8GH1LegEEciV2urlyMFUHGkn0Ur9Lnj5J2av!BmzV</tokenEmpresa></setor><setor><id>3</id><name>Compras</name><tokenSetor>Yjbrv9edL6EpmuehPQYQi3NZg7A1AuHSSNV00OkuNsevZi39iT</tokenSetor><tokenEmpresa>gXYUcxYYM8GH1LegEEciV2urlyMFUHGkn0Ur9Lnj5J2av!BmzV</tokenEmpresa></setor></root>

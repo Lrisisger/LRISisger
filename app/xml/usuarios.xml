@@ -5,4 +5,27 @@
     <!-- XML QUE SALVA AS INFORMAÇÕES DOS USUÁRIOS CADASTRADOS -->
 
 
+    <usuario>
+        <id>1</id>
+        <name>Heveraldo Augusto Silva Viana Filho</name>
+        <email>Heveraldoa8@gmail.com</email>
+        <password>$2y$10$NNFelvIkQwHe88a7DEZSbuyp3Yl1dIpDgGW5V7leHJxHfMMHVqC6K</password>
+        <cpf>1234567899</cpf>
+        <isAdm>1</isAdm>
+        <token>VVYBlQ3Hq2V8smfbTtzRpumKj#eApO5dLXuemotgEbM90XspDh</token>
+        <tokenEmpresa>gXYUcxYYM8GH1LegEEciV2urlyMFUHGkn0Ur9Lnj5J2av!BmzV</tokenEmpresa>
+        <mainAcc>1</mainAcc>
+    </usuario>
+
+    <usuario>
+        <id>3</id>
+        <name>Lucas Eduardo</name>
+        <email>Lucas@gmail.com</email>
+        <password>$2y$10$wZcnGHjX6En6GIH1VV0dLOgY2Dm7s/I6ZfmyyNdy2moYoydIWLJUe</password>
+        <cpf>86400493515</cpf>
+        <isAdm>1</isAdm>
+        <token>YaoOLvTxgGIT@lMRmpelSsv4$brn1b32AeQbVTvwf64XWiR72b</token>
+        <tokenEmpresa>gXYUcxYYM8GH1LegEEciV2urlyMFUHGkn0Ur9Lnj5J2av!BmzV</tokenEmpresa>
+        <mainAcc>0</mainAcc>
+    </usuario>
 </root>
