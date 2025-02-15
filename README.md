@@ -5,8 +5,6 @@
 - Luis Santos
 - Robert Narcisio
 - Luca Soares
-## Descrição do Projeto
-- O LRISisger é um sistema de gerenciamento de equipes desenvolvido pelo nosso grupo da faculdade com o objetivo de auxiliar administradores na administração de tarefas de suas equipes de forma fácil e intuitiva. O sistema oferece um layout interativo que permite aos administradores visualizar o status de cada tarefa e seus colaboradores de maneira eficiente.
 
 ## Tecnologias Utilizadas
  - O sistema foi desenvolvido utilizando as seguintes tecnologias:
